@@ -1,31 +1,34 @@
 // src/components/SocialProfiles.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 import "../app.css";
-
-const sampleGroups = [
-  {
-    id: "g1",
-    title: "Heritage Enthusiasts",
-    desc: "Share photos and stories.",
-    img: "/images/enthusiast.jpg",
-  },
-  {
-    id: "g2",
-    title: "Monuments Photography",
-    desc: "Photography group for monuments.",
-    img: "/images/photography.jpg",
-  },
-  {
-    id: "g3",
-    title: "Festivals & Culture",
-    desc: "Discuss festivals and traditions.",
-    img: "/images/culture.jpg",
-  },
-];
 
 export default function SocialProfiles() {
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const userName = user?.username || "Guest";
+  
+  const sampleGroups = [
+    {
+      id: "g1",
+      title: "Heritage Enthusiasts",
+      desc: "Share photos and stories.",
+      img: "/images/enthusiast.jpg",
+    },
+    {
+      id: "g2",
+      title: "Monuments Photography",
+      desc: "Photography group for monuments.",
+      img: "/images/photography.jpg",
+    },
+    {
+      id: "g3",
+      title: "Festivals & Culture",
+      desc: "Discuss festivals and traditions.",
+      img: "/images/culture.jpg",
+    },
+  ];
 
   return (
     <div className="home-page">
@@ -43,7 +46,7 @@ export default function SocialProfiles() {
         </div>
 
         <div className="header-right">
-          <div className="user-name">Prannoy Chandola</div>
+          <div className="user-name">{userName}</div>
           <div className="user-avatar" />
         </div>
       </header>

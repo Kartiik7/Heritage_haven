@@ -18,6 +18,8 @@ export default function SiteDetail() {
   const [error, setError] = useState(null);
   const [showQuiz, setShowQuiz] = useState(false);
 
+  const userName = user?.username || "Guest";
+
   useEffect(() => {
     let mounted = true;
     const localSite = heritageSites.find((s) => s.site_id === siteId);
@@ -155,7 +157,7 @@ export default function SiteDetail() {
         </div>
 
         <div className="header-right">
-          <div className="user-name">Guest</div>
+          <div className="user-name">{userName}</div>
           <div className="user-avatar" />
         </div>
       </header>

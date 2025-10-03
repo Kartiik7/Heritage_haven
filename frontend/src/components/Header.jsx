@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Header({ userName = "Prannoy Chandola" }) {
+export default function Header({ userName = "Guest" }) {
   const navigate = useNavigate();
 
   return (
