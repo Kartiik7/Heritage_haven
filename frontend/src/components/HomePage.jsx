@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../app.css";
 
-export default function HomePage({ userName: propUserName = "Prannoy Chandola", onLogout }) {
-  const navigate = useNavigate();                    // <-- added
+export default function HomePage({ userName: propUserName = "Guest", onLogout }) {
+  const navigate = useNavigate();
   const location = useLocation();
   const stateUser = location.state?.userName;
 
@@ -16,7 +16,8 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
     storedUser = null;
   }
 
-  const userName = stateUser || propUserName || storedUser || "Guest";
+  // ✅ only one variable for username
+  const finalUserName = stateUser || propUserName || storedUser || "Guest";
 
   useEffect(() => {
     document.body.classList.add("home-mode");
@@ -30,7 +31,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
   const features = [
     {
       title: "Discover",
-      route: "/discover",
+      path: "/discover",
       bullets: [
         "Explore India's rich heritage of festivals and monuments.",
         "Find detailed stories, history, and cultural significance.",
@@ -39,7 +40,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
     },
     {
       title: "AR/Video Tour",
-      route: "/ar-tour",
+      path: "/artour",
       bullets: [
         "Step into monuments and festivals through immersive AR/VR.",
         "Experience India's beauty as if you are truly there.",
@@ -48,7 +49,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
     },
     {
       title: "Social Profiles",
-      route: "/social",
+      path: "/social-profiles",
       bullets: [
         "Connect with others who share your cultural interests.",
         "Share your experiences, memories, and celebrations.",
@@ -71,7 +72,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
         <h1 className="page-title">Home Page</h1>
 
         <div className="header-right">
-          <div className="user-name">{userName}</div>
+          <div className="user-name">{finalUserName}</div>
           <div className="user-avatar" />
           {onLogout && (
             <button
@@ -113,10 +114,11 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
               </div>
 
               <div className="feature-right">
+                {/* ✅ navigate on click */}
                 <button
                   className="feature-go"
                   aria-label={`open ${f.title}`}
-                  onClick={() => navigate(f.route)}            /* <-- navigation */
+                  onClick={() => navigate(f.path, { state: { userName: finalUserName } })}
                 >
                   ➜
                 </button>

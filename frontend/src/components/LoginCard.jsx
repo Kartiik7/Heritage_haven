@@ -12,16 +12,9 @@ export default function LoginCard() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Minimal change: store username if "remember" checked
-    if (remember && username) {
-      try {
-        localStorage.setItem("hh_userName", username);
-      } catch (err) {
-        // ignore storage errors
-      }
-    }
-    // Pass username to Home page via router state
-    navigate("/home", { state: { userName: username } });
+    // TODO: insert actual auth logic here
+    // For now we assume login succeeds and redirect to home
+    navigate("/home");
   };
 
   return (
