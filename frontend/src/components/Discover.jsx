@@ -32,7 +32,7 @@ export default function Discover() {
       <div className="home-page">
         <header className="hh-header">
           <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
-            <img src="/images/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
+            <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
             <div>
               <div className="brand-title">HERITAGE HAVEN</div>
               <div className="brand-sub">A new way to connect with culture</div>
@@ -60,7 +60,7 @@ export default function Discover() {
       <div className="home-page">
         <header className="hh-header">
           <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
-            <img src="/images/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
+            <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
             <div>
               <div className="brand-title">HERITAGE HAVEN</div>
               <div className="brand-sub">A new way to connect with culture</div>
@@ -87,7 +87,7 @@ export default function Discover() {
     <div className="home-page">
       <header className="hh-header">
         <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
-          <img src="/images/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
+          <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>

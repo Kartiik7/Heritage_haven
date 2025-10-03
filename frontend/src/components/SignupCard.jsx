@@ -35,7 +35,7 @@ export default function SignupCard() {
     <div className="auth-page">
       <header className="hh-header auth-header">
         <div className="logo-box" onClick={() => navigate("/home")} style={{ cursor: "pointer" }}>
-          <img src="/images/heritage-haven-logo.jpg" alt="Heritage Haven" className="logo-img" />
+          <img src="/heritage-haven-logo.jpg" alt="Heritage Haven" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>

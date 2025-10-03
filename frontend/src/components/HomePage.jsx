@@ -61,7 +61,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
     <div className="home-page">
       <header className="hh-header home-header">
         <div className="logo-box">
-          <img src="/namaste-techies-logo.png" alt="Heritage Haven" className="logo-img" />
+          <img src="/heritage-haven-logo.png" alt="Heritage Haven" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
