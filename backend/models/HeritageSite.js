@@ -9,12 +9,11 @@ const heritageSiteSchema = new Schema({
     youtube_video_id: { type: String },
     location: { type: String, required: true },
     geotag: {
-        latitude: { type: Number, required: true },
-        longitude: { type: Number, required: true }
+        type: { type: String },
+        era: { type: String },
+        latitude: { type: Number },
+        longitude: { type: Number }
     },
-    // Add these back from your original sample for better recommendations
-    type: { type: String },
-    era: { type: String },
     tags: { type: [String] },
 }, { timestamps: true });
 
