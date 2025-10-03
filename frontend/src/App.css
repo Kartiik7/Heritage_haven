@@ -187,24 +187,139 @@
 }
 
 /* Thumbnails area (row beneath the card) */
-.site-thumbnails {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 92%;
+
+/* Common button style for Discover cards */
+.card-btn {
+  background: linear-gradient(135deg, #003973, #e43a15);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
 }
-.site-thumbnails img {
-  width: 140px;
-  height: 96px;
-  object-fit: cover;
+
+.card-btn:hover {
+  background: linear-gradient(135deg, #e43a15, #003973);
+  transform: translateY(-2px);
+}
+/* ====== card buttons used across Discover / listings ====== */
+.card-btn {
+  background: linear-gradient(135deg, #003973 0%, #2f9db1 50%, #c85a5a 100%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.18);
-  transition: transform .14s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
-.site-thumbnails img:hover { transform: translateY(-4px); }
+
+.card-btn.small {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+  border-radius: 7px;
+}
+/* Stronger rule for buttons used inside feature-card list (Discover) */
+.feature-card .signup-btn,
+.feature-card .signup-btn.small {
+  background: linear-gradient(90deg, rgba(7,46,70,1) 0%, rgba(39,88,104,1) 50%, rgba(197,74,74,0.9) 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  font-size: 0.95rem;
+}
+
+.feature-card .signup-btn.small {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+}
+
+.feature-card .signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.38);
+}
+/* Align action buttons side by side nicely */
+.site-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start; /* keeps them aligned left */
+  gap: 16px; /* equal spacing between buttons */
+  flex-wrap: wrap; /* prevents overflow on small screens */
+}
+
+/* Ensure both action buttons look uniform */
+.site-actions .site-btn {
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(39,88,104,1) 50%, rgba(197,74,74,0.95));
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.site-actions .site-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.38);
+}
+
+.card-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.36);
+  opacity: 0.98;
+}
+
+.card-btn.ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.95);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: none;
+}
+
+.card-btn:active {
+  transform: translateY(0);
+}
+
+/* Thumbnails area */
+.site-thumbnails {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;   /* center thumbnails */
+  gap: 16px;                 /* equal spacing between them */
+  flex-wrap: wrap;           /* wrap on smaller screens */
+}
+
+/* Thumbnail images */
+.site-thumbnails img {
+  width: 160px;              /* same width */
+  height: 120px;             /* same height */
+  object-fit: cover;         /* ensures images don’t stretch */
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+.site-thumbnails img:hover {
+  transform: scale(1.05);
+}
+
 
 /* ensure the main content has a comfortable bottom padding so footer doesn't overlap */
 .home-main, .site-main, .auth-main {
@@ -533,3 +648,204 @@ body {
   background-size: cover;
   background-position: center;
 }
+/* AR/Video Tour Cards wrapper */
+/* ARTour grid & cards to ensure alignment */
+.ar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Card: equal height with vertical layout */
+.ar-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, rgba(6,36,65,0.9), rgba(24,96,135,0.16));
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: inset 0 6px 16px rgba(0,0,0,0.22), 0 8px 20px rgba(0,0,0,0.28);
+  min-height: 420px;        /* keep cards consistent — tweak as needed */
+}
+
+/* top row: thumbnail + intro text */
+.ar-card-top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.ar-card-top img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.ar-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+.ar-card p {
+  margin: 6px 0 0;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.45;
+  font-size: 14px;
+  max-height: 4.3em; /* keep brief preview */
+  overflow: hidden;
+}
+
+/* video wrap keeps consistent height */
+.ar-card-video {
+  margin-top: 12px;
+  flex: 1 1 auto; /* let video area expand to fill vertical space */
+  display: flex;
+  align-items: center;
+}
+.video-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  max-height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.06);
+}
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* details button anchored at bottom */
+.details-btn {
+  margin-top: 12px;
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(197,74,74,0.95));
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.details-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.32);
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .ar-card { min-height: 420px; }
+  .ar-card-top img { width: 100px; height: 72px; }
+  .video-wrap { min-height: 140px; max-height: 200px; }
+}
+@media (max-width: 520px) {
+  .ar-grid { grid-template-columns: 1fr; }
+  .ar-card { min-height: auto; }
+  .video-wrap { min-height: 180px; max-height: 260px; }
+}
+/* ---------- Social / Group list card styling (matches your theme) ---------- */
+
+.group-card {
+  display: grid;
+  grid-template-columns: 140px 1fr 90px;
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(6,36,65,0.9), rgba(24,96,135,0.24), rgba(210,90,90,0.12));
+  box-shadow: inset 0 8px 18px rgba(0,0,0,0.28), 0 10px 28px rgba(0,0,0,0.26);
+  transition: transform .14s ease, box-shadow .14s ease;
+  width: 100%;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.44);
+}
+
+.group-left {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.group-thumb {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.18);
+  background: linear-gradient(180deg,#fff,#eee); /* placeholder fallback */
+}
+
+/* body area */
+.group-body {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* title + desc align with existing feature card styling */
+.group-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+}
+
+.group-desc {
+  color: rgba(255,255,255,0.9);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* small primary pill button — reuse look of card-btn */
+.card-btn.small {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(39,88,104,1) 50%, rgba(197,74,74,0.95));
+  color: white;
+}
+
+/* right arrow — keep same aesthetics but center vertically */
+.group-right {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* slightly smaller arrow to match height */
+.group-go {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 22px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.32);
+}
+
+/* re-use your .feature-go styling then tweak size */
+.feature-go.group-go {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+/* Responsive: stack card columns on narrow screens */
+@media (max-width: 900px) {
+  .group-card {
+    grid-template-columns: 92px 1fr;
+    padding: 16px;
+  }
+  .group-right { display: none; } /* hide arrow on narrow screens to save space */
+  .group-thumb { width: 92px; height: 92px; }
+  .group-title { font-size: 20px; }
+}
+

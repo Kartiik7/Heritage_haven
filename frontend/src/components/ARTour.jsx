@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchHeritageSites } from "../utils/api";
 
+import "../app.css";
+
 export default function ARTour() {
   const navigate = useNavigate();
   const [sites, setSites] = useState([]);
@@ -18,8 +20,8 @@ export default function ARTour() {
         setSites(withVideos);
         setError(null);
       } catch (err) {
-        console.error('Failed to load heritage sites:', err);
-        setError('Failed to load heritage sites. Please try again later.');
+        console.error("Failed to load heritage sites:", err);
+        setError("Failed to load heritage sites. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -48,9 +50,7 @@ export default function ARTour() {
           </div>
         </header>
         <main style={{ padding: 28 }}>
-          <div style={{ textAlign: "center", marginTop: "50px" }}>
-            Loading video tours...
-          </div>
+          <div style={{ textAlign: "center", marginTop: "50px" }}>Loading video tours...</div>
         </main>
       </div>
     );
@@ -76,9 +76,7 @@ export default function ARTour() {
           </div>
         </header>
         <main style={{ padding: 28 }}>
-          <div style={{ textAlign: "center", marginTop: "50px", color: "red" }}>
-            Error: {error}
-          </div>
+          <div style={{ textAlign: "center", marginTop: "50px", color: "red" }}>Error: {error}</div>
         </main>
       </div>
     );
@@ -106,38 +104,45 @@ export default function ARTour() {
       </header>
 
       <main style={{ padding: 28 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))", gap: 20 }}>
+        {/* grid container */}
+        <div className="ar-grid">
           {sites.map((site) => (
-            <div key={site._id} className="feature-card" style={{ padding: 16 }}>
-              <div style={{ display: "flex", gap: 12 }}>
+            <article key={site.site_id} className="ar-card">
+              {/* top row: thumbnail + text */}
+              <div className="ar-card-top">
                 <img
-                  src={site.image_array[0]}
+                  src={site.image_array && site.image_array[0]}
                   alt={site.name}
-                  style={{ width: 160, height: 100, objectFit: "cover", borderRadius: 8 }}
                 />
-                <div style={{ flex: 1 }}>
-                  <div className="feature-title" style={{ fontSize: 18 }}>{site.name}</div>
-                  <p style={{ marginTop: 6 }}>{site.description}</p>
-                  <div style={{ marginTop: 8 }}>
-                    <button className="signup-btn small" onClick={() => navigate(`/site/${site.site_id}`)}>
-                      Details
-                    </button>
-                  </div>
+                <div>
+                  <h3>{site.name}</h3>
+                  <p>{site.description}</p>
                 </div>
               </div>
 
-              <div style={{ marginTop: 12 }}>
-                <iframe
-                  title={site.name + " video"}
-                  width="100%"
-                  height="280"
-                  src={`https://www.youtube.com/embed/${site.youtube_video_id}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+              {/* video area (kept a fixed aspect area to match heights better) */}
+              <div className="ar-card-video">
+                <div className="video-wrap">
+                  <iframe
+                    title={`${site.name} video`}
+                    src={`https://www.youtube.com/embed/${site.youtube_video_id}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
-            </div>
+
+              {/* details button anchored at bottom */}
+              <div>
+                <button
+                  className="details-btn"
+                  onClick={() => navigate(`/site/${site.site_id}`)}
+                >
+                  Details
+                </button>
+              </div>
+            </article>
           ))}
         </div>
       </main>

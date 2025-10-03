@@ -17,8 +17,8 @@ export default function Discover() {
         setSites(heritageSites);
         setError(null);
       } catch (err) {
-        console.error('Failed to load heritage sites:', err);
-        setError('Failed to load heritage sites. Please try again later.');
+        console.error("Failed to load heritage sites:", err);
+        setError("Failed to load heritage sites. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -47,9 +47,7 @@ export default function Discover() {
           </div>
         </header>
         <main className="home-main" style={{ padding: 28 }}>
-          <div style={{ textAlign: "center", marginTop: "50px" }}>
-            Loading heritage sites...
-          </div>
+          <div style={{ textAlign: "center", marginTop: "50px" }}>Loading heritage sites...</div>
         </main>
       </div>
     );
@@ -75,9 +73,7 @@ export default function Discover() {
           </div>
         </header>
         <main className="home-main" style={{ padding: 28 }}>
-          <div style={{ textAlign: "center", marginTop: "50px", color: "red" }}>
-            Error: {error}
-          </div>
+          <div style={{ textAlign: "center", marginTop: "50px", color: "red" }}>Error: {error}</div>
         </main>
       </div>
     );
@@ -119,6 +115,8 @@ export default function Discover() {
               <div style={{ flex: 1 }}>
                 <div className="feature-title">{site.name}</div>
                 <p style={{ color: "rgba(255,255,255,0.9)", marginTop: 6 }}>{site.description}</p>
+
+                {/* action buttons — use the same signup-btn small styling for consistency */}
                 <div style={{ marginTop: 12 }}>
                   <button
                     className="signup-btn small"
@@ -127,9 +125,16 @@ export default function Discover() {
                   >
                     View
                   </button>
+
+                  {/* changed to signup-btn small so it matches View button style */}
                   <button
-                    className="text-btn"
-                    onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${site.geotag.latitude},${site.geotag.longitude}`, "_blank")}
+                    className="signup-btn small"
+                    onClick={() =>
+                      window.open(
+                        `https://www.google.com/maps/search/?api=1&query=${site.geotag.latitude},${site.geotag.longitude}`,
+                        "_blank"
+                      )
+                    }
                   >
                     Open in Maps
                   </button>

@@ -2,14 +2,10 @@
   {
     "site_id": "H001",
     "name": "Ajanta Caves",
-<<<<<<< HEAD
-    "image_array": ["/images/sites/ajanta-caves.jpg", "/images/sites/ajanta-caves.jpg"],
-=======
     "image_array": [
       "/images/sites/ajanta-caves.jpg",
       "/images/sites/ajanta-caves-2.jpg"
     ],
->>>>>>> e856b4935bb7d735bad2e7b3fbd55e8d8700ce4e
     "description": "Ancient Buddhist rock-cut caves famous for murals and sculptures.",
     "youtube_video_id": "dZxllTnr0vc",
     "location": "Aurangabad, Maharashtra, India",
@@ -733,14 +729,10 @@
   {
     "site_id": "H030",
     "name": "Warli Art",
-<<<<<<< HEAD
-    "image_array": ["/images/sites/warli.jpg", "/images/sites/warli-2.jpg"],
-=======
     "image_array": [
       "/images/sites/warli.jpg",
       "/images/sites/warli-2.jpg"
     ],
->>>>>>> e856b4935bb7d735bad2e7b3fbd55e8d8700ce4e
     "description": "A tribal art form practiced in Maharashtra, depicting daily life.",
     "youtube_video_id": "F9n4D5k7L8m",
     "location": "Maharashtra, India",
