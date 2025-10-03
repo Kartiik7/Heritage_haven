@@ -5,6 +5,9 @@
 
 /* Reset-ish */
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+/* small helpers for new pages */
+.home-main { background: transparent; }
+.feature-card img { box-shadow: 12px 12px 0 rgba(0,0,0,0.2); }
 
 :root{
   --panel-width: 480px;

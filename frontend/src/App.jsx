@@ -1,34 +1,37 @@
-import React, { useState } from "react";
-import LoginCard from "./components/LoginCard";
-import SignupCard from "./components/SignupCard";
-import HomePage from "./components/HomePage";
+// src/App.jsx
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import LoginCard from "./components/LoginCard.jsx";
+import SignupCard from "./components/SignupCard.jsx";
+import HomePage from "./components/HomePage.jsx";
+import Discover from "./components/Discover.jsx";
+import ARTour from "./components/ARTour.jsx";
+import SocialProfiles from "./components/SocialProfiles.jsx";
+import SiteDetail from "./components/SiteDetail.jsx";
+
 import "./app.css";
 
 export default function App() {
-  // set initial to "home" for testing; change to "login" to start at login
-  const [mode, setMode] = useState("home"); // "login" | "signup" | "home"
-
-  if (mode === "home") {
-    // render HomePage alone (full screen)
-    return <HomePage userName="Prannoy Chandola" onLogout={() => setMode("login")} />;
-  }
-
-  // login/signup view using the previous split layout
   return (
-    <div className="page">
-      <div className="left-panel">
-        <div className="welcome-small">Welcome to</div>
-        <h1 className="title">Heritage Haven</h1>
-        <p className="tagline">Culture Se Judne Ka Naya Tareeka...</p>
-      </div>
+    <Routes>
+      {/* Default redirect */}
+      <Route path="/" element={<Navigate to="/home" replace />} />
 
-      <div className="right-panel">
-        {mode === "signup" ? (
-          <SignupCard switchToLogin={() => setMode("login")} onSuccess={() => setMode("home")} />
-        ) : (
-          <LoginCard switchToSignup={() => setMode("signup")} onSuccess={() => setMode("home")} />
-        )}
-      </div>
-    </div>
+      {/* Main Home Page */}
+      <Route path="/home" element={<HomePage userName="Prannoy Chandola" />} />
+
+      {/* Auth Pages */}
+      <Route path="/login" element={<LoginCard onSuccess={() => {}} />} />
+      <Route path="/signup" element={<SignupCard onSuccess={() => {}} />} />
+
+      {/* Feature Pages */}
+      <Route path="/discover" element={<Discover />} />
+      <Route path="/ar-tour" element={<ARTour />} />
+      <Route path="/social" element={<SocialProfiles />} />
+
+      {/* Site detail */}
+      <Route path="/site/:siteId" element={<SiteDetail />} />
+    </Routes>
   );
 }
