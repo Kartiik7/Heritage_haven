@@ -3,7 +3,10 @@ import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../app.css";
 
-export default function HomePage({ userName: propUserName = "Prannoy Chandola", onLogout }) {
+export default function HomePage({
+  userName: propUserName = "Prannoy Chandola",
+  onLogout,
+}) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,7 +23,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
 
   useEffect(() => {
     document.body.classList.add("home-mode");
-    document.body.style.overflow = "hidden";
+    // Removed overflow: hidden to allow scrolling on smaller screens
     return () => {
       document.body.classList.remove("home-mode");
       document.body.style.overflow = "";
@@ -65,7 +68,11 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
           onClick={() => navigate("/home", { state: { userName } })}
           style={{ cursor: "pointer" }}
         >
-          <img src="/heritage-haven-logo.png" alt="Heritage Haven" className="logo-img" />
+          <img
+            src="/heritage-haven-logo.png"
+            alt="Heritage Haven"
+            className="logo-img"
+          />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
@@ -81,9 +88,8 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
             <button
               className="text-btn"
               onClick={() => {
-                // optional: clear stored user on logout
-                try { 
-                  localStorage.removeItem("hh_userName"); 
+                try {
+                  localStorage.removeItem("hh_userName");
                 } catch {
                   // Ignore localStorage errors
                 }
@@ -109,14 +115,17 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
             <article
               className="feature-card home-feature-card"
               key={i}
-              // make whole card clickable (optional)
               onClick={() => navigate(f.path, { state: { userName } })}
               style={{ cursor: "pointer" }}
             >
               <div className="feature-thumb">
                 <div
                   className={`thumb-placeholder ${
-                    i === 0 ? "discover-thumb" : i === 1 ? "ar-thumb" : "social-thumb"
+                    i === 0
+                      ? "discover-thumb"
+                      : i === 1
+                      ? "ar-thumb"
+                      : "social-thumb"
                   }`}
                 />
               </div>
@@ -135,7 +144,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
                   className="feature-go"
                   aria-label={`open ${f.title}`}
                   onClick={(e) => {
-                    e.stopPropagation(); // prevent the outer onClick double-fire
+                    e.stopPropagation();
                     navigate(f.path, { state: { userName } });
                   }}
                 >
