@@ -1,306 +1,754 @@
 [
   {
-    "_id": "1",
     "site_id": "H001",
     "name": "Ajanta Caves",
-    "image_array": ["/images/sites/ajanta-caves.jpg", "/images/sites/ajanta-caves-2.jpg"],
+    "image_array": [
+      "/images/sites/ajanta-caves.jpg",
+      "/images/sites/ajanta-caves-2.jpg"
+    ],
     "description": "Ancient Buddhist rock-cut caves famous for murals and sculptures.",
     "youtube_video_id": "dZxllTnr0vc",
     "location": "Aurangabad, Maharashtra, India",
-    "geotag": { "latitude": 20.552, "longitude": 75.7033 }
+    "geotag": {
+      "latitude": 20.552,
+      "longitude": 75.7033
+    },
+    "type": "cave",
+    "era": "Ancient",
+    "tags": [
+      "unesco",
+      "cave",
+      "ancient",
+      "buddhist",
+      "murals",
+      "sculptures",
+      "maharashtra"
+    ]
   },
   {
-    "_id": "2",
     "site_id": "H002",
     "name": "Amber-Fort",
-    "image_array": ["/images/sites/amber-fort.jpeg", "/images/sites/amber-fort-2.jpg"],
+    "image_array": [
+      "/images/sites/amber-fort.jpeg",
+      "/images/sites/amber-fort-2.jpg"
+    ],
     "description": "A grand fort near Jaipur known for its artistic Rajput architecture.",
     "youtube_video_id": "pW6GfcmjgrI",
     "location": "Jaipur, Rajasthan, India",
-    "geotag": { "latitude": 26.9855, "longitude": 75.8513 }
+    "geotag": {
+      "latitude": 26.9855,
+      "longitude": 75.8513
+    },
+    "type": "fort",
+    "era": "Rajput",
+    "tags": [
+      "fort",
+      "rajput",
+      "architecture",
+      "jaipur",
+      "rajasthan",
+      "palace"
+    ]
   },
   {
-    "_id": "3",
     "site_id": "H003",
     "name": "Ancient Pottery",
-    "image_array": ["/images/sites/ancient-pottery.jpg", "/images/sites/ancient-pottery-2.jpg"],
-    "description": "Traditional pottery reflecting India’s ancient craft heritage.",
+    "image_array": [
+      "/images/sites/ancient-pottery.jpg",
+      "/images/sites/ancient-pottery-2.jpg"
+    ],
+    "description": "Traditional pottery reflecting India's ancient craft heritage.",
     "youtube_video_id": "UvH7xm8JfJ4",
     "location": "Various regions, India",
-    "geotag": { "latitude": 23.0, "longitude": 78.0 }
+    "geotag": {
+      "latitude": 23,
+      "longitude": 78
+    },
+    "type": "craft",
+    "era": "Ancient",
+    "tags": [
+      "craft",
+      "ancient",
+      "pottery",
+      "traditional",
+      "heritage",
+      "art"
+    ]
   },
   {
-    "_id": "4",
     "site_id": "H004",
     "name": "Bharatanatyam",
-    "image_array": ["/images/sites/bharatnatiyam.jpg", "/images/sites/bharatanatyam-2.jpg"],
+    "image_array": [
+      "/images/sites/bharatnatiyam.jpg",
+      "/images/sites/bharatanatyam-2.jpg"
+    ],
     "description": "One of the oldest classical dance forms of India, from Tamil Nadu.",
     "youtube_video_id": "JWhA3ldZcyY",
     "location": "Tamil Nadu, India",
-    "geotag": { "latitude": 13.0827, "longitude": 80.2707 }
+    "geotag": {
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "type": "dance",
+    "era": "Classical",
+    "tags": [
+      "dance",
+      "classical",
+      "bharatanatyam",
+      "tamil nadu",
+      "performance art"
+    ]
   },
   {
-    "_id": "5",
     "site_id": "H005",
     "name": "Brihadeeshwara Temple",
-    "image_array": ["/images/sites/brihadeeshwara.jpg", "/images/sites/brihadeeshwara-2.jpg"],
+    "image_array": [
+      "/images/sites/brihadeeshwara.jpg",
+      "/images/sites/brihadeeshwara-2.jpg"
+    ],
     "description": "A Chola dynasty temple dedicated to Lord Shiva in Thanjavur.",
     "youtube_video_id": "KC3GAmjn1mg",
     "location": "Thanjavur, Tamil Nadu, India",
-    "geotag": { "latitude": 10.7828, "longitude": 79.1318 }
+    "geotag": {
+      "latitude": 10.7828,
+      "longitude": 79.1318
+    },
+    "type": "temple",
+    "era": "Chola",
+    "tags": [
+      "unesco",
+      "temple",
+      "chola",
+      "shiva",
+      "dravidian",
+      "architecture",
+      "tamil nadu"
+    ]
   },
   {
-    "_id": "6",
     "site_id": "H006",
     "name": "Charminar",
-    "image_array": ["/images/sites/chaarminar.jpg", "/images/sites/charminar-2.jpg"],
+    "image_array": [
+      "/images/sites/chaarminar.jpg",
+      "/images/sites/charminar-2.jpg"
+    ],
     "description": "Historic mosque and monument built in 1591 in Hyderabad.",
     "youtube_video_id": "qctv8iV7PeE",
     "location": "Hyderabad, Telangana, India",
-    "geotag": { "latitude": 17.3616, "longitude": 78.4747 }
+    "geotag": {
+      "latitude": 17.3616,
+      "longitude": 78.4747
+    },
+    "type": "monument",
+    "era": "Islamic",
+    "tags": [
+      "monument",
+      "islamic",
+      "architecture",
+      "hyderabad",
+      "telangana",
+      "mosque"
+    ]
   },
   {
-    "_id": "7",
     "site_id": "H007",
     "name": "Champaner Masjid",
-    "image_array": ["/images/sites/champaner-masjid.jpeg", "/images/sites/champaner-masjid-2.jpg"],
+    "image_array": [
+      "/images/sites/champaner-masjid.jpeg",
+      "/images/sites/champaner-masjid-2.jpg"
+    ],
     "description": "A UNESCO site in Gujarat featuring Indo-Islamic architecture.",
     "youtube_video_id": "2j3vwgpSMck",
     "location": "Pavagadh, Gujarat, India",
-    "geotag": { "latitude": 22.4835, "longitude": 73.5316 }
+    "geotag": {
+      "latitude": 22.4835,
+      "longitude": 73.5316
+    },
+    "type": "mosque",
+    "era": "Islamic",
+    "tags": [
+      "unesco",
+      "mosque",
+      "islamic",
+      "architecture",
+      "gujarat",
+      "indo-islamic"
+    ]
   },
   {
-    "_id": "8",
     "site_id": "H008",
     "name": "Chola Temple",
-    "image_array": ["/images/sites/chola-temple.jpg", "/images/sites/chola-temple-2.jpg"],
+    "image_array": [
+      "/images/sites/chola-temple.jpg",
+      "/images/sites/chola-temple-2.jpg"
+    ],
     "description": "Temples built by the Chola dynasty, known for Dravidian architecture.",
     "youtube_video_id": "hefTVpiNuaM",
     "location": "Tamil Nadu, India",
-    "geotag": { "latitude": 10.8, "longitude": 79.1 }
+    "geotag": {
+      "latitude": 10.8,
+      "longitude": 79.1
+    },
+    "type": "temple",
+    "era": "Chola",
+    "tags": [
+      "temple",
+      "chola",
+      "dravidian",
+      "architecture",
+      "tamil nadu",
+      "unesco"
+    ]
   },
   {
-    "_id": "9",
     "site_id": "H009",
     "name": "Christmas",
-    "image_array": ["/images/sites/christmas.jpeg", "/images/sites/christmas-2.jpg"],
+    "image_array": [
+      "/images/sites/christmas.jpeg",
+      "/images/sites/christmas-2.jpg"
+    ],
     "description": "Celebration of the birth of Jesus Christ, observed across India.",
     "youtube_video_id": "4mUptqxrFvI",
     "location": "All over India",
-    "geotag": { "latitude": 28.6, "longitude": 77.2 }
+    "geotag": {
+      "latitude": 28.6,
+      "longitude": 77.2
+    },
+    "type": "festival",
+    "era": "Modern",
+    "tags": [
+      "festival",
+      "modern",
+      "christmas",
+      "christian",
+      "celebration",
+      "india"
+    ]
   },
   {
-    "_id": "10",
     "site_id": "H010",
     "name": "Decorated Bowl",
-    "image_array": ["/images/sites/decorated-bowl.jpg", "/images/sites/decorated-bowl-2.jpg"],
+    "image_array": [
+      "/images/sites/decorated-bowl.jpg",
+      "/images/sites/decorated-bowl-2.jpg"
+    ],
     "description": "Traditional handcrafted bowl designs from Indian artisans.",
     "youtube_video_id": "UGPGn5ZeZoA",
     "location": "Various regions, India",
-    "geotag": { "latitude": 23.5, "longitude": 78.5 }
+    "geotag": {
+      "latitude": 23.5,
+      "longitude": 78.5
+    },
+    "type": "craft",
+    "era": "Traditional",
+    "tags": [
+      "craft",
+      "traditional",
+      "handcrafted",
+      "artisan",
+      "pottery",
+      "art"
+    ]
   },
   {
-    "_id": "11",
     "site_id": "H011",
     "name": "Diwali",
-    "image_array": ["/images/sites/diwali.jpg", "/images/sites/diwali-2.jpg"],
+    "image_array": [
+      "/images/sites/diwali.jpg",
+      "/images/sites/diwali-2.jpg"
+    ],
     "description": "Festival of Lights celebrated with diyas, sweets, and fireworks.",
     "youtube_video_id": "mPwmXRws7FA",
     "location": "All over India",
-    "geotag": { "latitude": 28.61, "longitude": 77.23 }
+    "geotag": {
+      "latitude": 28.61,
+      "longitude": 77.23
+    },
+    "type": "festival",
+    "era": "Traditional",
+    "tags": [
+      "festival",
+      "traditional",
+      "diwali",
+      "hindu",
+      "lights",
+      "india"
+    ]
   },
   {
-    "_id": "12",
     "site_id": "H012",
     "name": "Durga Puja",
-    "image_array": ["/images/sites/durga-puja.jpg", "/images/sites/durga-puja-2.jpg"],
+    "image_array": [
+      "/images/sites/durga-puja.jpg",
+      "/images/sites/durga-puja-2.jpg"
+    ],
     "description": "Grand festival in West Bengal celebrating Goddess Durga.",
     "youtube_video_id": "Ipq8J1_QzXk",
     "location": "Kolkata, West Bengal, India",
-    "geotag": { "latitude": 22.5726, "longitude": 88.3639 }
+    "geotag": {
+      "latitude": 22.5726,
+      "longitude": 88.3639
+    },
+    "type": "festival",
+    "era": "Traditional",
+    "tags": [
+      "festival",
+      "traditional",
+      "durga puja",
+      "kolkata",
+      "west bengal",
+      "hindu",
+      "unesco"
+    ]
   },
   {
-    "_id": "13",
     "site_id": "H013",
     "name": "Garba",
-    "image_array": ["/images/sites/garba.jpg", "/images/sites/garba-2.jpg"],
+    "image_array": [
+      "/images/sites/garba.jpg",
+      "/images/sites/garba-2.jpg"
+    ],
     "description": "Traditional Gujarati folk dance performed during Navratri.",
     "youtube_video_id": "mEZItgQ1vVY",
     "location": "Gujarat, India",
-    "geotag": { "latitude": 22.3, "longitude": 70.8 }
+    "geotag": {
+      "latitude": 22.3,
+      "longitude": 70.8
+    },
+    "type": "dance",
+    "era": "Traditional",
+    "tags": [
+      "dance",
+      "traditional",
+      "garba",
+      "folk",
+      "gujarat",
+      "navratri"
+    ]
   },
   {
-    "_id": "14",
     "site_id": "H014",
     "name": "Gateway of India",
-    "image_array": ["/images/sites/gatewayofindia.jpg", "/images/sites/gatewayofindia-2.jpg"],
+    "image_array": [
+      "/images/sites/gatewayofindia.jpg",
+      "/images/sites/gatewayofindia-2.jpg"
+    ],
     "description": "Monument built in Mumbai during the 20th century colonial era.",
     "youtube_video_id": "cNnQhWz9m8c",
     "location": "Mumbai, Maharashtra, India",
-    "geotag": { "latitude": 18.9219, "longitude": 72.8347 }
+    "geotag": {
+      "latitude": 18.9219,
+      "longitude": 72.8347
+    },
+    "type": "monument",
+    "era": "Colonial",
+    "tags": [
+      "monument",
+      "colonial",
+      "british",
+      "mumbai",
+      "architecture",
+      "maharashtra"
+    ]
   },
   {
-    "_id": "15",
     "site_id": "H015",
     "name": "Golden Temple",
-    "image_array": ["/images/sites/golden temple.jpg", "/images/sites/golden-temple-2.jpg"],
+    "image_array": [
+      "/images/sites/golden temple.jpg",
+      "/images/sites/golden-temple-2.jpg"
+    ],
     "description": "The holiest Gurdwara of Sikhism located in Amritsar.",
     "youtube_video_id": "jA7NhLxv29g",
     "location": "Amritsar, Punjab, India",
-    "geotag": { "latitude": 31.62, "longitude": 74.8765 }
+    "geotag": {
+      "latitude": 31.62,
+      "longitude": 74.8765
+    },
+    "type": "temple",
+    "era": "Sikh",
+    "tags": [
+      "temple",
+      "sikh",
+      "gurdwara",
+      "amritsar",
+      "punjab",
+      "sikhism"
+    ]
   },
   {
-    "_id": "16",
     "site_id": "H016",
     "name": "Hawa Mahal",
-    "image_array": ["/images/sites/hawa-mahal.jpg", "/images/sites/hawa-mahal-2.jpg"],
+    "image_array": [
+      "/images/sites/hawa-mahal.jpg",
+      "/images/sites/hawa-mahal-2.jpg"
+    ],
     "description": "Palace of Winds in Jaipur with unique honeycomb design.",
     "youtube_video_id": "jSlrNR2hAqc",
     "location": "Jaipur, Rajasthan, India",
-    "geotag": { "latitude": 26.9239, "longitude": 75.8267 }
+    "geotag": {
+      "latitude": 26.9239,
+      "longitude": 75.8267
+    },
+    "type": "palace",
+    "era": "Rajput",
+    "tags": [
+      "palace",
+      "rajput",
+      "architecture",
+      "jaipur",
+      "rajasthan",
+      "hawa mahal"
+    ]
   },
   {
-    "_id": "17",
     "site_id": "H017",
     "name": "Jallianwala Bagh",
-    "image_array": ["/images/sites/jallianwala-bagh.jpeg", "/images/sites/jallianwala-bagh-2.jpg"],
+    "image_array": [
+      "/images/sites/jallianwala-bagh.jpeg",
+      "/images/sites/jallianwala-bagh-2.jpg"
+    ],
     "description": "Site of the tragic 1919 massacre, now a memorial in Amritsar.",
     "youtube_video_id": "FR4Se6M4RRM",
     "location": "Amritsar, Punjab, India",
-    "geotag": { "latitude": 31.6206, "longitude": 74.8796 }
+    "geotag": {
+      "latitude": 31.6206,
+      "longitude": 74.8796
+    },
+    "type": "memorial",
+    "era": "Colonial",
+    "tags": [
+      "memorial",
+      "colonial",
+      "history",
+      "amritsar",
+      "punjab",
+      "british"
+    ]
   },
   {
-    "_id": "18",
     "site_id": "H018",
     "name": "Kuchipudi",
-    "image_array": ["/images/sites/kuchipudi.jpg", "/images/sites/kuchipudi-2.jpg"],
+    "image_array": [
+      "/images/sites/kuchipudi.jpg",
+      "/images/sites/kuchipudi-2.jpg"
+    ],
     "description": "Classical dance form from Andhra Pradesh.",
     "youtube_video_id": "ko5sKNuSLbs",
     "location": "Andhra Pradesh, India",
-    "geotag": { "latitude": 16.5, "longitude": 80.6 }
+    "geotag": {
+      "latitude": 16.5,
+      "longitude": 80.6
+    },
+    "type": "dance",
+    "era": "Classical",
+    "tags": [
+      "dance",
+      "classical",
+      "kuchipudi",
+      "andhra pradesh",
+      "performance art"
+    ]
   },
   {
-    "_id": "19",
     "site_id": "H019",
     "name": "Lotus Temple",
-    "image_array": ["/images/sites/lotus-temple.jpg", "/images/sites/lotus-temple-2.jpg"],
+    "image_array": [
+      "/images/sites/lotus-temple.jpg",
+      "/images/sites/lotus-temple-2.jpg"
+    ],
     "description": "Baháʼí House of Worship in New Delhi shaped like a lotus.",
     "youtube_video_id": "vH-MgZLchLM",
     "location": "New Delhi, India",
-    "geotag": { "latitude": 28.5535, "longitude": 77.2588 }
+    "geotag": {
+      "latitude": 28.5535,
+      "longitude": 77.2588
+    },
+    "type": "temple",
+    "era": "Modern",
+    "tags": [
+      "temple",
+      "modern",
+      "bahai",
+      "new delhi",
+      "architecture",
+      "worship"
+    ]
   },
   {
-    "_id": "20",
     "site_id": "H020",
     "name": "Manipuri Dance",
-    "image_array": ["/images/sites/manipuri.jpg", "/images/sites/manipuri-2.jpg"],
+    "image_array": [
+      "/images/sites/manipuri.jpg",
+      "/images/sites/manipuri-2.jpg"
+    ],
     "description": "Classical dance form from Manipur, India.",
     "youtube_video_id": "Q9rPwA8F8so",
     "location": "Manipur, India",
-    "geotag": { "latitude": 24.8, "longitude": 93.9 }
+    "geotag": {
+      "latitude": 24.8,
+      "longitude": 93.9
+    },
+    "type": "dance",
+    "era": "Classical",
+    "tags": [
+      "dance",
+      "classical",
+      "manipuri",
+      "manipur",
+      "performance art"
+    ]
   },
   {
-    "_id": "21",
     "site_id": "H021",
     "name": "Maori Mask",
-    "image_array": ["/images/sites/maori-mask.jpg", "/images/sites/maori-mask-2.jpg"],
+    "image_array": [
+      "/images/sites/maori-mask.jpg",
+      "/images/sites/maori-mask-2.jpg"
+    ],
     "description": "Traditional masks symbolizing Maori culture.",
     "youtube_video_id": "yW9PvT8rQ5U",
     "location": "New Zealand (cultural reference)",
-    "geotag": { "latitude": -40.9, "longitude": 174.9 }
+    "geotag": {
+      "latitude": -40.9,
+      "longitude": 174.9
+    },
+    "type": "artifact",
+    "era": "Traditional",
+    "tags": [
+      "artifact",
+      "traditional",
+      "maori",
+      "mask",
+      "new zealand",
+      "culture"
+    ]
   },
   {
-    "_id": "22",
     "site_id": "H022",
     "name": "Mohiniyattam",
-    "image_array": ["/images/sites/mohiniyattam.jpg", "/images/sites/mohiniyattam-2.jpg"],
+    "image_array": [
+      "/images/sites/mohiniyattam.jpg",
+      "/images/sites/mohiniyattam-2.jpg"
+    ],
     "description": "Graceful classical dance form from Kerala.",
     "youtube_video_id": "d8H1X5iY7s0",
     "location": "Kerala, India",
-    "geotag": { "latitude": 10.85, "longitude": 76.27 }
+    "geotag": {
+      "latitude": 10.85,
+      "longitude": 76.27
+    },
+    "type": "dance",
+    "era": "Classical",
+    "tags": [
+      "dance",
+      "classical",
+      "mohiniyattam",
+      "kerala",
+      "performance art"
+    ]
   },
   {
-    "_id": "23",
     "site_id": "H023",
     "name": "Mysore Palace",
-    "image_array": ["/images/sites/mysore palace.jpg", "/images/sites/mysore-palace-2.jpg"],
+    "image_array": [
+      "/images/sites/mysore palace.jpg",
+      "/images/sites/mysore-palace-2.jpg"
+    ],
     "description": "Historic palace of the Wadiyar dynasty in Mysore.",
     "youtube_video_id": "UaTzDAKKbQI",
     "location": "Mysuru, Karnataka, India",
-    "geotag": { "latitude": 12.3052, "longitude": 76.6552 }
+    "geotag": {
+      "latitude": 12.3052,
+      "longitude": 76.6552
+    },
+    "type": "palace",
+    "era": "Wadiyar",
+    "tags": [
+      "palace",
+      "wadiyar",
+      "mysuru",
+      "karnataka",
+      "architecture",
+      "history"
+    ]
   },
   {
-    "_id": "24",
     "site_id": "H024",
     "name": "Oral History",
-    "image_array": ["/images/sites/Oral History.jpg", "/images/sites/oral-history-2.jpg"],
+    "image_array": [
+      "/images/sites/Oral History.jpg",
+      "/images/sites/oral-history-2.jpg"
+    ],
     "description": "Tradition of passing culture and stories through spoken word.",
     "youtube_video_id": "uYp0PjD4ySk",
     "location": "All over India",
-    "geotag": { "latitude": 23.0, "longitude": 78.0 }
+    "geotag": {
+      "latitude": 23,
+      "longitude": 78
+    },
+    "type": "tradition",
+    "era": "Ancient",
+    "tags": [
+      "tradition",
+      "ancient",
+      "oral history",
+      "storytelling",
+      "culture",
+      "heritage"
+    ]
   },
   {
-    "_id": "25",
     "site_id": "H025",
     "name": "Raksha Bandhan",
-    "image_array": ["/images/sites/raksha-bandhan.jpg", "/images/sites/raksha-bandhan-2.jpg"],
+    "image_array": [
+      "/images/sites/raksha-bandhan.jpg",
+      "/images/sites/raksha-bandhan-2.jpg"
+    ],
     "description": "Festival celebrating the bond between brothers and sisters.",
     "youtube_video_id": "Q7s5O1Pk8Sw",
     "location": "All over India",
-    "geotag": { "latitude": 28.6, "longitude": 77.2 }
+    "geotag": {
+      "latitude": 28.6,
+      "longitude": 77.2
+    },
+    "type": "festival",
+    "era": "Traditional",
+    "tags": [
+      "festival",
+      "traditional",
+      "raksha bandhan",
+      "hindu",
+      "siblings",
+      "india"
+    ]
   },
   {
-    "_id": "26",
     "site_id": "H026",
     "name": "Red Fort",
-    "image_array": ["/images/sites/red-fort.jpg", "/images/sites/red-fort-2.jpg"],
+    "image_array": [
+      "/images/sites/red-fort.jpg",
+      "/images/sites/red-fort-2.jpg"
+    ],
     "description": "UNESCO World Heritage site and symbol of India's independence.",
     "youtube_video_id": "EhoubiX8lat",
     "location": "Delhi, India",
-    "geotag": { "latitude": 28.6562, "longitude": 77.2410 }
+    "geotag": {
+      "latitude": 28.6562,
+      "longitude": 77.241
+    },
+    "type": "fort",
+    "era": "Mughal",
+    "tags": [
+      "unesco",
+      "fort",
+      "mughal",
+      "architecture",
+      "sandstone",
+      "history",
+      "delhi"
+    ]
   },
   {
-    "_id": "27",
     "site_id": "H027",
     "name": "Sanchi Stupa",
-    "image_array": ["/images/sites/sanchi-stupa.jpg", "/images/sites/sanchi-stupa-2.jpg"],
+    "image_array": [
+      "/images/sites/sanchi-stupa.jpg",
+      "/images/sites/sanchi-stupa-2.jpg"
+    ],
     "description": "One of the oldest stone structures in India, a Buddhist monument.",
     "youtube_video_id": "s9H1X9q7QdY",
     "location": "Madhya Pradesh, India",
-    "geotag": { "latitude": 23.4866, "longitude": 77.7395 }
+    "geotag": {
+      "latitude": 23.4866,
+      "longitude": 77.7395
+    },
+    "type": "stupa",
+    "era": "Ancient",
+    "tags": [
+      "unesco",
+      "stupa",
+      "ancient",
+      "buddhist",
+      "monument",
+      "mauryan",
+      "madhya pradesh"
+    ]
   },
   {
-    "_id": "28",
     "site_id": "H028",
     "name": "Sacred Site Riverbank",
-    "image_array": ["/images/sites/Sacred Site Riverbank.jpg", "/images/sites/sacred-site-riverbank-2.jpg"],
+    "image_array": [
+      "/images/sites/Sacred Site Riverbank.jpg",
+      "/images/sites/sacred-site-riverbank-2.jpg"
+    ],
     "description": "Riverbanks in India considered sacred for rituals and worship.",
     "youtube_video_id": "aiMxfVxg87Q",
     "location": "Varanasi, Uttar Pradesh, India",
-    "geotag": { "latitude": 25.3176, "longitude": 82.9739 }
+    "geotag": {
+      "latitude": 25.3176,
+      "longitude": 82.9739
+    },
+    "type": "sacred_site",
+    "era": "Ancient",
+    "tags": [
+      "sacred site",
+      "ancient",
+      "riverbank",
+      "rituals",
+      "worship",
+      "varanasi",
+      "ghat"
+    ]
   },
   {
-    "_id": "29",
     "site_id": "H029",
     "name": "Victoria Memorial",
-    "image_array": ["/images/sites/victoria-memorial.jpg", "/images/sites/victoria-memorial-2.jpg"],
+    "image_array": [
+      "/images/sites/victoria-memorial.jpg",
+      "/images/sites/victoria-memorial-2.jpg"
+    ],
     "description": "A large marble building in Kolkata dedicated to Queen Victoria.",
     "youtube_video_id": "dQw4w9WgXcQ",
     "location": "Kolkata, West Bengal, India",
-    "geotag": { "latitude": 22.5448, "longitude": 88.3426 }
+    "geotag": {
+      "latitude": 22.5448,
+      "longitude": 88.3426
+    },
+    "type": "memorial",
+    "era": "Colonial",
+    "tags": [
+      "memorial",
+      "colonial",
+      "british",
+      "kolkata",
+      "west bengal",
+      "architecture"
+    ]
   },
   {
-    "_id": "30",
     "site_id": "H030",
     "name": "Warli Art",
-<<<<<<< Updated upstream
-    "image_array": ["/images/sites/warli.jpg", "/images/sites/warli-2.jpg"],
-=======
-    "image_array": ["/public/images/ar-video.jpg", "/images/sites/warli-2.jpg"],
->>>>>>> Stashed changes
+    "image_array": [
+      "/images/sites/warli.jpg",
+      "/images/sites/warli-2.jpg"
+    ],
     "description": "A tribal art form practiced in Maharashtra, depicting daily life.",
     "youtube_video_id": "F9n4D5k7L8m",
     "location": "Maharashtra, India",
-    "geotag": { "latitude": 19.6, "longitude": 73.0 }
+    "geotag": {
+      "latitude": 19.6,
+      "longitude": 73
+    },
+    "type": "art",
+    "era": "Traditional",
+    "tags": [
+      "art",
+      "traditional",
+      "warli",
+      "tribal",
+      "folk art",
+      "maharashtra"
+    ]
   }
 ]

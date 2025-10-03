@@ -1,16 +1,65 @@
 // src/components/SiteDetail.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import heritageSites from "../assets/heritageSites.json"; // adjust path if you put JSON elsewhere
+import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
 
 export default function SiteDetail() {
   const { siteId } = useParams(); // expects /site/H001
   const navigate = useNavigate();
+  const [site, setSite] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const site = heritageSites.find((s) => s.site_id === siteId || s._id === siteId);
+  useEffect(() => {
+    const loadSite = async () => {
+      try {
+        setLoading(true);
+        const siteData = await fetchHeritageSiteById(siteId);
+        setSite(siteData);
+        setError(null);
+      } catch (err) {
+        console.error('Failed to load heritage site:', err);
+        setError('Failed to load heritage site. Please try again later.');
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (!site) {
+    if (siteId) {
+      loadSite();
+    }
+  }, [siteId]);
+
+  if (loading) {
+    return (
+      <div className="home-page" style={{ padding: 28 }}>
+        <header className="hh-header">
+          <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
+            <img src="/images/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
+            <div>
+              <div className="brand-title">HERITAGE HAVEN</div>
+              <div className="brand-sub">A new way to connect with culture</div>
+            </div>
+          </div>
+          <div style={{ textAlign: "center", flex: 1 }}>
+            <h1 className="page-title">Loading...</h1>
+          </div>
+          <div className="header-right">
+            <div className="user-name">Prannoy Chandola</div>
+            <div className="user-avatar" />
+          </div>
+        </header>
+        <main style={{ padding: 28 }}>
+          <div style={{ textAlign: "center", marginTop: "50px" }}>
+            Loading heritage site details...
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (error || !site) {
     return (
       <div className="home-page" style={{ padding: 28 }}>
         <header className="hh-header">
@@ -32,7 +81,7 @@ export default function SiteDetail() {
 
         <main style={{ padding: 28 }}>
           <h2>Site not found</h2>
-          <p>No site matches <strong>{siteId}</strong>. Return to home to choose another site.</p>
+          <p>{error || `No site matches ${siteId}. Return to home to choose another site.`}</p>
           <button className="signup-btn small" onClick={() => navigate("/home")}>Back to Home</button>
         </main>
       </div>
