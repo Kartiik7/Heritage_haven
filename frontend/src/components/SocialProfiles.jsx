@@ -1,11 +1,27 @@
 // src/components/SocialProfiles.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../app.css";
 
-const mockProfiles = [
-  { id: "p1", name: "Heritage Enthusiasts", desc: "Share photos and stories." },
-  { id: "p2", name: "Monuments Photography", desc: "Photography group for monuments." },
-  { id: "p3", name: "Festivals & Culture", desc: "Discuss festivals and traditions." },
+const sampleGroups = [
+  {
+    id: "g1",
+    title: "Heritage Enthusiasts",
+    desc: "Share photos and stories.",
+    img: "/images/enthusiast.jpg",
+  },
+  {
+    id: "g2",
+    title: "Monuments Photography",
+    desc: "Photography group for monuments.",
+    img: "/images/photography.jpg",
+  },
+  {
+    id: "g3",
+    title: "Festivals & Culture",
+    desc: "Discuss festivals and traditions.",
+    img: "/images/culture.jpg",
+  },
 ];
 
 export default function SocialProfiles() {
@@ -23,7 +39,7 @@ export default function SocialProfiles() {
         </div>
 
         <div style={{ textAlign: "center", flex: 1 }}>
-          <h1 className="page-title">Social Profiles</h1>
+          <h1 className="page-title">Social Groups</h1>
         </div>
 
         <div className="header-right">
@@ -32,26 +48,43 @@ export default function SocialProfiles() {
         </div>
       </header>
 
-      <main style={{ padding: 28 }}>
-        <div className="features-wrap" style={{ gap: 18 }}>
-          {mockProfiles.map((p) => (
-            <article key={p.id} className="feature-card" style={{ alignItems: "center" }}>
-              <div className="feature-thumb">
-                <div className="thumb-placeholder" style={{ background: "linear-gradient(180deg,#fff,#ddd)" }} />
+      <main className="home-main" style={{ padding: 28 }}>
+        <div className="features-wrap" style={{ gap: 28 }}>
+          {sampleGroups.map((g) => (
+            <article key={g.id} className="group-card">
+              <div className="group-left">
+                <img src={g.img} alt={g.title} className="group-thumb" />
               </div>
 
-              <div style={{ flex: 1 }}>
-                <div className="feature-title">{p.name}</div>
-                <p style={{ color: "rgba(255,255,255,0.9)" }}>{p.desc}</p>
-                <div style={{ marginTop: 10 }}>
-                  <button className="signup-btn small" onClick={() => alert("Open group: " + p.name)}>
+              <div className="group-body">
+                <div className="group-title">{g.title}</div>
+                <div className="group-desc">{g.desc}</div>
+
+                <div style={{ marginTop: 14 }}>
+                  <button
+                    className="card-btn small"
+                    onClick={() => {
+                      /* go to group or open modal */
+                      alert(`Open group ${g.title}`);
+                    }}
+                    aria-label={`Open ${g.title}`}
+                  >
                     Open Group
                   </button>
                 </div>
               </div>
 
-              <div>
-                <button className="feature-go" onClick={() => alert("Visit " + p.name)}>➜</button>
+              <div className="group-right">
+                <button
+                  className="feature-go group-go"
+                  onClick={() => {
+                    /* go to group page */
+                    navigate(`/social/${g.id}`);
+                  }}
+                  aria-label={`go to ${g.title}`}
+                >
+                  ➜
+                </button>
               </div>
             </article>
           ))}

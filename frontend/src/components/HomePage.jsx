@@ -1,21 +1,21 @@
 // src/components/HomePage.jsx
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../app.css";
 
 export default function HomePage({ userName: propUserName = "Prannoy Chandola", onLogout }) {
-  const navigate = useNavigate();                    // <-- added
+  const navigate = useNavigate();
   const location = useLocation();
-  const stateUser = location.state?.userName;
 
-  // fallback to localStorage if available (remember me)
+  // allow passing username from navigation state (login)
+  const stateUser = location.state?.userName;
+  // fallback to prop or localStorage (if you implement remember)
   let storedUser = null;
   try {
     storedUser = localStorage.getItem("hh_userName");
   } catch (err) {
     storedUser = null;
   }
-
   const userName = stateUser || propUserName || storedUser || "Guest";
 
   useEffect(() => {
@@ -30,38 +30,42 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
   const features = [
     {
       title: "Discover",
-      route: "/discover",
       bullets: [
         "Explore India's rich heritage of festivals and monuments.",
         "Find detailed stories, history, and cultural significance.",
         "Reconnect with traditions no matter where you are.",
       ],
+      path: "/discover",
     },
     {
       title: "AR/Video Tour",
-      route: "/ar-tour",
       bullets: [
         "Step into monuments and festivals through immersive AR/VR.",
         "Experience India's beauty as if you are truly there.",
         "Travel virtually, anytime, from anywhere.",
       ],
+      path: "/ar-tour",
     },
     {
       title: "Social Profiles",
-      route: "/social",
       bullets: [
         "Connect with others who share your cultural interests.",
         "Share your experiences, memories, and celebrations.",
         "Build a community that keeps heritage alive.",
       ],
+      path: "/social",
     },
   ];
 
   return (
     <div className="home-page">
       <header className="hh-header home-header">
-        <div className="logo-box">
-          <img src="/heritage-haven-logo.png" alt="Heritage Haven" className="logo-img" />
+        <div
+          className="logo-box"
+          onClick={() => navigate("/home", { state: { userName } })}
+          style={{ cursor: "pointer" }}
+        >
+          <img src="/namaste-techies-logo.png" alt="Heritage Haven" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
@@ -76,7 +80,11 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
           {onLogout && (
             <button
               className="text-btn"
-              onClick={onLogout}
+              onClick={() => {
+                // optional: clear stored user on logout
+                try { localStorage.removeItem("hh_userName"); } catch (e) {}
+                onLogout();
+              }}
               style={{
                 marginLeft: 12,
                 background: "transparent",
@@ -94,7 +102,13 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
       <main className="home-main home-main-full">
         <div className="features-wrap features-wrap-full">
           {features.map((f, i) => (
-            <article className="feature-card home-feature-card" key={i}>
+            <article
+              className="feature-card home-feature-card"
+              key={i}
+              // make whole card clickable (optional)
+              onClick={() => navigate(f.path, { state: { userName } })}
+              style={{ cursor: "pointer" }}
+            >
               <div className="feature-thumb">
                 <div
                   className={`thumb-placeholder ${
@@ -116,7 +130,10 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
                 <button
                   className="feature-go"
                   aria-label={`open ${f.title}`}
-                  onClick={() => navigate(f.route)}            /* <-- navigation */
+                  onClick={(e) => {
+                    e.stopPropagation(); // prevent the outer onClick double-fire
+                    navigate(f.path, { state: { userName } });
+                  }}
                 >
                   ➜
                 </button>

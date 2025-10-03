@@ -5,9 +5,6 @@
 
 /* Reset-ish */
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
-/* small helpers for new pages */
-.home-main { background: transparent; }
-.feature-card img { box-shadow: 12px 12px 0 rgba(0,0,0,0.2); }
 
 :root{
   --panel-width: 480px;
@@ -17,6 +14,23 @@
   --card-bg-start: rgba(18,40,50,0.85);
   --card-bg-end: rgba(20,28,36,0.75);
 }
+
+/* -------------------------
+   Global page background & layout
+   ------------------------- */
+.page{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  gap: 40px;
+  background: radial-gradient(1200px 600px at 10% 20%, rgba(0,0,0,0.25), transparent),
+              linear-gradient(135deg, #003973 0%, #2f9db1 40%, #c85a5a 100%);
+  background-blend-mode: overlay;
+  color: white;
+}
+
 /* ---------- Auth (full-screen) styles ---------- */
 
 .auth-page {
@@ -68,219 +82,248 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 
-/* footer spacing on auth pages */
-.auth-footer { height: 56px; padding: 0 40px; }
-
-/* responsive adjustments */
-@media (max-width: 900px) {
-  .auth-card { width: min(520px, 96%); padding: 20px; }
-  .page-title { font-size: 40px; }
-}
-
 /* -------------------------
-   Global page background & layout
+   SiteDetail (full-page themed card)
    ------------------------- */
-.page{
+
+/* Full-page wrapper for site detail, matches home/login theme */
+.site-page {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px;
-  gap: 40px;
-  background: radial-gradient(1200px 600px at 10% 20%, rgba(0,0,0,0.25), transparent),
-              linear-gradient(135deg, #003973 0%, #2f9db1 40%, #c85a5a 100%);
-  background-blend-mode: overlay;
+  flex-direction: column;
+  background: linear-gradient(135deg, #003973 0%, #2f9db1 40%, #c85a5a 100%);
   color: white;
+  overflow-x: hidden;
 }
 
-/* -------------------------
-   Left panel: Welcome text (login/signup)
-   ------------------------- */
-.left-panel{
+/* center main content vertically and horizontally */
+.site-main {
   flex: 1;
-  max-width: 700px;
-  padding-left: 40px;
-}
-.logo-img {
-  width: 64px;       /* adjust as needed */
-  height: 64px;
-  object-fit: contain;
-  display: block;
-  margin-right: 8px;
-}
-
-.welcome-small{
-  font-size: 40px;
-  opacity: 0.9;
-  letter-spacing: 0.6px;
-  margin-bottom: 16px;
-}
-
-.title{
-  font-size: 120px;
-  line-height: 0.9;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -2px;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.4);
-  font-family: "Poppins", "Segoe UI", sans-serif;
-}
-
-.tagline{
-  margin-top: 18px;
-  font-size: 40px;
-  opacity: 0.95;
-  color: rgba(255,255,255,0.95);
-}
-
-/* -------------------------
-   Right panel: forms
-   ------------------------- */
-.right-panel{
-  width: var(--panel-width);
-  max-width: 50%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 12px;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
-/* Card (login / signup) */
-.login-card{
-  width: 100%;
-  background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
+/* The central card that contains left image + right info */
+.site-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 92%;
+  max-width: 1200px;
+  background: linear-gradient(90deg, rgba(6,36,65,0.9), rgba(24,96,135,0.14));
   backdrop-filter: blur(6px);
-  border-radius: 8px;
-  padding: 28px 26px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.02);
-  border-left: 6px solid rgba(255,255,255,0.02);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: inset 0 6px 14px rgba(0,0,0,0.18), 0 12px 32px rgba(0,0,0,0.32);
+  align-items: flex-start;
 }
 
-/* Form elements */
-.login-form .label{
-  display:block;
-  font-size: 14px;
-  margin: 10px 0 6px;
-  color: rgba(255,255,255,0.85);
-  font-weight: 500;
+/* Left image column */
+.site-left {
+  flex: 1.1;
+  min-width: 220px;
 }
-
-/* fallback label styling if plain <label> used */
-.login-form label {
-  font-size: 14px;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 6px;
+.site-main-image {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 12px;
   display: block;
 }
 
-.input{
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  padding: 8px 10px;
-  font-size: 14px;
-  background: white;
-  color: #111;
-  outline: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+/* Right info column */
+.site-right {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* Grid-ish row helper */
-.row{
-  display:flex;
-  gap: 10px;
+/* Title and description */
+.site-right h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.site-right p { color: rgba(255,255,255,0.92); line-height: 1.5; }
+
+/* Video block */
+.site-video {
+  margin-top: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 10px;
+  border-radius: 8px;
+}
+.site-video h3 { margin: 0 0 8px 0; color: white; }
+.site-video iframe { border-radius: 6px; border: none; width: 100%; }
+
+/* Action buttons (right under video) */
+.site-actions {
   margin-top: 12px;
+  display: flex;
+  gap: 12px;
   align-items: center;
 }
-
-/* helpers */
-.between{ justify-content: space-between; }
-.center{ align-items: center; }
-
-/* link-like (unused if prefer text-btn) */
-.link-like{
-  background: transparent;
+.site-btn {
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(39,88,104,1) 50%, rgba(197,74,74,0.95));
+  color: white;
+  padding: 10px 16px;
   border: none;
-  color: rgba(255,255,255,0.95);
+  border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
-  padding: 6px;
-  font-size: 14px;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+.site-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.38);
 }
 
-/* Remember block - tuned smaller and spaced */
-.remember{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  font-weight:600;
-  color: rgba(255,255,255,0.95);
-  font-size: 13px;         /* smaller text */
-}
+/* Thumbnails area (row beneath the card) */
 
-.remember input[type="checkbox"]{
-  width:14px;
-  height:14px;
-  margin: 0;
-  transform: none;
-}
-
-/* Text button style (for small text toggles) */
-.text-btn {
-  background: none;
+/* Common button style for Discover cards */
+.card-btn {
+  background: linear-gradient(135deg, #003973, #e43a15);
+  color: white;
+  font-weight: bold;
   border: none;
-  color: rgba(255,255,255,0.95);
-  font-size: 13px;        /* reduced size */
-  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-right: 8px;
   cursor: pointer;
-  padding: 2px 6px;
-  line-height: 1.2;
-  transition: color .2s;
-  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
 }
 
-.text-btn:hover {
-  color: #ffd369; /* highlight color on hover */
-  text-decoration: underline;
+.card-btn:hover {
+  background: linear-gradient(135deg, #e43a15, #003973);
+  transform: translateY(-2px);
+}
+/* ====== card buttons used across Discover / listings ====== */
+.card-btn {
+  background: linear-gradient(135deg, #003973 0%, #2f9db1 50%, #c85a5a 100%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Ensure small button/remember spacing */
-.row.between.center {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.card-btn.small {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+  border-radius: 7px;
 }
-
-/* Sign up / action area */
-.signup-wrap{
-  margin-top: 18px; /* slightly reduced to tighten layout */
-  display:flex;
-  justify-content:flex-start;
-}
-
-/* Big gradient primary button (used for form submit) */
-.signup-btn{
+/* Stronger rule for buttons used inside feature-card list (Discover) */
+.feature-card .signup-btn,
+.feature-card .signup-btn.small {
   background: linear-gradient(90deg, rgba(7,46,70,1) 0%, rgba(39,88,104,1) 50%, rgba(197,74,74,0.9) 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  font-size: 0.95rem;
+}
+
+.feature-card .signup-btn.small {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+}
+
+.feature-card .signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.38);
+}
+/* Align action buttons side by side nicely */
+.site-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start; /* keeps them aligned left */
+  gap: 16px; /* equal spacing between buttons */
+  flex-wrap: wrap; /* prevents overflow on small screens */
+}
+
+/* Ensure both action buttons look uniform */
+.site-actions .site-btn {
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(39,88,104,1) 50%, rgba(197,74,74,0.95));
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
-  transition: transform .12s ease, box-shadow .12s ease;
-  font-size: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.signup-btn:hover{
+.site-actions .site-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.38);
 }
 
-.signup-btn.small {
-  padding: 8px 14px;
-  font-size: 14px;
-  border-radius: 5px;
+.card-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.36);
+  opacity: 0.98;
+}
+
+.card-btn.ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.95);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: none;
+}
+
+.card-btn:active {
+  transform: translateY(0);
+}
+
+/* Thumbnails area */
+.site-thumbnails {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;   /* center thumbnails */
+  gap: 16px;                 /* equal spacing between them */
+  flex-wrap: wrap;           /* wrap on smaller screens */
+}
+
+/* Thumbnail images */
+.site-thumbnails img {
+  width: 160px;              /* same width */
+  height: 120px;             /* same height */
+  object-fit: cover;         /* ensures images don’t stretch */
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+.site-thumbnails img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ensure the main content has a comfortable bottom padding so footer doesn't overlap */
+.home-main, .site-main, .auth-main {
+  padding-bottom: 120px;
 }
 
 /* -------------------------
@@ -345,11 +388,11 @@
   opacity:0.95;
 }
 
-user-avatar{
+.user-avatar{
   width:44px;
   height:44px;
   border-radius:50%;
-  background: black; /* replace with user image using inline style or <img> if you have one */
+  background:#000; /* replace with user image using inline style or <img> if you have one */
   border:4px solid rgba(255,255,255,0.06);
 }
 
@@ -559,6 +602,9 @@ body {
   .feature-card { grid-template-columns: 140px 1fr 84px; padding: 26px; }
   .thumb-placeholder { width: 120px; height: 120px; }
   .feature-go { width: 72px; height: 72px; font-size: 20px; }
+  .site-card { flex-direction: column; align-items: center; padding: 16px; }
+  .site-left, .site-right { width: 100%; }
+  .site-main-image { max-height: 320px; object-fit: cover; }
 }
 
 @media (max-width: 1000px) {
@@ -571,14 +617,20 @@ body {
   .thumb-placeholder { width: 72px; height: 72px; }
   .feature-go { width: 54px; height: 54px; font-size: 18px; }
   .left-panel, .right-panel { display: none; } /* hide old panels when on small screens */
+  .site-thumbnails img { width: 96px; height: 64px; }
+  .site-card { width: 96%; }
 }
 
 @media (max-width: 520px){
   .title{ font-size: 44px; }
   .tagline{ font-size: 16px; }
   .login-card { padding: 22px; }
+  .site-thumbnails img { width: 84px; height: 56px; }
 }
-/* Feature card images */
+
+/* -------------------------
+   Feature card images
+   ------------------------- */
 .discover-thumb {
   background-image: url('/images/discover.jpg');
   background-size: cover;
@@ -596,3 +648,204 @@ body {
   background-size: cover;
   background-position: center;
 }
+/* AR/Video Tour Cards wrapper */
+/* ARTour grid & cards to ensure alignment */
+.ar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Card: equal height with vertical layout */
+.ar-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, rgba(6,36,65,0.9), rgba(24,96,135,0.16));
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: inset 0 6px 16px rgba(0,0,0,0.22), 0 8px 20px rgba(0,0,0,0.28);
+  min-height: 420px;        /* keep cards consistent — tweak as needed */
+}
+
+/* top row: thumbnail + intro text */
+.ar-card-top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.ar-card-top img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.ar-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+.ar-card p {
+  margin: 6px 0 0;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.45;
+  font-size: 14px;
+  max-height: 4.3em; /* keep brief preview */
+  overflow: hidden;
+}
+
+/* video wrap keeps consistent height */
+.ar-card-video {
+  margin-top: 12px;
+  flex: 1 1 auto; /* let video area expand to fill vertical space */
+  display: flex;
+  align-items: center;
+}
+.video-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  max-height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.06);
+}
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* details button anchored at bottom */
+.details-btn {
+  margin-top: 12px;
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(197,74,74,0.95));
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.details-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.32);
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .ar-card { min-height: 420px; }
+  .ar-card-top img { width: 100px; height: 72px; }
+  .video-wrap { min-height: 140px; max-height: 200px; }
+}
+@media (max-width: 520px) {
+  .ar-grid { grid-template-columns: 1fr; }
+  .ar-card { min-height: auto; }
+  .video-wrap { min-height: 180px; max-height: 260px; }
+}
+/* ---------- Social / Group list card styling (matches your theme) ---------- */
+
+.group-card {
+  display: grid;
+  grid-template-columns: 140px 1fr 90px;
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(6,36,65,0.9), rgba(24,96,135,0.24), rgba(210,90,90,0.12));
+  box-shadow: inset 0 8px 18px rgba(0,0,0,0.28), 0 10px 28px rgba(0,0,0,0.26);
+  transition: transform .14s ease, box-shadow .14s ease;
+  width: 100%;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.44);
+}
+
+.group-left {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.group-thumb {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.18);
+  background: linear-gradient(180deg,#fff,#eee); /* placeholder fallback */
+}
+
+/* body area */
+.group-body {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* title + desc align with existing feature card styling */
+.group-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+}
+
+.group-desc {
+  color: rgba(255,255,255,0.9);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* small primary pill button — reuse look of card-btn */
+.card-btn.small {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  background: linear-gradient(90deg, rgba(7,46,70,1), rgba(39,88,104,1) 50%, rgba(197,74,74,0.95));
+  color: white;
+}
+
+/* right arrow — keep same aesthetics but center vertically */
+.group-right {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* slightly smaller arrow to match height */
+.group-go {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 22px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.32);
+}
+
+/* re-use your .feature-go styling then tweak size */
+.feature-go.group-go {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+/* Responsive: stack card columns on narrow screens */
+@media (max-width: 900px) {
+  .group-card {
+    grid-template-columns: 92px 1fr;
+    padding: 16px;
+  }
+  .group-right { display: none; } /* hide arrow on narrow screens to save space */
+  .group-thumb { width: 92px; height: 92px; }
+  .group-title { font-size: 20px; }
+}
+
