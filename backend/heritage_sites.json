@@ -2907,169 +2907,337 @@
   {
     "site_id": "H157",
     "name": "Meghalaya Living Root Bridges",
-    "image_array": ["/images/sites/rootbridges.jpg", "/images/sites/rootbridges-2.jpg"],
+    "image_array": [
+      "/images/sites/rootbridges.jpg",
+      "/images/sites/rootbridges-2.jpg"
+    ],
     "description": "Unique bridges grown from rubber tree roots by Khasi tribes.",
     "youtube_video_id": "d9Qk3vJpX6M",
     "location": "Meghalaya, India",
-    "geotag": {"latitude": 25.2966, "longitude": 91.7109},
+    "geotag": {
+      "latitude": 25.2966,
+      "longitude": 91.7109
+    },
     "type": "architecture",
     "era": "Traditional",
-    "tags": ["root bridges", "living bridges", "meghalaya", "tribal", "architecture"]
+    "tags": [
+      "root bridges",
+      "living bridges",
+      "meghalaya",
+      "tribal",
+      "architecture"
+    ]
   },
   {
     "site_id": "H158",
     "name": "Srirangam Temple",
-    "image_array": ["/images/sites/srirangam.jpg", "/images/sites/srirangam-2.jpg"],
+    "image_array": [
+      "/images/sites/srirangam.jpg",
+      "/images/sites/srirangam-2.jpg"
+    ],
     "description": "Largest functioning Hindu temple in the world dedicated to Lord Ranganatha.",
     "youtube_video_id": "L9xQ7Pq3xB4",
     "location": "Srirangam, Tamil Nadu, India",
-    "geotag": {"latitude": 10.8539, "longitude": 78.6936},
+    "geotag": {
+      "latitude": 10.8539,
+      "longitude": 78.6936
+    },
     "type": "temple",
     "era": "Medieval",
-    "tags": ["srirangam", "temple", "hindu", "tamil nadu", "architecture"]
+    "tags": [
+      "srirangam",
+      "temple",
+      "hindu",
+      "tamil nadu",
+      "architecture"
+    ]
   },
   {
     "site_id": "H159",
     "name": "Warangal Fort",
-    "image_array": ["/images/sites/warangal.jpg", "/images/sites/warangal-2.jpg"],
+    "image_array": [
+      "/images/sites/warangal.jpg",
+      "/images/sites/warangal-2.jpg"
+    ],
     "description": "Historic fort built by Kakatiya dynasty in Telangana.",
     "youtube_video_id": "XzP0kN9cQ2M",
     "location": "Warangal, Telangana, India",
-    "geotag": {"latitude": 17.9783, "longitude": 79.5900},
+    "geotag": {
+      "latitude": 17.9783,
+      "longitude": 79.5900
+    },
     "type": "fort",
     "era": "Medieval",
-    "tags": ["warangal", "fort", "telangana", "kakatiya", "heritage"]
+    "tags": [
+      "warangal",
+      "fort",
+      "telangana",
+      "kakatiya",
+      "heritage"
+    ]
   },
   {
     "site_id": "H160",
     "name": "Bhimbetka Rock Shelters",
-    "image_array": ["/images/sites/bhimbetka.jpg", "/images/sites/bhimbetka-2.jpg"],
+    "image_array": [
+      "/images/sites/bhimbetka.jpg",
+      "/images/sites/bhimbetka-2.jpg"
+    ],
     "description": "Prehistoric rock shelters with ancient cave paintings, UNESCO site.",
     "youtube_video_id": "F9hJx5XlD2I",
     "location": "Madhya Pradesh, India",
-    "geotag": {"latitude": 22.9375, "longitude": 78.2197},
+    "geotag": {
+      "latitude": 22.9375,
+      "longitude": 78.2197
+    },
     "type": "cave",
     "era": "Prehistoric",
-    "tags": ["bhimbetka", "unesco", "cave", "prehistoric", "paintings"]
+    "tags": [
+      "bhimbetka",
+      "unesco",
+      "cave",
+      "prehistoric",
+      "paintings"
+    ]
   },
   {
     "site_id": "H161",
     "name": "Thar Desert",
-    "image_array": ["/images/sites/thar.jpg", "/images/sites/thar-2.jpg"],
+    "image_array": [
+      "/images/sites/thar.jpg",
+      "/images/sites/thar-2.jpg"
+    ],
     "description": "Vast arid region in Rajasthan, famous for dunes and desert culture.",
     "youtube_video_id": "R8uW7GdJ1KQ",
     "location": "Rajasthan, India",
-    "geotag": {"latitude": 26.9124, "longitude": 70.9131},
+    "geotag": {
+      "latitude": 26.9124,
+      "longitude": 70.9131
+    },
     "type": "natural site",
     "era": "Natural",
-    "tags": ["thar", "desert", "rajasthan", "dunes", "culture"]
+    "tags": [
+      "thar",
+      "desert",
+      "rajasthan",
+      "dunes",
+      "culture"
+    ]
   },
   {
     "site_id": "H162",
     "name": "Pattadakal Temples",
-    "image_array": ["/images/sites/pattadakal.jpg", "/images/sites/pattadakal-2.jpg"],
+    "image_array": [
+      "/images/sites/pattadakal.jpg",
+      "/images/sites/pattadakal-2.jpg"
+    ],
     "description": "UNESCO site of 7th-8th century Chalukya architecture in Karnataka.",
     "youtube_video_id": "X3oZ9Pq2V5I",
     "location": "Karnataka, India",
-    "geotag": {"latitude": 16.1061, "longitude": 75.92},
+    "geotag": {
+      "latitude": 16.1061,
+      "longitude": 75.92
+    },
     "type": "temple",
     "era": "Chalukya",
-    "tags": ["pattadakal", "unesco", "temple", "karnataka", "architecture"]
+    "tags": [
+      "pattadakal",
+      "unesco",
+      "temple",
+      "karnataka",
+      "architecture"
+    ]
   },
   {
     "site_id": "H163",
     "name": "Chilika Lake",
-    "image_array": ["/images/sites/chilika.jpg", "/images/sites/chilika-2.jpg"],
+    "image_array": [
+      "/images/sites/chilika.jpg",
+      "/images/sites/chilika-2.jpg"
+    ],
     "description": "Largest coastal lagoon in India, habitat of migratory birds.",
     "youtube_video_id": "N5tJxPq4D9L",
     "location": "Odisha, India",
-    "geotag": {"latitude": 19.7, "longitude": 85.3},
+    "geotag": {
+      "latitude": 19.7,
+      "longitude": 85.3
+    },
     "type": "natural site",
     "era": "Natural",
-    "tags": ["chilika", "lake", "odisha", "birds", "wetland"]
+    "tags": [
+      "chilika",
+      "lake",
+      "odisha",
+      "birds",
+      "wetland"
+    ]
   },
   {
     "site_id": "H164",
     "name": "Hazaribagh National Park",
-    "image_array": ["/images/sites/hazaribagh.jpg", "/images/sites/hazaribagh-2.jpg"],
+    "image_array": [
+      "/images/sites/hazaribagh.jpg",
+      "/images/sites/hazaribagh-2.jpg"
+    ],
     "description": "Park with diverse flora and fauna in Jharkhand.",
     "youtube_video_id": "Q6uZk3V7X8A",
     "location": "Jharkhand, India",
-    "geotag": {"latitude": 23.998, "longitude": 85.36},
+    "geotag": {
+      "latitude": 23.998,
+      "longitude": 85.36
+    },
     "type": "national park",
     "era": "Natural",
-    "tags": ["hazaribagh", "national park", "jharkhand", "wildlife", "flora fauna"]
+    "tags": [
+      "hazaribagh",
+      "national park",
+      "jharkhand",
+      "wildlife",
+      "flora fauna"
+    ]
   },
   {
     "site_id": "H165",
     "name": "Kanha National Park",
-    "image_array": ["/images/sites/kanha.jpg", "/images/sites/kanha-2.jpg"],
+    "image_array": [
+      "/images/sites/kanha.jpg",
+      "/images/sites/kanha-2.jpg"
+    ],
     "description": "Famous tiger reserve in Madhya Pradesh with rich biodiversity.",
     "youtube_video_id": "Y6oR7Dk2V3Q",
     "location": "Madhya Pradesh, India",
-    "geotag": {"latitude": 22.334, "longitude": 80.611},
+    "geotag": {
+      "latitude": 22.334,
+      "longitude": 80.611
+    },
     "type": "national park",
     "era": "Natural",
-    "tags": ["kanha", "tiger reserve", "mp", "wildlife", "biodiversity"]
+    "tags": [
+      "kanha",
+      "tiger reserve",
+      "mp",
+      "wildlife",
+      "biodiversity"
+    ]
   },
   {
     "site_id": "H166",
     "name": "Bhadrakali Temple",
-    "image_array": ["/images/sites/bhadrakali.jpg", "/images/sites/bhadrakali-2.jpg"],
+    "image_array": [
+      "/images/sites/bhadrakali.jpg",
+      "/images/sites/bhadrakali-2.jpg"
+    ],
     "description": "Ancient temple dedicated to Goddess Bhadrakali in Andhra Pradesh.",
     "youtube_video_id": "V9oJ3Xk1Q2L",
     "location": "Andhra Pradesh, India",
-    "geotag": {"latitude": 16.5062, "longitude": 80.6480},
+    "geotag": {
+      "latitude": 16.5062,
+      "longitude": 80.6480
+    },
     "type": "temple",
     "era": "Ancient",
-    "tags": ["bhadrakali", "temple", "andhra pradesh", "hindu", "heritage"]
+    "tags": [
+      "bhadrakali",
+      "temple",
+      "andhra pradesh",
+      "hindu",
+      "heritage"
+    ]
   },
   {
     "site_id": "H167",
     "name": "Ranganathittu Bird Sanctuary",
-    "image_array": ["/images/sites/ranganathittu.jpg", "/images/sites/ranganathittu-2.jpg"],
+    "image_array": [
+      "/images/sites/ranganathittu.jpg",
+      "/images/sites/ranganathittu-2.jpg"
+    ],
     "description": "Popular bird sanctuary in Karnataka along the Kaveri river.",
     "youtube_video_id": "M3oL7Xq2V5K",
     "location": "Karnataka, India",
-    "geotag": {"latitude": 12.4032, "longitude": 76.515},
+    "geotag": {
+      "latitude": 12.4032,
+      "longitude": 76.515
+    },
     "type": "sanctuary",
     "era": "Natural",
-    "tags": ["ranganathittu", "bird sanctuary", "karnataka", "birds", "kaveri river"]
+    "tags": [
+      "ranganathittu",
+      "bird sanctuary",
+      "karnataka",
+      "birds",
+      "kaveri river"
+    ]
   },
   {
     "site_id": "H168",
     "name": "Ganga Aarti at Varanasi",
-    "image_array": ["/images/sites/gangaaarti.jpg", "/images/sites/gangaaarti-2.jpg"],
+    "image_array": [
+      "/images/sites/gangaaarti.jpg",
+      "/images/sites/gangaaarti-2.jpg"
+    ],
     "description": "Evening ritual worship on the ghats of River Ganga in Varanasi.",
     "youtube_video_id": "P4xJ7Rk2L8M",
     "location": "Varanasi, Uttar Pradesh, India",
-    "geotag": {"latitude": 25.3176, "longitude": 82.9739},
+    "geotag": {
+      "latitude": 25.3176,
+      "longitude": 82.9739
+    },
     "type": "ritual",
     "era": "Traditional",
-    "tags": ["ganga aarti", "varanasi", "ritual", "ghats", "hindu"]
+    "tags": [
+      "ganga aarti",
+      "varanasi",
+      "ritual",
+      "ghats",
+      "hindu"
+    ]
   },
   {
     "site_id": "H169",
     "name": "Sundernagar Buddha Statue",
-    "image_array": ["/images/sites/sundernagar.jpg", "/images/sites/sundernagar-2.jpg"],
+    "image_array": [
+      "/images/sites/sundernagar.jpg",
+      "/images/sites/sundernagar-2.jpg"
+    ],
     "description": "Giant statue of Lord Buddha in Himachal Pradesh.",
     "youtube_video_id": "H7oK3Vd2Q9L",
     "location": "Himachal Pradesh, India",
-    "geotag": {"latitude": 31.4929, "longitude": 76.9172},
+    "geotag": {
+      "latitude": 31.4929,
+      "longitude": 76.9172
+    },
     "type": "statue",
     "era": "Modern",
-    "tags": ["buddha statue", "sundernagar", "himachal pradesh", "religion", "monument"]
+    "tags": [
+      "buddha statue",
+      "sundernagar",
+      "himachal pradesh",
+      "religion",
+      "monument"
+    ]
   },
   {
     "site_id": "H170",
     "name": "Elephanta Caves",
-    "image_array": ["/images/sites/elephanta.jpg", "/images/sites/elephanta-2.jpg"],
+    "image_array": [
+      "/images/sites/elephanta.jpg",
+      "/images/sites/elephanta-2.jpg"
+    ],
     "description": "Rock-cut cave temples near Mumbai, UNESCO World Heritage Site.",
     "youtube_video_id": "J3xL7Tq2V1O",
     "location": "Mumbai, Maharashtra, India",
-    "geotag": {"latitude": 18.9634, "longitude": 72.9317},
+    "geotag": {
+      "latitude": 18.9634,
+      "longitude": 72.9317
+    },
     "type": "cave",
     "era": "Ancient",
-    "tags": ["elephanta", "unesco", "caves", "mumbai", "temples"]
+    "tags": [
+      "elephanta",
+      "unesco",
+      "caves",
+      "mumbai",
+      "temples"
+    ]
   }
 ]

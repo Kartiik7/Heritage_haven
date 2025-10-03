@@ -93,58 +93,110 @@ export const fetchSiteRecommendations = async (siteId) => {
 };
 
 /**
- * Get personalized recommendations for a user
- * @param {string} token - Authentication token (optional for guest users)
- * @param {number} lat - User's latitude (optional)
- * @param {number} lon - User's longitude (optional)
- * @returns {Promise<Array>} Array of personalized recommended sites
+ * Get personalized recommendations for the home page
+ * @param {number} limit - Maximum number of recommendations to return (default: 10)
+ * @returns {Promise<Array>} Array of recommended heritage sites
  */
-export const fetchPersonalizedRecommendations = async (token = null, lat = null, lon = null) => {
+export const fetchHomeRecommendations = async (limit = 10) => {
   try {
-    const headers = {
-      'Content-Type': 'application/json'
-    };
+    // For now, we'll fetch all sites and return a random selection
+    // In a real implementation, this would be based on user preferences, history, etc.
+    const allSites = await fetchHeritageSites();
     
-    if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
-    }
-    
-    let url = `${API_BASE_URL}/recommendations/user`;
-    const params = new URLSearchParams();
-    if (lat !== null) params.append('lat', lat);
-    if (lon !== null) params.append('lon', lon);
-    if (params.toString()) url += `?${params.toString()}`;
-    
-    const response = await fetch(url, { headers });
-    
-    if (!response.ok) {
-      // For guests, fall back to general site recommendations
-      if (response.status === 401 && !token) {
-        return await fetchGeneralRecommendations();
-      }
-      throw new Error(`Failed to fetch personalized recommendations: ${response.status} ${response.statusText}`);
-    }
-    
-    const recommendations = await response.json();
-    return recommendations;
+    // Shuffle the array and take the first 'limit' items
+    const shuffled = allSites.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, limit);
   } catch (error) {
-    console.error('Error fetching personalized recommendations:', error);
-    // Fallback to general recommendations
-    return await fetchGeneralRecommendations();
+    console.error('Error fetching home recommendations:', error);
+    throw error;
   }
 };
 
 /**
- * Get general recommendations (fallback for guests)
- * @returns {Promise<Array>} Array of general recommended sites
+ * Register a new user
+ * @param {Object} userData - User registration data
+ * @param {string} userData.username - Username
+ * @param {string} userData.email - Email address
+ * @param {string} userData.password - Password
+ * @returns {Promise<Object>} User data with token
  */
-export const fetchGeneralRecommendations = async () => {
+export const registerUser = async (userData) => {
   try {
-    const sites = await fetchHeritageSites();
-    // Return first 6 sites as general recommendations
-    return sites.slice(0, 6);
+    const response = await fetch(`${API_BASE_URL}/auth/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Registration failed');
+    }
+
+    return data;
   } catch (error) {
-    console.error('Error fetching general recommendations:', error);
-    return [];
+    console.error('Error registering user:', error);
+    throw error;
+  }
+};
+
+/**
+ * Login user
+ * @param {Object} credentials - User login credentials
+ * @param {string} credentials.email - Email address
+ * @param {string} credentials.password - Password
+ * @returns {Promise<Object>} User data with token
+ */
+export const loginUser = async (credentials) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/auth/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Login failed');
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error logging in user:', error);
+    throw error;
+  }
+};
+
+/**
+ * Get user profile
+ * @param {string} token - Authentication token
+ * @returns {Promise<Object>} User profile data
+ */
+export const getUserProfile = async (token) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/auth/profile`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to fetch user profile');
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error fetching user profile:', error);
+    throw error;
   }
 };

@@ -1,20 +1,41 @@
 // src/components/LoginCard.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
+import { loginUser } from "../utils/api.js";
 import "../app.css";
 
 export default function LoginCard() {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: insert actual auth logic here
-    // For now we assume login succeeds and redirect to home
-    navigate("/home");
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const userData = await loginUser({ email, password });
+      login(userData);
+      
+      // Remember user preference
+      if (remember) {
+        localStorage.setItem("hh_rememberUser", "true");
+      } else {
+        localStorage.removeItem("hh_rememberUser");
+      }
+      
+      navigate("/home");
+    } catch (error) {
+      setError(error.message || "Login failed. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -42,6 +63,12 @@ export default function LoginCard() {
         <form className="auth-card" onSubmit={handleSubmit}>
           <h2 style={{ marginBottom: 8 }}>Log In</h2>
 
+          {error && (
+            <div className="error-message">
+              {error}
+            </div>
+          )}
+
           <label className="login-label">Email</label>
           <input
             className="input"
@@ -50,16 +77,7 @@ export default function LoginCard() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
             required
-          />
-
-          <label className="login-label">Username</label>
-          <input
-            className="input"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="username"
-            required
+            disabled={isLoading}
           />
 
           <label className="login-label">Password</label>
@@ -70,6 +88,7 @@ export default function LoginCard() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="password"
             required
+            disabled={isLoading}
           />
 
           <div className="row between center" style={{ marginTop: 12 }}>
@@ -79,6 +98,7 @@ export default function LoginCard() {
                 checked={remember}
                 onChange={(e) => setRemember(e.target.checked)}
                 style={{ width: 14, height: 14 }}
+                disabled={isLoading}
               />
               Remember Me
             </label>
@@ -88,14 +108,15 @@ export default function LoginCard() {
               className="text-btn"
               onClick={() => navigate("/signup")}
               style={{ textDecoration: "underline" }}
+              disabled={isLoading}
             >
               SignUp / Create Account
             </button>
           </div>
 
           <div className="signup-wrap" style={{ marginTop: 18 }}>
-            <button type="submit" className="signup-btn">
-              Log In
+            <button type="submit" className="signup-btn" disabled={isLoading} data-loading={isLoading}>
+              {isLoading ? "Logging In..." : "Log In"}
             </button>
           </div>
         </form>

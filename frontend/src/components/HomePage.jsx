@@ -1,34 +1,80 @@
 // src/components/HomePage.jsx
-import React, { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
+import { fetchHomeRecommendations } from "../utils/api";
 import "../app.css";
 
-export default function HomePage({
-  userName: propUserName = "Prannoy Chandola",
-  onLogout,
-}) {
+export default function HomePage() {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { user, logout, loading: authLoading, isAuthenticated } = useAuth();
 
-  // allow passing username from navigation state (login)
-  const stateUser = location.state?.userName;
-  // fallback to prop or localStorage (if you implement remember)
-  let storedUser = null;
-  try {
-    storedUser = localStorage.getItem("hh_userName");
-  } catch {
-    storedUser = null;
-  }
-  const userName = stateUser || propUserName || storedUser || "Guest";
+  // Recommendations state
+  const [recommendations, setRecommendations] = useState([]);
+  const [recommendationsLoading, setRecommendationsLoading] = useState(true);
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !isAuthenticated) {
+      navigate("/login");
+    }
+  }, [authLoading, isAuthenticated, navigate]);
 
   useEffect(() => {
     document.body.classList.add("home-mode");
-    // Removed overflow: hidden to allow scrolling on smaller screens
+    // Don't set overflow hidden on body to allow scrolling within components
     return () => {
       document.body.classList.remove("home-mode");
       document.body.style.overflow = "";
     };
   }, []);
+
+  // Fetch recommendations
+  useEffect(() => {
+    const loadRecommendations = async () => {
+      try {
+        setRecommendationsLoading(true);
+        const recs = await fetchHomeRecommendations(12); // Get 12 recommendations for better scrolling
+        setRecommendations(recs);
+      } catch (error) {
+        console.error('Failed to load recommendations:', error);
+        setRecommendations([]);
+      } finally {
+        setRecommendationsLoading(false);
+      }
+    };
+
+    if (isAuthenticated) {
+      loadRecommendations();
+    }
+  }, [isAuthenticated]);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
+  // Show loading while checking authentication
+  if (authLoading) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Loading...
+      </div>
+    );
+  }
+
+  // Don't render if not authenticated (will redirect)
+  if (!isAuthenticated) {
+    return null;
+  }
+
+  const userName = user?.username || "Guest";
 
   const features = [
     {
@@ -68,11 +114,7 @@ export default function HomePage({
           onClick={() => navigate("/home", { state: { userName } })}
           style={{ cursor: "pointer" }}
         >
-          <img
-            src="/heritage-haven-logo.png"
-            alt="Heritage Haven"
-            className="logo-img"
-          />
+          <img src="/heritage-haven-logo.png" alt="Heritage Haven" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
@@ -84,28 +126,23 @@ export default function HomePage({
         <div className="header-right">
           <div className="user-name">{userName}</div>
           <div className="user-avatar" />
-          {onLogout && (
-            <button
-              className="text-btn"
-              onClick={() => {
-                try {
-                  localStorage.removeItem("hh_userName");
-                } catch {
-                  // Ignore localStorage errors
-                }
-                onLogout();
-              }}
-              style={{
-                marginLeft: 12,
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.08)",
-                padding: "6px 10px",
-                borderRadius: 6,
-              }}
-            >
-              Log out
-            </button>
-          )}
+          <button
+            className="text-btn"
+            onClick={handleLogout}
+            style={{
+              marginLeft: 12,
+              background: "transparent",
+              border: "1px solid rgba(255,255,255,0.08)",
+              padding: "6px 10px",
+              borderRadius: 6,
+              color: "white",
+              cursor: "pointer",
+              fontSize: "12px"
+            }}
+            title="Logout"
+          >
+            Log out
+          </button>
         </div>
       </header>
 
@@ -115,17 +152,14 @@ export default function HomePage({
             <article
               className="feature-card home-feature-card"
               key={i}
+              // make whole card clickable (optional)
               onClick={() => navigate(f.path, { state: { userName } })}
               style={{ cursor: "pointer" }}
             >
               <div className="feature-thumb">
                 <div
                   className={`thumb-placeholder ${
-                    i === 0
-                      ? "discover-thumb"
-                      : i === 1
-                      ? "ar-thumb"
-                      : "social-thumb"
+                    i === 0 ? "discover-thumb" : i === 1 ? "ar-thumb" : "social-thumb"
                   }`}
                 />
               </div>
@@ -144,7 +178,7 @@ export default function HomePage({
                   className="feature-go"
                   aria-label={`open ${f.title}`}
                   onClick={(e) => {
-                    e.stopPropagation();
+                    e.stopPropagation(); // prevent the outer onClick double-fire
                     navigate(f.path, { state: { userName } });
                   }}
                 >
@@ -155,6 +189,135 @@ export default function HomePage({
           ))}
         </div>
       </main>
+
+      {/* Personalized Recommendations Section */}
+      <section style={{
+        backgroundColor: "rgba(0,0,0,0.4)",
+        borderTop: "1px solid rgba(255,255,255,0.1)",
+        padding: "30px 28px"
+      }}>
+        <h2 style={{
+          color: "rgba(255,255,255,0.95)",
+          fontSize: "24px",
+          marginBottom: "20px",
+          textAlign: "center",
+          fontWeight: "600"
+        }}>
+          Personalized Recommendations
+        </h2>
+        
+        {/* Scroll hint */}
+        {recommendations.length > 4 && (
+          <div style={{
+            textAlign: "center",
+            color: "rgba(255,255,255,0.6)",
+            fontSize: "14px",
+            marginBottom: "15px"
+          }}>
+            ← Scroll horizontally to see more →
+          </div>
+        )}
+        
+        {recommendationsLoading ? (
+          <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "200px",
+            color: "rgba(255,255,255,0.7)"
+          }}>
+            Loading recommendations...
+          </div>
+        ) : recommendations.length > 0 ? (
+          <div 
+            className="recommendations-scroll"
+            style={{
+              display: "flex",
+              overflowX: "auto",
+              overflowY: "hidden",
+              gap: "20px",
+              paddingBottom: "15px",
+              paddingRight: "10px",
+              whiteSpace: "nowrap"
+            }}
+          >
+            {recommendations.map((site) => (
+              <div
+                key={site.site_id}
+                onClick={() => navigate(`/site/${site.site_id}`, { state: { userName } })}
+                style={{
+                  minWidth: "300px",
+                  maxWidth: "300px",
+                  flexShrink: 0,
+                  backgroundColor: "rgba(255,255,255,0.1)",
+                  borderRadius: "12px",
+                  padding: "16px",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  whiteSpace: "normal"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "rgba(255,255,255,0.15)";
+                  e.target.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "rgba(255,255,255,0.1)";
+                  e.target.style.transform = "translateY(0)";
+                }}
+              >
+                <img
+                  src={site.image_array?.[0] || "/heritage-haven-logo.jpg"}
+                  alt={site.name}
+                  style={{
+                    width: "100%",
+                    height: "140px",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    marginBottom: "12px"
+                  }}
+                />
+                <h3 style={{
+                  color: "rgba(255,255,255,0.95)",
+                  fontSize: "16px",
+                  marginBottom: "8px",
+                  fontWeight: "600",
+                  lineHeight: "1.2"
+                }}>
+                  {site.name}
+                </h3>
+                <p style={{
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: "14px",
+                  lineHeight: "1.4",
+                  margin: 0,
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden"
+                }}>
+                  {site.description}
+                </p>
+                <div style={{
+                  color: "rgba(255,255,255,0.6)",
+                  fontSize: "12px",
+                  marginTop: "8px"
+                }}>
+                  📍 {site.location}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div style={{
+            textAlign: "center",
+            color: "rgba(255,255,255,0.7)",
+            padding: "40px"
+          }}>
+            No recommendations available at the moment.
+          </div>
+        )}
+      </section>
 
       <footer className="hh-footer home-footer">
         <div className="footer-left">Contact Us</div>
