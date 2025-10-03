@@ -7,6 +7,8 @@ const quizRoutes = require('./routes/quizRoutes'); // path relative to server.js
 app.use('/api/quiz', quizRoutes);
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/user', userRoutes);
+const hotelsRoutes = require('./routes/hotelsRoutes');
+app.use('/api/hotels', hotelsRoutes);
 
 const app = express();
 connectDB().then(() => {

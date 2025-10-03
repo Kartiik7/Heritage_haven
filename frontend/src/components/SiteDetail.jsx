@@ -6,6 +6,8 @@ import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
 import Quiz from './Quiz';
 import { useState, useEffect } from 'react';
+import HotelsList from './HotelsList';
+import ThingsToDo from './ThingsToDo';
 
 export default function SiteDetail() {
   const { siteId } = useParams();
@@ -70,7 +72,12 @@ export default function SiteDetail() {
               <div className="brand-sub">A new way to connect with culture</div>
             </div>
           </div>
-
+        <div style={{ marginTop: 16 }}>
+  <HotelsList lat={site.lat} lon={site.lon} city={site.cityCode || site.city} />
+</div>
+<div style={{ marginTop: 12 }}>
+  <ThingsToDo lat={site.lat} lon={site.lon} />
+</div>
           <div style={{ textAlign: "center", flex: 1 }}>
             <h1 className="page-title">Loading...</h1>
           </div>
