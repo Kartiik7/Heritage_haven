@@ -1,15 +1,19 @@
 // src/components/ARTour.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 import { fetchHeritageSites } from "../utils/api";
 
 import "../app.css";
 
 export default function ARTour() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [sites, setSites] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const userName = user?.username || "Guest";
 
   useEffect(() => {
     const loadSites = async () => {
@@ -45,7 +49,7 @@ export default function ARTour() {
             <h1 className="page-title">AR / Video Tour</h1>
           </div>
           <div className="header-right">
-            <div className="user-name">Prannoy Chandola</div>
+            <div className="user-name">{userName}</div>
             <div className="user-avatar" />
           </div>
         </header>
@@ -71,7 +75,7 @@ export default function ARTour() {
             <h1 className="page-title">AR / Video Tour</h1>
           </div>
           <div className="header-right">
-            <div className="user-name">Prannoy Chandola</div>
+            <div className="user-name">{userName}</div>
             <div className="user-avatar" />
           </div>
         </header>
@@ -98,7 +102,7 @@ export default function ARTour() {
         </div>
 
         <div className="header-right">
-          <div className="user-name">Prannoy Chandola</div>
+          <div className="user-name">{userName}</div>
           <div className="user-avatar" />
         </div>
       </header>

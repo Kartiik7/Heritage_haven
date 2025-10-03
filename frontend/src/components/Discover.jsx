@@ -1,10 +1,12 @@
 // src/components/Discover.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 import { fetchHeritageSites } from "../utils/api";
 
 export default function Discover() {
   const navigate = useNavigate();
+  const { user, isAuthenticated } = useAuth();
   const [sites, setSites] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,6 +14,8 @@ export default function Discover() {
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+
+  const userName = user?.username || "Guest";
 
   useEffect(() => {
     const loadSites = async () => {
@@ -73,7 +77,7 @@ export default function Discover() {
             <h1 className="page-title">Discover</h1>
           </div>
           <div className="header-right">
-            <div className="user-name">Prannoy Chandola</div>
+            <div className="user-name">{userName}</div>
             <div className="user-avatar" />
           </div>
         </header>
@@ -109,7 +113,7 @@ export default function Discover() {
             <h1 className="page-title">Discover</h1>
           </div>
           <div className="header-right">
-            <div className="user-name">Prannoy Chandola</div>
+            <div className="user-name">{userName}</div>
             <div className="user-avatar" />
           </div>
         </header>
@@ -142,7 +146,7 @@ export default function Discover() {
         </div>
 
         <div className="header-right">
-          <div className="user-name">Prannoy Chandola</div>
+          <div className="user-name">{userName}</div>
           <div className="user-avatar" />
         </div>
       </header>
