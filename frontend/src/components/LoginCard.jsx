@@ -115,7 +115,7 @@ export default function LoginCard() {
           </div>
 
           <div className="signup-wrap" style={{ marginTop: 18 }}>
-            <button type="submit" className="signup-btn" disabled={isLoading} data-loading={isLoading}>
+            <button type="submit" className="auth-btn" disabled={isLoading} data-loading={isLoading}>
               {isLoading ? "Logging In..." : "Log In"}
             </button>
           </div>

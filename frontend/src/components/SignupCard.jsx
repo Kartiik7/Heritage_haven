@@ -149,7 +149,7 @@ export default function SignupCard() {
           </div>
 
           <div className="signup-wrap" style={{ marginTop: 18 }}>
-            <button type="submit" className="signup-btn" disabled={isLoading} data-loading={isLoading}>
+            <button type="submit" className="auth-btn" disabled={isLoading} data-loading={isLoading}>
               {isLoading ? "Creating Account..." : "Sign Up"}
             </button>
           </div>

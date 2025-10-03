@@ -198,7 +198,8 @@
   margin-top: 24px;
 }
 
-.signup-btn {
+/* Auth button for login/signup pages */
+.auth-btn {
   width: 100%;
   height: 52px;
   background: linear-gradient(135deg, #267b9b 0%, #1e6b8a 50%, #1a5a77 100%);
@@ -214,24 +215,24 @@
   text-transform: uppercase;
 }
 
-.signup-btn:hover:not(:disabled) {
+.auth-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(38,123,155,0.4);
   background: linear-gradient(135deg, #2e8bb0 0%, #24759c 50%, #1f6488 100%);
 }
 
-.signup-btn:active:not(:disabled) {
+.auth-btn:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.signup-btn:disabled {
+.auth-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
   position: relative;
 }
 
-.signup-btn:disabled::after {
+.auth-btn:disabled::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -246,8 +247,32 @@
   display: none;
 }
 
-.signup-btn:disabled[data-loading="true"]::after {
+.auth-btn:disabled[data-loading="true"]::after {
   display: block;
+}
+
+/* Original signup-btn for Discover page and other components */
+.signup-btn {
+  background: linear-gradient(90deg, rgba(7,46,70,1) 0%, rgba(39,88,104,1) 50%, rgba(197,74,74,0.9) 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  font-size: 0.95rem;
+}
+
+.signup-btn.small {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.38);
 }
 
 @keyframes spin {
@@ -296,7 +321,7 @@
     font-size: 15px;
   }
   
-  .signup-btn {
+  .auth-btn {
     height: 48px;
     font-size: 15px;
   }
