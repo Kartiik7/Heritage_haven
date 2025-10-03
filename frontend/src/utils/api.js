@@ -91,3 +91,60 @@ export const fetchSiteRecommendations = async (siteId) => {
     throw error;
   }
 };
+
+/**
+ * Get personalized recommendations for a user
+ * @param {string} token - Authentication token (optional for guest users)
+ * @param {number} lat - User's latitude (optional)
+ * @param {number} lon - User's longitude (optional)
+ * @returns {Promise<Array>} Array of personalized recommended sites
+ */
+export const fetchPersonalizedRecommendations = async (token = null, lat = null, lon = null) => {
+  try {
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+    
+    let url = `${API_BASE_URL}/recommendations/user`;
+    const params = new URLSearchParams();
+    if (lat !== null) params.append('lat', lat);
+    if (lon !== null) params.append('lon', lon);
+    if (params.toString()) url += `?${params.toString()}`;
+    
+    const response = await fetch(url, { headers });
+    
+    if (!response.ok) {
+      // For guests, fall back to general site recommendations
+      if (response.status === 401 && !token) {
+        return await fetchGeneralRecommendations();
+      }
+      throw new Error(`Failed to fetch personalized recommendations: ${response.status} ${response.statusText}`);
+    }
+    
+    const recommendations = await response.json();
+    return recommendations;
+  } catch (error) {
+    console.error('Error fetching personalized recommendations:', error);
+    // Fallback to general recommendations
+    return await fetchGeneralRecommendations();
+  }
+};
+
+/**
+ * Get general recommendations (fallback for guests)
+ * @returns {Promise<Array>} Array of general recommended sites
+ */
+export const fetchGeneralRecommendations = async () => {
+  try {
+    const sites = await fetchHeritageSites();
+    // Return first 6 sites as general recommendations
+    return sites.slice(0, 6);
+  } catch (error) {
+    console.error('Error fetching general recommendations:', error);
+    return [];
+  }
+};
