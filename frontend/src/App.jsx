@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import LoginCard from "./components/LoginCard";
+import SignupCard from "./components/SignupCard";
+import HomePage from "./components/HomePage";
+import "./app.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  // set initial to "home" for testing; change to "login" to start at login
+  const [mode, setMode] = useState("home"); // "login" | "signup" | "home"
 
+  if (mode === "home") {
+    // render HomePage alone (full screen)
+    return <HomePage userName="Prannoy Chandola" onLogout={() => setMode("login")} />;
+  }
+
+  // login/signup view using the previous split layout
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="page">
+      <div className="left-panel">
+        <div className="welcome-small">Welcome to</div>
+        <h1 className="title">Heritage Haven</h1>
+        <p className="tagline">Culture Se Judne Ka Naya Tareeka...</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      <div className="right-panel">
+        {mode === "signup" ? (
+          <SignupCard switchToLogin={() => setMode("login")} onSuccess={() => setMode("home")} />
+        ) : (
+          <LoginCard switchToSignup={() => setMode("signup")} onSuccess={() => setMode("home")} />
+        )}
+      </div>
+    </div>
+  );
+}
