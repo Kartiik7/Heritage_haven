@@ -81,7 +81,12 @@ export default function HomePage({ userName = "Prannoy Chandola", onLogout }) {
           {features.map((f, i) => (
             <article className="feature-card home-feature-card" key={i}>
               <div className="feature-thumb">
-                <div className="thumb-placeholder" />
+                {/* add specific class per card */}
+                <div
+                  className={`thumb-placeholder ${
+                    i === 0 ? "discover-thumb" : i === 1 ? "ar-thumb" : "social-thumb"
+                  }`}
+                />
               </div>
 
               <div className="feature-body">

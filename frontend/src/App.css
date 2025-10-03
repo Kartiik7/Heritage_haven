@@ -39,6 +39,13 @@
   max-width: 700px;
   padding-left: 40px;
 }
+.logo-img {
+  width: 64px;       /* adjust as needed */
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  margin-right: 8px;
+}
 
 .welcome-small{
   font-size: 40px;
@@ -508,4 +515,22 @@ body {
   .title{ font-size: 44px; }
   .tagline{ font-size: 16px; }
   .login-card { padding: 22px; }
+}
+/* Feature card images */
+.discover-thumb {
+  background-image: url('/images/discover.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.ar-thumb {
+  background-image: url('/images/ar-video.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.social-thumb {
+  background-image: url('/images/social.jpg');
+  background-size: cover;
+  background-position: center;
 }

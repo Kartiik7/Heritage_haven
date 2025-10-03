@@ -7,7 +7,8 @@ export default function Header({ userName = "Prannoy Chandola" }) {
   return (
     <header className="hh-header">
       <div className="logo-box" onClick={() => navigate("/home")} style={{ cursor: "pointer" }}>
-        <div className="logo-mark">🏛️</div>
+        {/* Replace emoji with your logo image */}
+        <img src="/images/heritage-haven-logo.jpg" alt="Heritage Logo" className="logo-img" />
         <div>
           <div className="brand-title">HERITAGE</div>
           <div className="brand-sub">A new way to connect with culture</div>
