@@ -15,22 +15,20 @@ import "./app.css";
 export default function App() {
   return (
     <Routes>
-      {/* Default redirect */}
-      <Route path="/" element={<Navigate to="/home" replace />} />
+      {/* 👇 Landing page goes to Login */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-      {/* Main Home Page */}
+      {/* Login & Signup pages (first two screens) */}
+      <Route path="/login" element={<LoginCard />} />
+      <Route path="/signup" element={<SignupCard />} />
+
+      {/* After login → Home */}
       <Route path="/home" element={<HomePage userName="Prannoy Chandola" />} />
 
-      {/* Auth Pages */}
-      <Route path="/login" element={<LoginCard onSuccess={() => {}} />} />
-      <Route path="/signup" element={<SignupCard onSuccess={() => {}} />} />
-
-      {/* Feature Pages */}
+      {/* Feature pages */}
       <Route path="/discover" element={<Discover />} />
       <Route path="/ar-tour" element={<ARTour />} />
       <Route path="/social" element={<SocialProfiles />} />
-
-      {/* Site detail */}
       <Route path="/site/:siteId" element={<SiteDetail />} />
     </Routes>
   );
