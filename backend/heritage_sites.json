@@ -1,0 +1,82 @@
+[
+  {
+    "site_id": "H001",
+    "name": "Taj Mahal",
+    "image_array": [
+      "/images/taj-mahal/gallery-1.jpg",
+      "/images/taj-mahal/gallery-2.jpg",
+      "/images/taj-mahal/gallery-3.jpg"
+    ],
+    "description": "An immense mausoleum of white marble, the Taj Mahal was built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife. It is the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage. The complex includes the tomb, a mosque, a guest house, and is set in formal gardens, bounded on three sides by a crenellated wall. The Taj Mahal is renowned for its perfect symmetry, intricate decorations, and the way its appearance changes with the light of the day.",
+    "youtube_video_id": "8-g_gL8sfH4",
+    "location": "Agra, India",
+    "geotag": {
+      "latitude": 27.1751,
+      "longitude": 78.0421
+    }
+  },
+  {
+    "site_id": "H104",
+    "name": "Colosseum",
+    "image_array": [
+      "/images/colosseum/gallery-1.jpg",
+      "/images/colosseum/gallery-2.jpg",
+      "/images/colosseum/gallery-3.jpg"
+    ],
+    "description": "Located in the centre of Rome, Italy, the Colosseum is the largest ancient amphitheatre ever built. Constructed of travertine limestone, tuff, and brick-faced concrete, it could hold an estimated 50,000 to 80,000 spectators. For centuries, it was used for gladiatorial contests, public spectacles, animal hunts, and dramas based on Roman mythology. Despite being partially ruined by earthquakes and stone-robbers, the Colosseum remains an iconic symbol of Imperial Rome and is one of the world's most popular tourist attractions.",
+    "youtube_video_id": "d-3L36N3M0g",
+    "location": "Rome, Italy",
+    "geotag": {
+      "latitude": 41.8902,
+      "longitude": 12.4922
+    }
+  },
+  {
+    "site_id": "H103",
+    "name": "Machu Picchu",
+    "image_array": [
+      "/images/machu-picchu/gallery-1.jpg",
+      "/images/machu-picchu/gallery-2.jpg",
+      "/images/machu-picchu/gallery-3.jpg"
+    ],
+    "description": "This Incan citadel is set high in the Andes Mountains in Peru, above the Urubamba River valley. Built in the 15th century and later abandoned, it’s renowned for its sophisticated dry-stone walls that fuse huge blocks without the use of mortar. The exact former use of Machu Picchu remains a mystery, but its intricate agricultural terraces, plazas, and temples suggest it was a sacred or royal estate. The site's stunning preservation and breathtaking mountain backdrop make it one of the most famous archaeological wonders in the world.",
+    "youtube_video_id": "cnMa-Sm9H4k",
+    "location": "Cusco Region, Peru",
+    "geotag": {
+      "latitude": -13.1631,
+      "longitude": -72.5450
+    }
+  },
+  {
+    "site_id": "H108",
+    "name": "Angkor Wat",
+    "image_array": [
+      "/images/angkor-wat/gallery-1.jpg",
+      "/images/angkor-wat/gallery-2.jpg",
+      "/images/angkor-wat/gallery-3.jpg"
+    ],
+    "description": "Angkor Wat is a massive stone temple complex in Cambodia and the largest religious monument in the world. Originally constructed as a Hindu temple dedicated to the god Vishnu for the Khmer Empire, it was gradually transformed into a Buddhist temple towards the end of the 12th century. The complex is admired for the grandeur and harmony of its architecture, its extensive bas-reliefs, and the numerous devatas adorning its walls. It has remained a significant religious centre since its foundation, and today it is the heart of Cambodia's national identity.",
+    "youtube_video_id": "b6V2n4G1i04",
+    "location": "Siem Reap, Cambodia",
+    "geotag": {
+      "latitude": 13.4125,
+      "longitude": 103.8667
+    }
+  },
+  {
+    "site_id": "H101",
+    "name": "Pyramids of Giza",
+    "image_array": [
+      "/images/giza-pyramids/gallery-1.jpg",
+      "/images/giza-pyramids/gallery-2.jpg",
+      "/images/giza-pyramids/gallery-3.jpg"
+    ],
+    "description": "The Giza pyramid complex, on the outskirts of Cairo, Egypt, is one of the most famous ancient sites in the world. It includes the Great Pyramid of Khufu, the Pyramid of Khafre, and the Pyramid of Menkaure, along with their associated pyramid complexes and the Great Sphinx. These structures were all built during the Fourth Dynasty of the Old Kingdom of Ancient Egypt, around 4,500 years ago. The Great Pyramid is the oldest and largest of the three, and it is the only one of the Seven Wonders of the Ancient World still in existence.",
+    "youtube_video_id": "m_wm-p7-iW8",
+    "location": "Giza, Egypt",
+    "geotag": {
+      "latitude": 29.9792,
+      "longitude": 31.1342
+    }
+  }
+]
