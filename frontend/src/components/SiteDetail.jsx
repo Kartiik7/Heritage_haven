@@ -60,21 +60,8 @@ export default function SiteDetail() {
     return (
       <div className="home-page" style={{ padding: 28 }}>
         <header className="hh-header">
-<<<<<<< HEAD
           <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
             <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
-=======
-          <div
-            className="logo-box"
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/home")}
-          >
-            <img
-              src="/images/heritage-haven-logo.jpg"
-              alt="logo"
-              className="logo-img"
-            />
->>>>>>> 602db91caa7637e96d08c6a0a2e4398a47012ea5
             <div>
               <div className="brand-title">HERITAGE HAVEN</div>
               <div className="brand-sub">A new way to connect with culture</div>
@@ -105,21 +92,8 @@ export default function SiteDetail() {
     return (
       <div className="home-page" style={{ padding: 28 }}>
         <header className="hh-header">
-<<<<<<< HEAD
           <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
             <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
-=======
-          <div
-            className="logo-box"
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/home")}
-          >
-            <img
-              src="/images/heritage-haven-logo.jpg"
-              alt="logo"
-              className="logo-img"
-            />
->>>>>>> 602db91caa7637e96d08c6a0a2e4398a47012ea5
             <div>
               <div className="brand-title">HERITAGE HAVEN</div>
               <div className="brand-sub">A new way to connect with culture</div>
@@ -154,21 +128,8 @@ export default function SiteDetail() {
   return (
     <div className="site-page">
       <header className="hh-header">
-<<<<<<< HEAD
         <div className="logo-box" style={{ cursor: "pointer" }} onClick={() => navigate("/home")}>
           <img src="/heritage-haven-logo.jpg" alt="logo" className="logo-img" />
-=======
-        <div
-          className="logo-box"
-          style={{ cursor: "pointer" }}
-          onClick={() => navigate("/home")}
-        >
-          <img
-            src="/images/heritage-haven-logo.jpg"
-            alt="logo"
-            className="logo-img"
-          />
->>>>>>> 602db91caa7637e96d08c6a0a2e4398a47012ea5
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
@@ -190,11 +151,7 @@ export default function SiteDetail() {
           {/* Left: main image (vertically centered) */}
           <div className="site-left">
             <img
-<<<<<<< HEAD
               src={site.image_array?.[0] || "/heritage-haven-logo.jpg"}
-=======
-              src={site.image_array?.[0] || "/images/sites/placeholder.jpg"}
->>>>>>> 602db91caa7637e96d08c6a0a2e4398a47012ea5
               alt={site.name}
               className="site-main-image"
             />

@@ -13,7 +13,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
   let storedUser = null;
   try {
     storedUser = localStorage.getItem("hh_userName");
-  } catch (err) {
+  } catch {
     storedUser = null;
   }
   const userName = stateUser || propUserName || storedUser || "Guest";
@@ -65,7 +65,7 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
           onClick={() => navigate("/home", { state: { userName } })}
           style={{ cursor: "pointer" }}
         >
-          <img src="/namaste-techies-logo.png" alt="Heritage Haven" className="logo-img" />
+          <img src="/heritage-haven-logo.png" alt="Heritage Haven" className="logo-img" />
           <div>
             <div className="brand-title">HERITAGE HAVEN</div>
             <div className="brand-sub">A new way to connect with culture</div>
@@ -82,7 +82,11 @@ export default function HomePage({ userName: propUserName = "Prannoy Chandola", 
               className="text-btn"
               onClick={() => {
                 // optional: clear stored user on logout
-                try { localStorage.removeItem("hh_userName"); } catch (e) {}
+                try { 
+                  localStorage.removeItem("hh_userName"); 
+                } catch {
+                  // Ignore localStorage errors
+                }
                 onLogout();
               }}
               style={{
