@@ -293,7 +293,11 @@
     "_id": "30",
     "site_id": "H030",
     "name": "Warli Art",
+<<<<<<< Updated upstream
     "image_array": ["/images/sites/warli.jpg", "/images/sites/warli-2.jpg"],
+=======
+    "image_array": ["/public/images/ar-video.jpg", "/images/sites/warli-2.jpg"],
+>>>>>>> Stashed changes
     "description": "A tribal art form practiced in Maharashtra, depicting daily life.",
     "youtube_video_id": "F9n4D5k7L8m",
     "location": "Maharashtra, India",
