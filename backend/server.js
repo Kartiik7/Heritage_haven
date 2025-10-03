@@ -3,6 +3,10 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db.js');
 const { initializeModel } = require('./utils/recommendationEngine'); // <-- IMPORT
+const quizRoutes = require('./routes/quizRoutes'); // path relative to server.js
+app.use('/api/quiz', quizRoutes);
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/user', userRoutes);
 
 const app = express();
 connectDB().then(() => {

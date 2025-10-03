@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import heritageSites from "../assets/heritageSites.json";
 import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
+import Quiz from './Quiz';
+import { useState, useEffect } from 'react';
 
 export default function SiteDetail() {
   const { siteId } = useParams();
@@ -12,6 +14,7 @@ export default function SiteDetail() {
   const [site, setSite] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showQuiz, setShowQuiz] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -86,6 +89,9 @@ export default function SiteDetail() {
       </div>
     );
   }
+<button className="btn" onClick={() => setShowQuiz(prev => !prev)}>
+  {showQuiz ? 'Hide Quiz' : 'Take Quiz'}
+</button>
 
   // Not found / error
   if (!site) {
@@ -135,6 +141,7 @@ export default function SiteDetail() {
             <div className="brand-sub">A new way to connect with culture</div>
           </div>
         </div>
+{showQuiz && <Quiz monumentId={site.slug || site._id || site.name} />}
 
         <div style={{ textAlign: "center", flex: 1 }}>
           <h1 className="page-title">{site.name}</h1>

@@ -1,754 +1,4218 @@
-[
-  {
-    "site_id": "H001",
-    "name": "Ajanta Caves",
-    "image_array": [
-      "/images/sites/ajanta-caves.jpg",
-      "/images/sites/ajanta-caves-2.jpg"
-    ],
-    "description": "Ancient Buddhist rock-cut caves famous for murals and sculptures.",
-    "youtube_video_id": "dZxllTnr0vc",
-    "location": "Aurangabad, Maharashtra, India",
-    "geotag": {
-      "latitude": 20.552,
-      "longitude": 75.7033
-    },
-    "type": "cave",
-    "era": "Ancient",
-    "tags": [
-      "unesco",
-      "cave",
-      "ancient",
-      "buddhist",
-      "murals",
-      "sculptures",
-      "maharashtra"
-    ]
+[{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0a"
   },
-  {
-    "site_id": "H002",
-    "name": "Amber-Fort",
-    "image_array": [
-      "/images/sites/amber-fort.jpeg",
-      "/images/sites/amber-fort-2.jpg"
-    ],
-    "description": "A grand fort near Jaipur known for its artistic Rajput architecture.",
-    "youtube_video_id": "pW6GfcmjgrI",
-    "location": "Jaipur, Rajasthan, India",
-    "geotag": {
-      "latitude": 26.9855,
-      "longitude": 75.8513
-    },
-    "type": "fort",
-    "era": "Rajput",
-    "tags": [
-      "fort",
-      "rajput",
-      "architecture",
-      "jaipur",
-      "rajasthan",
-      "palace"
-    ]
+  "site_id": "H004",
+  "name": "Bharatanatyam",
+  "image_array": [
+    "/images/sites/bharatnatiyam.jpg",
+    "/images/sites/bharatanatyam-2.jpg"
+  ],
+  "description": "One of the oldest classical dance forms of India, from Tamil Nadu.",
+  "youtube_video_id": "JWhA3ldZcyY",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 13.0827,
+    "longitude": 80.2707
   },
-  {
-    "site_id": "H003",
-    "name": "Ancient Pottery",
-    "image_array": [
-      "/images/sites/ancient-pottery.jpg",
-      "/images/sites/ancient-pottery-2.jpg"
-    ],
-    "description": "Traditional pottery reflecting India's ancient craft heritage.",
-    "youtube_video_id": "UvH7xm8JfJ4",
-    "location": "Various regions, India",
-    "geotag": {
-      "latitude": 23,
-      "longitude": 78
-    },
-    "type": "craft",
-    "era": "Ancient",
-    "tags": [
-      "craft",
-      "ancient",
-      "pottery",
-      "traditional",
-      "heritage",
-      "art"
-    ]
+  "type": "dance",
+  "era": "Classical",
+  "tags": [
+    "dance",
+    "classical",
+    "bharatanatyam",
+    "tamil nadu",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0c"
   },
-  {
-    "site_id": "H004",
-    "name": "Bharatanatyam",
-    "image_array": [
-      "/images/sites/bharatnatiyam.jpg",
-      "/images/sites/bharatanatyam-2.jpg"
-    ],
-    "description": "One of the oldest classical dance forms of India, from Tamil Nadu.",
-    "youtube_video_id": "JWhA3ldZcyY",
-    "location": "Tamil Nadu, India",
-    "geotag": {
-      "latitude": 13.0827,
-      "longitude": 80.2707
-    },
-    "type": "dance",
-    "era": "Classical",
-    "tags": [
-      "dance",
-      "classical",
-      "bharatanatyam",
-      "tamil nadu",
-      "performance art"
-    ]
+  "site_id": "H006",
+  "name": "Charminar",
+  "image_array": [
+    "/images/sites/chaarminar.jpg",
+    "/images/sites/charminar-2.jpg"
+  ],
+  "description": "Historic mosque and monument built in 1591 in Hyderabad.",
+  "youtube_video_id": "qctv8iV7PeE",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3616,
+    "longitude": 78.4747
   },
-  {
-    "site_id": "H005",
-    "name": "Brihadeeshwara Temple",
-    "image_array": [
-      "/images/sites/brihadeeshwara.jpg",
-      "/images/sites/brihadeeshwara-2.jpg"
-    ],
-    "description": "A Chola dynasty temple dedicated to Lord Shiva in Thanjavur.",
-    "youtube_video_id": "KC3GAmjn1mg",
-    "location": "Thanjavur, Tamil Nadu, India",
-    "geotag": {
-      "latitude": 10.7828,
-      "longitude": 79.1318
-    },
-    "type": "temple",
-    "era": "Chola",
-    "tags": [
-      "unesco",
-      "temple",
-      "chola",
-      "shiva",
-      "dravidian",
-      "architecture",
-      "tamil nadu"
-    ]
+  "type": "monument",
+  "era": "Islamic",
+  "tags": [
+    "monument",
+    "islamic",
+    "architecture",
+    "hyderabad",
+    "telangana",
+    "mosque"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0e"
   },
-  {
-    "site_id": "H006",
-    "name": "Charminar",
-    "image_array": [
-      "/images/sites/chaarminar.jpg",
-      "/images/sites/charminar-2.jpg"
-    ],
-    "description": "Historic mosque and monument built in 1591 in Hyderabad.",
-    "youtube_video_id": "qctv8iV7PeE",
-    "location": "Hyderabad, Telangana, India",
-    "geotag": {
-      "latitude": 17.3616,
-      "longitude": 78.4747
-    },
-    "type": "monument",
-    "era": "Islamic",
-    "tags": [
-      "monument",
-      "islamic",
-      "architecture",
-      "hyderabad",
-      "telangana",
-      "mosque"
-    ]
+  "site_id": "H008",
+  "name": "Chola Temple",
+  "image_array": [
+    "/images/sites/chola-temple.jpg",
+    "/images/sites/chola-temple-2.jpg"
+  ],
+  "description": "Temples built by the Chola dynasty, known for Dravidian architecture.",
+  "youtube_video_id": "hefTVpiNuaM",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.8,
+    "longitude": 79.1
   },
-  {
-    "site_id": "H007",
-    "name": "Champaner Masjid",
-    "image_array": [
-      "/images/sites/champaner-masjid.jpeg",
-      "/images/sites/champaner-masjid-2.jpg"
-    ],
-    "description": "A UNESCO site in Gujarat featuring Indo-Islamic architecture.",
-    "youtube_video_id": "2j3vwgpSMck",
-    "location": "Pavagadh, Gujarat, India",
-    "geotag": {
-      "latitude": 22.4835,
-      "longitude": 73.5316
-    },
-    "type": "mosque",
-    "era": "Islamic",
-    "tags": [
-      "unesco",
-      "mosque",
-      "islamic",
-      "architecture",
-      "gujarat",
-      "indo-islamic"
-    ]
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "temple",
+    "chola",
+    "dravidian",
+    "architecture",
+    "tamil nadu",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce11"
   },
-  {
-    "site_id": "H008",
-    "name": "Chola Temple",
-    "image_array": [
-      "/images/sites/chola-temple.jpg",
-      "/images/sites/chola-temple-2.jpg"
-    ],
-    "description": "Temples built by the Chola dynasty, known for Dravidian architecture.",
-    "youtube_video_id": "hefTVpiNuaM",
-    "location": "Tamil Nadu, India",
-    "geotag": {
-      "latitude": 10.8,
-      "longitude": 79.1
-    },
-    "type": "temple",
-    "era": "Chola",
-    "tags": [
-      "temple",
-      "chola",
-      "dravidian",
-      "architecture",
-      "tamil nadu",
-      "unesco"
-    ]
+  "site_id": "H011",
+  "name": "Diwali",
+  "image_array": [
+    "/images/sites/diwali.jpg",
+    "/images/sites/diwali-2.jpg"
+  ],
+  "description": "Festival of Lights celebrated with diyas, sweets, and fireworks.",
+  "youtube_video_id": "mPwmXRws7FA",
+  "location": "All over India",
+  "geotag": {
+    "latitude": 28.61,
+    "longitude": 77.23
   },
-  {
-    "site_id": "H009",
-    "name": "Christmas",
-    "image_array": [
-      "/images/sites/christmas.jpeg",
-      "/images/sites/christmas-2.jpg"
-    ],
-    "description": "Celebration of the birth of Jesus Christ, observed across India.",
-    "youtube_video_id": "4mUptqxrFvI",
-    "location": "All over India",
-    "geotag": {
-      "latitude": 28.6,
-      "longitude": 77.2
-    },
-    "type": "festival",
-    "era": "Modern",
-    "tags": [
-      "festival",
-      "modern",
-      "christmas",
-      "christian",
-      "celebration",
-      "india"
-    ]
+  "type": "festival",
+  "era": "Traditional",
+  "tags": [
+    "festival",
+    "traditional",
+    "diwali",
+    "hindu",
+    "lights",
+    "india"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce13"
   },
-  {
-    "site_id": "H010",
-    "name": "Decorated Bowl",
-    "image_array": [
-      "/images/sites/decorated-bowl.jpg",
-      "/images/sites/decorated-bowl-2.jpg"
-    ],
-    "description": "Traditional handcrafted bowl designs from Indian artisans.",
-    "youtube_video_id": "UGPGn5ZeZoA",
-    "location": "Various regions, India",
-    "geotag": {
-      "latitude": 23.5,
-      "longitude": 78.5
-    },
-    "type": "craft",
-    "era": "Traditional",
-    "tags": [
-      "craft",
-      "traditional",
-      "handcrafted",
-      "artisan",
-      "pottery",
-      "art"
-    ]
+  "site_id": "H013",
+  "name": "Garba",
+  "image_array": [
+    "/images/sites/garba.jpg",
+    "/images/sites/garba-2.jpg"
+  ],
+  "description": "Traditional Gujarati folk dance performed during Navratri.",
+  "youtube_video_id": "mEZItgQ1vVY",
+  "location": "Gujarat, India",
+  "geotag": {
+    "latitude": 22.3,
+    "longitude": 70.8
   },
-  {
-    "site_id": "H011",
-    "name": "Diwali",
-    "image_array": [
-      "/images/sites/diwali.jpg",
-      "/images/sites/diwali-2.jpg"
-    ],
-    "description": "Festival of Lights celebrated with diyas, sweets, and fireworks.",
-    "youtube_video_id": "mPwmXRws7FA",
-    "location": "All over India",
-    "geotag": {
-      "latitude": 28.61,
-      "longitude": 77.23
-    },
-    "type": "festival",
-    "era": "Traditional",
-    "tags": [
-      "festival",
-      "traditional",
-      "diwali",
-      "hindu",
-      "lights",
-      "india"
-    ]
+  "type": "dance",
+  "era": "Traditional",
+  "tags": [
+    "dance",
+    "traditional",
+    "garba",
+    "folk",
+    "gujarat",
+    "navratri"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1a"
   },
-  {
-    "site_id": "H012",
-    "name": "Durga Puja",
-    "image_array": [
-      "/images/sites/durga-puja.jpg",
-      "/images/sites/durga-puja-2.jpg"
-    ],
-    "description": "Grand festival in West Bengal celebrating Goddess Durga.",
-    "youtube_video_id": "Ipq8J1_QzXk",
-    "location": "Kolkata, West Bengal, India",
-    "geotag": {
-      "latitude": 22.5726,
-      "longitude": 88.3639
-    },
-    "type": "festival",
-    "era": "Traditional",
-    "tags": [
-      "festival",
-      "traditional",
-      "durga puja",
-      "kolkata",
-      "west bengal",
-      "hindu",
-      "unesco"
-    ]
+  "site_id": "H020",
+  "name": "Manipuri Dance",
+  "image_array": [
+    "/images/sites/manipuri.jpg",
+    "/images/sites/manipuri-2.jpg"
+  ],
+  "description": "Classical dance form from Manipur, India.",
+  "youtube_video_id": "o3wZcwO6zC8",
+  "location": "Manipur, India",
+  "geotag": {
+    "latitude": 24.8,
+    "longitude": 93.9
   },
-  {
-    "site_id": "H013",
-    "name": "Garba",
-    "image_array": [
-      "/images/sites/garba.jpg",
-      "/images/sites/garba-2.jpg"
-    ],
-    "description": "Traditional Gujarati folk dance performed during Navratri.",
-    "youtube_video_id": "mEZItgQ1vVY",
-    "location": "Gujarat, India",
-    "geotag": {
-      "latitude": 22.3,
-      "longitude": 70.8
-    },
-    "type": "dance",
-    "era": "Traditional",
-    "tags": [
-      "dance",
-      "traditional",
-      "garba",
-      "folk",
-      "gujarat",
-      "navratri"
-    ]
+  "type": "dance",
+  "era": "Classical",
+  "tags": [
+    "dance",
+    "classical",
+    "manipuri",
+    "manipur",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1b"
   },
-  {
-    "site_id": "H014",
-    "name": "Gateway of India",
-    "image_array": [
-      "/images/sites/gatewayofindia.jpg",
-      "/images/sites/gatewayofindia-2.jpg"
-    ],
-    "description": "Monument built in Mumbai during the 20th century colonial era.",
-    "youtube_video_id": "cNnQhWz9m8c",
-    "location": "Mumbai, Maharashtra, India",
-    "geotag": {
-      "latitude": 18.9219,
-      "longitude": 72.8347
-    },
-    "type": "monument",
-    "era": "Colonial",
-    "tags": [
-      "monument",
-      "colonial",
-      "british",
-      "mumbai",
-      "architecture",
-      "maharashtra"
-    ]
+  "site_id": "H021",
+  "name": "Maori Mask",
+  "image_array": [
+    "/images/sites/maori-mask.jpg",
+    "/images/sites/maori-mask-2.jpg"
+  ],
+  "description": "Traditional masks symbolizing Maori culture.",
+  "youtube_video_id": "JmmO1I34BbE",
+  "location": "New Zealand (cultural reference)",
+  "geotag": {
+    "latitude": -40.9,
+    "longitude": 174.9
   },
-  {
-    "site_id": "H015",
-    "name": "Golden Temple",
-    "image_array": [
-      "/images/sites/golden temple.jpg",
-      "/images/sites/golden-temple-2.jpg"
-    ],
-    "description": "The holiest Gurdwara of Sikhism located in Amritsar.",
-    "youtube_video_id": "jA7NhLxv29g",
-    "location": "Amritsar, Punjab, India",
-    "geotag": {
-      "latitude": 31.62,
-      "longitude": 74.8765
-    },
-    "type": "temple",
-    "era": "Sikh",
-    "tags": [
-      "temple",
-      "sikh",
-      "gurdwara",
-      "amritsar",
-      "punjab",
-      "sikhism"
-    ]
+  "type": "artifact",
+  "era": "Traditional",
+  "tags": [
+    "artifact",
+    "traditional",
+    "maori",
+    "mask",
+    "new zealand",
+    "culture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1d"
   },
-  {
-    "site_id": "H016",
-    "name": "Hawa Mahal",
-    "image_array": [
-      "/images/sites/hawa-mahal.jpg",
-      "/images/sites/hawa-mahal-2.jpg"
-    ],
-    "description": "Palace of Winds in Jaipur with unique honeycomb design.",
-    "youtube_video_id": "jSlrNR2hAqc",
-    "location": "Jaipur, Rajasthan, India",
-    "geotag": {
-      "latitude": 26.9239,
-      "longitude": 75.8267
-    },
-    "type": "palace",
-    "era": "Rajput",
-    "tags": [
-      "palace",
-      "rajput",
-      "architecture",
-      "jaipur",
-      "rajasthan",
-      "hawa mahal"
-    ]
+  "site_id": "H023",
+  "name": "Mysore Palace",
+  "image_array": [
+    "/images/sites/mysore palace.jpg",
+    "/images/sites/mysore-palace-2.jpg"
+  ],
+  "description": "Historic palace of the Wadiyar dynasty in Mysore.",
+  "youtube_video_id": "fYfvk25kJiM",
+  "location": "Mysuru, Karnataka, India",
+  "geotag": {
+    "latitude": 12.3052,
+    "longitude": 76.6552
   },
-  {
-    "site_id": "H017",
-    "name": "Jallianwala Bagh",
-    "image_array": [
-      "/images/sites/jallianwala-bagh.jpeg",
-      "/images/sites/jallianwala-bagh-2.jpg"
-    ],
-    "description": "Site of the tragic 1919 massacre, now a memorial in Amritsar.",
-    "youtube_video_id": "FR4Se6M4RRM",
-    "location": "Amritsar, Punjab, India",
-    "geotag": {
-      "latitude": 31.6206,
-      "longitude": 74.8796
-    },
-    "type": "memorial",
-    "era": "Colonial",
-    "tags": [
-      "memorial",
-      "colonial",
-      "history",
-      "amritsar",
-      "punjab",
-      "british"
-    ]
+  "type": "palace",
+  "era": "Wadiyar",
+  "tags": [
+    "palace",
+    "wadiyar",
+    "mysuru",
+    "karnataka",
+    "architecture",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1e"
   },
-  {
-    "site_id": "H018",
-    "name": "Kuchipudi",
-    "image_array": [
-      "/images/sites/kuchipudi.jpg",
-      "/images/sites/kuchipudi-2.jpg"
-    ],
-    "description": "Classical dance form from Andhra Pradesh.",
-    "youtube_video_id": "ko5sKNuSLbs",
-    "location": "Andhra Pradesh, India",
-    "geotag": {
-      "latitude": 16.5,
-      "longitude": 80.6
-    },
-    "type": "dance",
-    "era": "Classical",
-    "tags": [
-      "dance",
-      "classical",
-      "kuchipudi",
-      "andhra pradesh",
-      "performance art"
-    ]
+  "site_id": "H024",
+  "name": "Oral History",
+  "image_array": [
+    "/images/sites/Oral History.jpg",
+    "/images/sites/oral-history-2.jpg"
+  ],
+  "description": "Tradition of passing culture and stories through spoken word.",
+  "youtube_video_id": "S26P3IN-uHk",
+  "location": "All over India",
+  "geotag": {
+    "latitude": 23,
+    "longitude": 78
   },
-  {
-    "site_id": "H019",
-    "name": "Lotus Temple",
-    "image_array": [
-      "/images/sites/lotus-temple.jpg",
-      "/images/sites/lotus-temple-2.jpg"
-    ],
-    "description": "Baháʼí House of Worship in New Delhi shaped like a lotus.",
-    "youtube_video_id": "vH-MgZLchLM",
-    "location": "New Delhi, India",
-    "geotag": {
-      "latitude": 28.5535,
-      "longitude": 77.2588
-    },
-    "type": "temple",
-    "era": "Modern",
-    "tags": [
-      "temple",
-      "modern",
-      "bahai",
-      "new delhi",
-      "architecture",
-      "worship"
-    ]
+  "type": "tradition",
+  "era": "Ancient",
+  "tags": [
+    "tradition",
+    "ancient",
+    "oral history",
+    "storytelling",
+    "culture",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1f"
   },
-  {
-    "site_id": "H020",
-    "name": "Manipuri Dance",
-    "image_array": [
-      "/images/sites/manipuri.jpg",
-      "/images/sites/manipuri-2.jpg"
-    ],
-    "description": "Classical dance form from Manipur, India.",
-    "youtube_video_id": "Q9rPwA8F8so",
-    "location": "Manipur, India",
-    "geotag": {
-      "latitude": 24.8,
-      "longitude": 93.9
-    },
-    "type": "dance",
-    "era": "Classical",
-    "tags": [
-      "dance",
-      "classical",
-      "manipuri",
-      "manipur",
-      "performance art"
-    ]
+  "site_id": "H025",
+  "name": "Raksha Bandhan",
+  "image_array": [
+    "/images/sites/raksha-bandhan.jpg",
+    "/images/sites/raksha-bandhan-2.jpg"
+  ],
+  "description": "Festival celebrating the bond between brothers and sisters.",
+  "youtube_video_id": "PPZcnULO_Js",
+  "location": "All over India",
+  "geotag": {
+    "latitude": 28.6,
+    "longitude": 77.2
   },
-  {
-    "site_id": "H021",
-    "name": "Maori Mask",
-    "image_array": [
-      "/images/sites/maori-mask.jpg",
-      "/images/sites/maori-mask-2.jpg"
-    ],
-    "description": "Traditional masks symbolizing Maori culture.",
-    "youtube_video_id": "yW9PvT8rQ5U",
-    "location": "New Zealand (cultural reference)",
-    "geotag": {
-      "latitude": -40.9,
-      "longitude": 174.9
-    },
-    "type": "artifact",
-    "era": "Traditional",
-    "tags": [
-      "artifact",
-      "traditional",
-      "maori",
-      "mask",
-      "new zealand",
-      "culture"
-    ]
+  "type": "festival",
+  "era": "Traditional",
+  "tags": [
+    "festival",
+    "traditional",
+    "raksha bandhan",
+    "hindu",
+    "siblings",
+    "india"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce07"
   },
-  {
-    "site_id": "H022",
-    "name": "Mohiniyattam",
-    "image_array": [
-      "/images/sites/mohiniyattam.jpg",
-      "/images/sites/mohiniyattam-2.jpg"
-    ],
-    "description": "Graceful classical dance form from Kerala.",
-    "youtube_video_id": "d8H1X5iY7s0",
-    "location": "Kerala, India",
-    "geotag": {
-      "latitude": 10.85,
-      "longitude": 76.27
-    },
-    "type": "dance",
-    "era": "Classical",
-    "tags": [
-      "dance",
-      "classical",
-      "mohiniyattam",
-      "kerala",
-      "performance art"
-    ]
+  "site_id": "H001",
+  "name": "Ajanta Caves",
+  "image_array": [
+    "/images/sites/ajanta-caves.jpg",
+    "/images/sites/ajanta-caves-2.jpg"
+  ],
+  "description": "Ancient Buddhist rock-cut caves famous for murals and sculptures.",
+  "youtube_video_id": "dZxllTnr0vc",
+  "location": "Aurangabad, Maharashtra, India",
+  "geotag": {
+    "latitude": 20.552,
+    "longitude": 75.7033
   },
-  {
-    "site_id": "H023",
-    "name": "Mysore Palace",
-    "image_array": [
-      "/images/sites/mysore palace.jpg",
-      "/images/sites/mysore-palace-2.jpg"
-    ],
-    "description": "Historic palace of the Wadiyar dynasty in Mysore.",
-    "youtube_video_id": "UaTzDAKKbQI",
-    "location": "Mysuru, Karnataka, India",
-    "geotag": {
-      "latitude": 12.3052,
-      "longitude": 76.6552
-    },
-    "type": "palace",
-    "era": "Wadiyar",
-    "tags": [
-      "palace",
-      "wadiyar",
-      "mysuru",
-      "karnataka",
-      "architecture",
-      "history"
-    ]
+  "type": "cave",
+  "era": "Ancient",
+  "tags": [
+    "unesco",
+    "cave",
+    "ancient",
+    "buddhist",
+    "murals",
+    "sculptures",
+    "maharashtra"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce08"
   },
-  {
-    "site_id": "H024",
-    "name": "Oral History",
-    "image_array": [
-      "/images/sites/Oral History.jpg",
-      "/images/sites/oral-history-2.jpg"
-    ],
-    "description": "Tradition of passing culture and stories through spoken word.",
-    "youtube_video_id": "uYp0PjD4ySk",
-    "location": "All over India",
-    "geotag": {
-      "latitude": 23,
-      "longitude": 78
-    },
-    "type": "tradition",
-    "era": "Ancient",
-    "tags": [
-      "tradition",
-      "ancient",
-      "oral history",
-      "storytelling",
-      "culture",
-      "heritage"
-    ]
+  "site_id": "H002",
+  "name": "Amber-Fort",
+  "image_array": [
+    "/images/sites/amber-fort.jpeg",
+    "/images/sites/amber-fort-2.jpg"
+  ],
+  "description": "A grand fort near Jaipur known for its artistic Rajput architecture.",
+  "youtube_video_id": "pW6GfcmjgrI",
+  "location": "Jaipur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9855,
+    "longitude": 75.8513
   },
-  {
-    "site_id": "H025",
-    "name": "Raksha Bandhan",
-    "image_array": [
-      "/images/sites/raksha-bandhan.jpg",
-      "/images/sites/raksha-bandhan-2.jpg"
-    ],
-    "description": "Festival celebrating the bond between brothers and sisters.",
-    "youtube_video_id": "Q7s5O1Pk8Sw",
-    "location": "All over India",
-    "geotag": {
-      "latitude": 28.6,
-      "longitude": 77.2
-    },
-    "type": "festival",
-    "era": "Traditional",
-    "tags": [
-      "festival",
-      "traditional",
-      "raksha bandhan",
-      "hindu",
-      "siblings",
-      "india"
-    ]
+  "type": "fort",
+  "era": "Rajput",
+  "tags": [
+    "fort",
+    "rajput",
+    "architecture",
+    "jaipur",
+    "rajasthan",
+    "palace"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0f"
   },
-  {
-    "site_id": "H026",
-    "name": "Red Fort",
-    "image_array": [
-      "/images/sites/red-fort.jpg",
-      "/images/sites/red-fort-2.jpg"
-    ],
-    "description": "UNESCO World Heritage site and symbol of India's independence.",
-    "youtube_video_id": "EhoubiX8lat",
-    "location": "Delhi, India",
-    "geotag": {
-      "latitude": 28.6562,
-      "longitude": 77.241
-    },
-    "type": "fort",
-    "era": "Mughal",
-    "tags": [
-      "unesco",
-      "fort",
-      "mughal",
-      "architecture",
-      "sandstone",
-      "history",
-      "delhi"
-    ]
+  "site_id": "H009",
+  "name": "Christmas",
+  "image_array": [
+    "/images/sites/christmas.jpeg",
+    "/images/sites/christmas-2.jpg"
+  ],
+  "description": "Celebration of the birth of Jesus Christ, observed across India.",
+  "youtube_video_id": "4mUptqxrFvI",
+  "location": "All over India",
+  "geotag": {
+    "latitude": 28.6,
+    "longitude": 77.2
   },
-  {
-    "site_id": "H027",
-    "name": "Sanchi Stupa",
-    "image_array": [
-      "/images/sites/sanchi-stupa.jpg",
-      "/images/sites/sanchi-stupa-2.jpg"
-    ],
-    "description": "One of the oldest stone structures in India, a Buddhist monument.",
-    "youtube_video_id": "s9H1X9q7QdY",
-    "location": "Madhya Pradesh, India",
-    "geotag": {
-      "latitude": 23.4866,
-      "longitude": 77.7395
-    },
-    "type": "stupa",
-    "era": "Ancient",
-    "tags": [
-      "unesco",
-      "stupa",
-      "ancient",
-      "buddhist",
-      "monument",
-      "mauryan",
-      "madhya pradesh"
-    ]
+  "type": "festival",
+  "era": "Modern",
+  "tags": [
+    "festival",
+    "modern",
+    "christmas",
+    "christian",
+    "celebration",
+    "india"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce12"
   },
-  {
-    "site_id": "H028",
-    "name": "Sacred Site Riverbank",
-    "image_array": [
-      "/images/sites/Sacred Site Riverbank.jpg",
-      "/images/sites/sacred-site-riverbank-2.jpg"
-    ],
-    "description": "Riverbanks in India considered sacred for rituals and worship.",
-    "youtube_video_id": "aiMxfVxg87Q",
-    "location": "Varanasi, Uttar Pradesh, India",
-    "geotag": {
-      "latitude": 25.3176,
-      "longitude": 82.9739
-    },
-    "type": "sacred_site",
-    "era": "Ancient",
-    "tags": [
-      "sacred site",
-      "ancient",
-      "riverbank",
-      "rituals",
-      "worship",
-      "varanasi",
-      "ghat"
-    ]
+  "site_id": "H012",
+  "name": "Durga Puja",
+  "image_array": [
+    "/images/sites/durga-puja.jpg",
+    "/images/sites/durga-puja-2.jpg"
+  ],
+  "description": "Grand festival in West Bengal celebrating Goddess Durga.",
+  "youtube_video_id": "Ipq8J1_QzXk",
+  "location": "Kolkata, West Bengal, India",
+  "geotag": {
+    "latitude": 22.5726,
+    "longitude": 88.3639
   },
-  {
-    "site_id": "H029",
-    "name": "Victoria Memorial",
-    "image_array": [
-      "/images/sites/victoria-memorial.jpg",
-      "/images/sites/victoria-memorial-2.jpg"
-    ],
-    "description": "A large marble building in Kolkata dedicated to Queen Victoria.",
-    "youtube_video_id": "dQw4w9WgXcQ",
-    "location": "Kolkata, West Bengal, India",
-    "geotag": {
-      "latitude": 22.5448,
-      "longitude": 88.3426
-    },
-    "type": "memorial",
-    "era": "Colonial",
-    "tags": [
-      "memorial",
-      "colonial",
-      "british",
-      "kolkata",
-      "west bengal",
-      "architecture"
-    ]
+  "type": "festival",
+  "era": "Traditional",
+  "tags": [
+    "festival",
+    "traditional",
+    "durga puja",
+    "kolkata",
+    "west bengal",
+    "hindu",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce20"
   },
-  {
-    "site_id": "H030",
-    "name": "Warli Art",
-    "image_array": [
-      "/images/sites/warli.jpg",
-      "/images/sites/warli-2.jpg"
-    ],
-    "description": "A tribal art form practiced in Maharashtra, depicting daily life.",
-    "youtube_video_id": "F9n4D5k7L8m",
-    "location": "Maharashtra, India",
-    "geotag": {
-      "latitude": 19.6,
-      "longitude": 73
-    },
-    "type": "art",
-    "era": "Traditional",
-    "tags": [
-      "art",
-      "traditional",
-      "warli",
-      "tribal",
-      "folk art",
-      "maharashtra"
-    ]
-  }
-]
+  "site_id": "H026",
+  "name": "Red Fort",
+  "image_array": [
+    "/images/sites/red-fort.jpg",
+    "/images/sites/red-fort-2.jpg"
+  ],
+  "description": "UNESCO World Heritage site and symbol of India's independence.",
+  "youtube_video_id": "p7E0ECrAI3I",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.6562,
+    "longitude": 77.241
+  },
+  "type": "fort",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "fort",
+    "mughal",
+    "architecture",
+    "sandstone",
+    "history",
+    "delhi"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce23"
+  },
+  "site_id": "H029",
+  "name": "Victoria Memorial",
+  "image_array": [
+    "/images/sites/victoria-memorial.jpg",
+    "/images/sites/victoria-memorial-2.jpg"
+  ],
+  "description": "A large marble building in Kolkata dedicated to Queen Victoria.",
+  "youtube_video_id": "dQw4w9WgXcQ",
+  "location": "Kolkata, West Bengal, India",
+  "geotag": {
+    "latitude": 22.5448,
+    "longitude": 88.3426
+  },
+  "type": "memorial",
+  "era": "Colonial",
+  "tags": [
+    "memorial",
+    "colonial",
+    "british",
+    "kolkata",
+    "west bengal",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce24"
+  },
+  "site_id": "H030",
+  "name": "Warli Art",
+  "image_array": [
+    "/images/sites/warli.jpg",
+    "/images/sites/warli-2.jpg"
+  ],
+  "description": "A tribal art form practiced in Maharashtra, depicting daily life.",
+  "youtube_video_id": "C-Mvr7rUWRo",
+  "location": "Maharashtra, India",
+  "geotag": {
+    "latitude": 19.6,
+    "longitude": 73
+  },
+  "type": "art",
+  "era": "Traditional",
+  "tags": [
+    "art",
+    "traditional",
+    "warli",
+    "tribal",
+    "folk art",
+    "maharashtra"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce09"
+  },
+  "site_id": "H003",
+  "name": "Ancient Pottery",
+  "image_array": [
+    "/images/sites/ancient-pottery.jpg",
+    "/images/sites/ancient-pottery-2.jpg"
+  ],
+  "description": "Traditional pottery reflecting India's ancient craft heritage.",
+  "youtube_video_id": "UvH7xm8JfJ4",
+  "location": "Various regions, India",
+  "geotag": {
+    "latitude": 23,
+    "longitude": 78
+  },
+  "type": "craft",
+  "era": "Ancient",
+  "tags": [
+    "craft",
+    "ancient",
+    "pottery",
+    "traditional",
+    "heritage",
+    "art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0b"
+  },
+  "site_id": "H005",
+  "name": "Brihadeeshwara Temple",
+  "image_array": [
+    "/images/sites/brihadeeshwara.jpg",
+    "/images/sites/brihadeeshwara-2.jpg"
+  ],
+  "description": "A Chola dynasty temple dedicated to Lord Shiva in Thanjavur.",
+  "youtube_video_id": "KC3GAmjn1mg",
+  "location": "Thanjavur, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.7828,
+    "longitude": 79.1318
+  },
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "unesco",
+    "temple",
+    "chola",
+    "shiva",
+    "dravidian",
+    "architecture",
+    "tamil nadu"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce0d"
+  },
+  "site_id": "H007",
+  "name": "Champaner Masjid",
+  "image_array": [
+    "/images/sites/champaner-masjid.jpeg",
+    "/images/sites/champaner-masjid-2.jpg"
+  ],
+  "description": "A UNESCO site in Gujarat featuring Indo-Islamic architecture.",
+  "youtube_video_id": "2j3vwgpSMck",
+  "location": "Pavagadh, Gujarat, India",
+  "geotag": {
+    "latitude": 22.4835,
+    "longitude": 73.5316
+  },
+  "type": "mosque",
+  "era": "Islamic",
+  "tags": [
+    "unesco",
+    "mosque",
+    "islamic",
+    "architecture",
+    "gujarat",
+    "indo-islamic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce10"
+  },
+  "site_id": "H010",
+  "name": "Decorated Bowl",
+  "image_array": [
+    "/images/sites/decorated-bowl.jpg",
+    "/images/sites/decorated-bowl-2.jpg"
+  ],
+  "description": "Traditional handcrafted bowl designs from Indian artisans.",
+  "youtube_video_id": "UGPGn5ZeZoA",
+  "location": "Various regions, India",
+  "geotag": {
+    "latitude": 23.5,
+    "longitude": 78.5
+  },
+  "type": "craft",
+  "era": "Traditional",
+  "tags": [
+    "craft",
+    "traditional",
+    "handcrafted",
+    "artisan",
+    "pottery",
+    "art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce16"
+  },
+  "site_id": "H016",
+  "name": "Hawa Mahal",
+  "image_array": [
+    "/images/sites/hawa-mahal.jpg",
+    "/images/sites/hawa-mahal-2.jpg"
+  ],
+  "description": "Palace of Winds in Jaipur with unique honeycomb design.",
+  "youtube_video_id": "jSlrNR2hAqc",
+  "location": "Jaipur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9239,
+    "longitude": 75.8267
+  },
+  "type": "palace",
+  "era": "Rajput",
+  "tags": [
+    "palace",
+    "rajput",
+    "architecture",
+    "jaipur",
+    "rajasthan",
+    "hawa mahal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce18"
+  },
+  "site_id": "H018",
+  "name": "Kuchipudi",
+  "image_array": [
+    "/images/sites/kuchipudi.jpg",
+    "/images/sites/kuchipudi-2.jpg"
+  ],
+  "description": "Classical dance form from Andhra Pradesh.",
+  "youtube_video_id": "ko5sKNuSLbs",
+  "location": "Andhra Pradesh, India",
+  "geotag": {
+    "latitude": 16.5,
+    "longitude": 80.6
+  },
+  "type": "dance",
+  "era": "Classical",
+  "tags": [
+    "dance",
+    "classical",
+    "kuchipudi",
+    "andhra pradesh",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce21"
+  },
+  "site_id": "H027",
+  "name": "Sanchi Stupa",
+  "image_array": [
+    "/images/sites/sanchi-stupa.jpg",
+    "/images/sites/sanchi-stupa-2.jpg"
+  ],
+  "description": "One of the oldest stone structures in India, a Buddhist monument.",
+  "youtube_video_id": "Xhxjah-2QX8",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 23.4866,
+    "longitude": 77.7395
+  },
+  "type": "stupa",
+  "era": "Ancient",
+  "tags": [
+    "unesco",
+    "stupa",
+    "ancient",
+    "buddhist",
+    "monument",
+    "mauryan",
+    "madhya pradesh"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce14"
+  },
+  "site_id": "H014",
+  "name": "Gateway of India",
+  "image_array": [
+    "/images/sites/gatewayofindia.jpg",
+    "/images/sites/gatewayofindia-2.jpg"
+  ],
+  "description": "Monument built in Mumbai during the 20th century colonial era.",
+  "youtube_video_id": "cNnQhWz9m8c",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9219,
+    "longitude": 72.8347
+  },
+  "type": "monument",
+  "era": "Colonial",
+  "tags": [
+    "monument",
+    "colonial",
+    "british",
+    "mumbai",
+    "architecture",
+    "maharashtra"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce15"
+  },
+  "site_id": "H015",
+  "name": "Golden Temple",
+  "image_array": [
+    "/images/sites/golden temple.jpg",
+    "/images/sites/golden-temple-2.jpg"
+  ],
+  "description": "The holiest Gurdwara of Sikhism located in Amritsar.",
+  "youtube_video_id": "jA7NhLxv29g",
+  "location": "Amritsar, Punjab, India",
+  "geotag": {
+    "latitude": 31.62,
+    "longitude": 74.8765
+  },
+  "type": "temple",
+  "era": "Sikh",
+  "tags": [
+    "temple",
+    "sikh",
+    "gurdwara",
+    "amritsar",
+    "punjab",
+    "sikhism"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce17"
+  },
+  "site_id": "H017",
+  "name": "Jallianwala Bagh",
+  "image_array": [
+    "/images/sites/jallianwala-bagh.jpeg",
+    "/images/sites/jallianwala-bagh-2.jpg"
+  ],
+  "description": "Site of the tragic 1919 massacre, now a memorial in Amritsar.",
+  "youtube_video_id": "FR4Se6M4RRM",
+  "location": "Amritsar, Punjab, India",
+  "geotag": {
+    "latitude": 31.6206,
+    "longitude": 74.8796
+  },
+  "type": "memorial",
+  "era": "Colonial",
+  "tags": [
+    "memorial",
+    "colonial",
+    "history",
+    "amritsar",
+    "punjab",
+    "british"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce19"
+  },
+  "site_id": "H019",
+  "name": "Lotus Temple",
+  "image_array": [
+    "/images/sites/lotus-temple.jpg",
+    "/images/sites/lotus-temple-2.jpg"
+  ],
+  "description": "Baháʼí House of Worship in New Delhi shaped like a lotus.",
+  "youtube_video_id": "BWiaj8-kAI0",
+  "location": "New Delhi, India",
+  "geotag": {
+    "latitude": 28.5535,
+    "longitude": 77.2588
+  },
+  "type": "temple",
+  "era": "Modern",
+  "tags": [
+    "temple",
+    "modern",
+    "bahai",
+    "new delhi",
+    "architecture",
+    "worship"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce1c"
+  },
+  "site_id": "H022",
+  "name": "Mohiniyattam",
+  "image_array": [
+    "/images/sites/mohiniyattam.jpg",
+    "/images/sites/mohiniyattam-2.jpg"
+  ],
+  "description": "Graceful classical dance form from Kerala.",
+  "youtube_video_id": "S5yeHOXD0MA",
+  "location": "Kerala, India",
+  "geotag": {
+    "latitude": 10.85,
+    "longitude": 76.27
+  },
+  "type": "dance",
+  "era": "Classical",
+  "tags": [
+    "dance",
+    "classical",
+    "mohiniyattam",
+    "kerala",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dff12923c54c379150ce22"
+  },
+  "site_id": "H028",
+  "name": "Sacred Site Riverbank",
+  "image_array": [
+    "/images/sites/Sacred Site Riverbank.jpg",
+    "/images/sites/sacred-site-riverbank-2.jpg"
+  ],
+  "description": "Riverbanks in India considered sacred for rituals and worship.",
+  "youtube_video_id": "kegsMwaH63E",
+  "location": "Varanasi, Uttar Pradesh, India",
+  "geotag": {
+    "latitude": 25.3176,
+    "longitude": 82.9739
+  },
+  "type": "sacred_site",
+  "era": "Ancient",
+  "tags": [
+    "sacred site",
+    "ancient",
+    "riverbank",
+    "rituals",
+    "worship",
+    "varanasi",
+    "ghat"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecb7"
+  },
+  "site_id": "H041",
+  "name": "Golconda Fort",
+  "image_array": [
+    "/images/sites/golconda.jpg",
+    "/images/sites/golconda-2.jpg"
+  ],
+  "description": "Medieval fort known for its acoustic architecture and diamond trade history.",
+  "youtube_video_id": "XzL5fxkpL4Y",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3833,
+    "longitude": 78.4011
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "fort",
+    "golconda",
+    "hyderabad",
+    "medieval",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecb8"
+  },
+  "site_id": "H042",
+  "name": "Chhau Dance",
+  "image_array": [
+    "/images/sites/chhau.jpg",
+    "/images/sites/chhau-2.jpg"
+  ],
+  "description": "Martial dance tradition with masks, popular in Odisha, Bengal, and Jharkhand.",
+  "youtube_video_id": "GJlqfQZxiNQ",
+  "location": "Mayurbhanj, Odisha, India",
+  "geotag": {
+    "latitude": 21.93,
+    "longitude": 86.74
+  },
+  "type": "dance",
+  "era": "Traditional",
+  "tags": [
+    "dance",
+    "folk",
+    "odisha",
+    "chhau",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecb9"
+  },
+  "site_id": "H043",
+  "name": "Hampi",
+  "image_array": [
+    "/images/sites/hampi.jpg",
+    "/images/sites/hampi-2.jpg"
+  ],
+  "description": "UNESCO ruins of the Vijayanagara Empire, known for stone chariot and temples.",
+  "youtube_video_id": "9eQZyVNRvNo",
+  "location": "Karnataka, India",
+  "geotag": {
+    "latitude": 15.335,
+    "longitude": 76.462
+  },
+  "type": "ruins",
+  "era": "Vijayanagara",
+  "tags": [
+    "unesco",
+    "ruins",
+    "hampi",
+    "vijayanagara",
+    "karnataka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecba"
+  },
+  "site_id": "H044",
+  "name": "Durga Puja",
+  "image_array": [
+    "/images/sites/durgapuja.jpg",
+    "/images/sites/durgapuja-2.jpg"
+  ],
+  "description": "Grand Bengali festival celebrating Goddess Durga with idols and pandals.",
+  "youtube_video_id": "4Hzt2U_6r3U",
+  "location": "Kolkata, West Bengal, India",
+  "geotag": {
+    "latitude": 22.5726,
+    "longitude": 88.3639
+  },
+  "type": "festival",
+  "era": "Traditional",
+  "tags": [
+    "festival",
+    "durga puja",
+    "west bengal",
+    "kolkata",
+    "hindu",
+    "celebration"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecbb"
+  },
+  "site_id": "H045",
+  "name": "Qutub Minar",
+  "image_array": [
+    "/images/sites/qutub.jpg",
+    "/images/sites/qutub-2.jpg"
+  ],
+  "description": "Tallest brick minaret in the world, a UNESCO site built in the 12th century.",
+  "youtube_video_id": "AClV9PlYd5A",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5245,
+    "longitude": 77.1855
+  },
+  "type": "monument",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "qutub minar",
+    "delhi",
+    "islamic architecture",
+    "monument"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecbc"
+  },
+  "site_id": "H046",
+  "name": "Warli Painting",
+  "image_array": [
+    "/images/sites/warli.jpg",
+    "/images/sites/warli-2.jpg"
+  ],
+  "description": "Tribal art form of Maharashtra using white geometric figures on mud walls.",
+  "youtube_video_id": "fR9XwhP3lt0",
+  "location": "Maharashtra, India",
+  "geotag": {
+    "latitude": 19.7515,
+    "longitude": 75.7139
+  },
+  "type": "art",
+  "era": "Tribal",
+  "tags": [
+    "art",
+    "folk",
+    "warli",
+    "maharashtra",
+    "tribal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecbd"
+  },
+  "site_id": "H047",
+  "name": "Golden Temple",
+  "image_array": [
+    "/images/sites/goldentemple.jpg",
+    "/images/sites/goldentemple-2.jpg"
+  ],
+  "description": "Sacred Sikh gurdwara with golden-plated dome, open to all communities.",
+  "youtube_video_id": "9z2c3Us7j3o",
+  "location": "Amritsar, Punjab, India",
+  "geotag": {
+    "latitude": 31.62,
+    "longitude": 74.88
+  },
+  "type": "temple",
+  "era": "Sikh",
+  "tags": [
+    "sikhism",
+    "temple",
+    "punjab",
+    "amritsar",
+    "golden temple"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecbe"
+  },
+  "site_id": "H048",
+  "name": "Jaisalmer Fort",
+  "image_array": [
+    "/images/sites/jaisalmer fort.jpg",
+    "/images/sites/jaisalmer-2.jpg"
+  ],
+  "description": "Living fort made of golden sandstone, housing residents and temples.",
+  "youtube_video_id": "t5CfU6jQmnE",
+  "location": "Jaisalmer, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9124,
+    "longitude": 70.9129
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "fort",
+    "jaisalmer",
+    "rajasthan",
+    "sandstone",
+    "living fort"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecbf"
+  },
+  "site_id": "H049",
+  "name": "Yakshagana",
+  "image_array": [
+    "/images/sites/yakshagana.jpg",
+    "/images/sites/yakshagana-2.jpg"
+  ],
+  "description": "Traditional theatre form of Karnataka combining dance, music, and dialogue.",
+  "youtube_video_id": "B2R_3Lz4zKM",
+  "location": "Karnataka, India",
+  "geotag": {
+    "latitude": 14.52,
+    "longitude": 75.72
+  },
+  "type": "theatre",
+  "era": "Traditional",
+  "tags": [
+    "theatre",
+    "yakshagana",
+    "folk",
+    "karnataka",
+    "performance art"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc0"
+  },
+  "site_id": "H050",
+  "name": "Kathakali",
+  "image_array": [
+    "/images/sites/kathakali.jpg",
+    "/images/sites/kathakali-2.jpg"
+  ],
+  "description": "Classical dance-drama of Kerala with elaborate makeup, costumes, and gestures.",
+  "youtube_video_id": "wP9w0X0xq6M",
+  "location": "Kerala, India",
+  "geotag": {
+    "latitude": 10.8505,
+    "longitude": 76.2711
+  },
+  "type": "dance",
+  "era": "Classical",
+  "tags": [
+    "dance",
+    "kathakali",
+    "kerala",
+    "classical",
+    "theatre"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc1"
+  },
+  "site_id": "H051",
+  "name": "Konark Sun Temple",
+  "image_array": [
+    "/images/sites/konark.jpg",
+    "/images/sites/konark-2.jpg"
+  ],
+  "description": "13th-century temple shaped like a colossal chariot dedicated to the Sun God.",
+  "youtube_video_id": "zHykW0c8EzE",
+  "location": "Konark, Odisha, India",
+  "geotag": {
+    "latitude": 19.8876,
+    "longitude": 86.0945
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "sun temple",
+    "konark",
+    "odisha",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc2"
+  },
+  "site_id": "H052",
+  "name": "Mysore Palace",
+  "image_array": [
+    "/images/sites/mysorepalace.jpg",
+    "/images/sites/mysorepalace-2.jpg"
+  ],
+  "description": "Royal palace of the Wadiyar dynasty, illuminated by thousands of lights.",
+  "youtube_video_id": "3oS0nQ9s0Yg",
+  "location": "Mysuru, Karnataka, India",
+  "geotag": {
+    "latitude": 12.3051,
+    "longitude": 76.6551
+  },
+  "type": "palace",
+  "era": "Modern",
+  "tags": [
+    "palace",
+    "mysore",
+    "karnataka",
+    "royal",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc3"
+  },
+  "site_id": "H053",
+  "name": "Ajanta Caves",
+  "image_array": [
+    "/images/sites/ajanta.jpg",
+    "/images/sites/ajanta-2.jpg"
+  ],
+  "description": "Rock-cut Buddhist caves famous for paintings and sculptures.",
+  "youtube_video_id": "cFSNYGGyR6c",
+  "location": "Aurangabad, Maharashtra, India",
+  "geotag": {
+    "latitude": 20.5519,
+    "longitude": 75.7033
+  },
+  "type": "caves",
+  "era": "Ancient",
+  "tags": [
+    "unesco",
+    "ajanta",
+    "buddhist",
+    "caves",
+    "paintings"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc4"
+  },
+  "site_id": "H054",
+  "name": "Ellora Caves",
+  "image_array": [
+    "/images/sites/ellora.jpg",
+    "/images/sites/ellora-2.jpg"
+  ],
+  "description": "Rock-cut temples and monasteries representing Hindu, Buddhist, and Jain faiths.",
+  "youtube_video_id": "KoJ7uSgI65g",
+  "location": "Aurangabad, Maharashtra, India",
+  "geotag": {
+    "latitude": 20.0268,
+    "longitude": 75.1792
+  },
+  "type": "caves",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "ellora",
+    "caves",
+    "rock cut",
+    "temples"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc5"
+  },
+  "site_id": "H055",
+  "name": "Meenakshi Amman Temple",
+  "image_array": [
+    "/images/sites/meenakshi.jpg",
+    "/images/sites/meenakshi-2.jpg"
+  ],
+  "description": "Dravidian-style temple in Madurai dedicated to Goddess Meenakshi.",
+  "youtube_video_id": "dY7qkI6S8Lw",
+  "location": "Madurai, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 9.9195,
+    "longitude": 78.1193
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "temple",
+    "meenakshi",
+    "madurai",
+    "tamil nadu",
+    "dravidian"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc6"
+  },
+  "site_id": "H056",
+  "name": "Sanchi Stupa",
+  "image_array": [
+    "/images/sites/sanchi.jpg",
+    "/images/sites/sanchi-2.jpg"
+  ],
+  "description": "Ancient Buddhist stupa built by Ashoka the Great.",
+  "youtube_video_id": "z1F9t6EdwIo",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 23.4793,
+    "longitude": 77.7391
+  },
+  "type": "stupa",
+  "era": "Ancient",
+  "tags": [
+    "buddhist",
+    "stupa",
+    "sanchi",
+    "ashoka",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc7"
+  },
+  "site_id": "H057",
+  "name": "Charminar",
+  "image_array": [
+    "/images/sites/charminar.jpg",
+    "/images/sites/charminar-2.jpg"
+  ],
+  "description": "Iconic mosque and monument with four grand arches.",
+  "youtube_video_id": "d8kFWRyV8gY",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3616,
+    "longitude": 78.4747
+  },
+  "type": "monument",
+  "era": "Medieval",
+  "tags": [
+    "charminar",
+    "hyderabad",
+    "mosque",
+    "monument",
+    "islamic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc8"
+  },
+  "site_id": "H058",
+  "name": "Brihadeeswarar Temple",
+  "image_array": [
+    "/images/sites/brihadeeswara.jpg",
+    "/images/sites/brihadeeswara-2.jpg"
+  ],
+  "description": "Chola dynasty masterpiece dedicated to Lord Shiva.",
+  "youtube_video_id": "S4y4u2vZ5yQ",
+  "location": "Thanjavur, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.7847,
+    "longitude": 79.1316
+  },
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "unesco",
+    "brihadeeswarar",
+    "thanjavur",
+    "temple",
+    "chola"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02375ec13f52bd301ecc9"
+  },
+  "site_id": "H059",
+  "name": "Mahabalipuram",
+  "image_array": [
+    "/images/sites/mahabalipuram.jpg",
+    "/images/sites/mahabalipuram-2.jpg"
+  ],
+  "description": "Group of monuments with rock-cut temples and shore temples.",
+  "youtube_video_id": "kQX41mr18bA",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 12.6208,
+    "longitude": 80.1926
+  },
+  "type": "monuments",
+  "era": "Pallava",
+  "tags": [
+    "unesco",
+    "mahabalipuram",
+    "shore temple",
+    "rock cut",
+    "pallava"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed3"
+  },
+  "site_id": "H060",
+  "name": "Lotus Temple",
+  "image_array": [
+    "/images/sites/lotus.jpg",
+    "/images/sites/lotus-2.jpg"
+  ],
+  "description": "Baháʼí House of Worship in Delhi known for its lotus-shaped architecture.",
+  "youtube_video_id": "Q2Ah-k0qgR0",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5535,
+    "longitude": 77.2588
+  },
+  "type": "temple",
+  "era": "Modern",
+  "tags": [
+    "lotus temple",
+    "bahai",
+    "delhi",
+    "architecture",
+    "modern"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed4"
+  },
+  "site_id": "H061",
+  "name": "Victoria Memorial",
+  "image_array": [
+    "/images/sites/victoria.jpg",
+    "/images/sites/victoria-2.jpg"
+  ],
+  "description": "Marble building in Kolkata dedicated to Queen Victoria.",
+  "youtube_video_id": "OBzJWu9l9mc",
+  "location": "Kolkata, West Bengal, India",
+  "geotag": {
+    "latitude": 22.5448,
+    "longitude": 88.3426
+  },
+  "type": "monument",
+  "era": "Colonial",
+  "tags": [
+    "victoria",
+    "kolkata",
+    "memorial",
+    "colonial",
+    "british era"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed5"
+  },
+  "site_id": "H062",
+  "name": "Ajmer Sharif Dargah",
+  "image_array": [
+    "/images/sites/ajmer.jpg",
+    "/images/sites/ajmer-2.jpg"
+  ],
+  "description": "Sufi shrine of Khwaja Moinuddin Chishti in Ajmer.",
+  "youtube_video_id": "n5PgFeP4rQ4",
+  "location": "Ajmer, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.4499,
+    "longitude": 74.6399
+  },
+  "type": "dargah",
+  "era": "Medieval",
+  "tags": [
+    "ajmer",
+    "sufi",
+    "dargah",
+    "rajasthan",
+    "islamic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed6"
+  },
+  "site_id": "H063",
+  "name": "Kaziranga National Park",
+  "image_array": [
+    "/images/sites/kaziranga.jpg",
+    "/images/sites/kaziranga-2.jpg"
+  ],
+  "description": "UNESCO World Heritage Site known for one-horned rhinoceroses.",
+  "youtube_video_id": "2hB95Q4TtKs",
+  "location": "Assam, India",
+  "geotag": {
+    "latitude": 26.5775,
+    "longitude": 93.1711
+  },
+  "type": "national park",
+  "era": "Modern",
+  "tags": [
+    "unesco",
+    "kaziranga",
+    "assam",
+    "wildlife",
+    "rhinoceros"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed7"
+  },
+  "site_id": "H064",
+  "name": "Ajanta Handicrafts",
+  "image_array": [
+    "/images/sites/handicrafts.jpg",
+    "/images/sites/handicrafts-2.jpg"
+  ],
+  "description": "Traditional Indian handicrafts showcasing cultural diversity.",
+  "youtube_video_id": "hsRlo1L2iKw",
+  "location": "India",
+  "geotag": {
+    "latitude": 21,
+    "longitude": 78
+  },
+  "type": "art",
+  "era": "Traditional",
+  "tags": [
+    "handicrafts",
+    "art",
+    "traditional",
+    "india",
+    "culture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed8"
+  },
+  "site_id": "H065",
+  "name": "Nalanda University Ruins",
+  "image_array": [
+    "/images/sites/nalanda.jpg",
+    "/images/sites/nalanda-2.jpg"
+  ],
+  "description": "Ancient university ruins, once a great center of learning.",
+  "youtube_video_id": "L3IRrHVY0Kg",
+  "location": "Nalanda, Bihar, India",
+  "geotag": {
+    "latitude": 25.135,
+    "longitude": 85.4436
+  },
+  "type": "ruins",
+  "era": "Ancient",
+  "tags": [
+    "nalanda",
+    "ruins",
+    "university",
+    "bihar",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eed9"
+  },
+  "site_id": "H066",
+  "name": "Elephanta Caves",
+  "image_array": [
+    "/images/sites/elephanta.jpg",
+    "/images/sites/elephanta-2.jpg"
+  ],
+  "description": "Rock-cut caves dedicated to Lord Shiva on Elephanta Island.",
+  "youtube_video_id": "d4qS5FJrjE4",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9633,
+    "longitude": 72.9311
+  },
+  "type": "caves",
+  "era": "Medieval",
+  "tags": [
+    "elephanta",
+    "unesco",
+    "mumbai",
+    "shiva",
+    "rock cut"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeda"
+  },
+  "site_id": "H067",
+  "name": "Gateway of India",
+  "image_array": [
+    "/images/sites/gateway.jpg",
+    "/images/sites/gateway-2.jpg"
+  ],
+  "description": "Arch-monument built in Mumbai during the 20th century.",
+  "youtube_video_id": "RlxM6z7XriY",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.922,
+    "longitude": 72.8347
+  },
+  "type": "monument",
+  "era": "Colonial",
+  "tags": [
+    "gateway of india",
+    "mumbai",
+    "monument",
+    "colonial",
+    "20th century"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eedb"
+  },
+  "site_id": "H068",
+  "name": "Humayun’s Tomb",
+  "image_array": [
+    "/images/sites/humayun.jpg",
+    "/images/sites/humayun-2.jpg"
+  ],
+  "description": "Mughal tomb in Delhi, inspiration for Taj Mahal.",
+  "youtube_video_id": "vJbHg56k3Wc",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5933,
+    "longitude": 77.2507
+  },
+  "type": "tomb",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "humayun",
+    "delhi",
+    "mughal",
+    "tomb"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eedc"
+  },
+  "site_id": "H069",
+  "name": "Fatehpur Sikri",
+  "image_array": [
+    "/images/sites/fatehpur.jpg",
+    "/images/sites/fatehpur-2.jpg"
+  ],
+  "description": "City built by Akbar, later abandoned due to water scarcity.",
+  "youtube_video_id": "f7Wk7QjZRo8",
+  "location": "Uttar Pradesh, India",
+  "geotag": {
+    "latitude": 27.0937,
+    "longitude": 77.6681
+  },
+  "type": "city",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "fatehpur sikri",
+    "akbar",
+    "mughal",
+    "city"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eedd"
+  },
+  "site_id": "H070",
+  "name": "Khajuraho Temples",
+  "image_array": [
+    "/images/sites/khajuraho.jpg",
+    "/images/sites/khajuraho-2.jpg"
+  ],
+  "description": "UNESCO temples famous for intricate sculptures and carvings.",
+  "youtube_video_id": "hH3R2mXuc9Q",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 24.8318,
+    "longitude": 79.9199
+  },
+  "type": "temple",
+  "era": "Chandela",
+  "tags": [
+    "unesco",
+    "khajuraho",
+    "sculptures",
+    "temples",
+    "madhya pradesh"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eede"
+  },
+  "site_id": "H071",
+  "name": "Rani ki Vav",
+  "image_array": [
+    "/images/sites/ranikivav.jpg",
+    "/images/sites/ranikivav-2.jpg"
+  ],
+  "description": "Stepwell in Gujarat, UNESCO site with ornate carvings.",
+  "youtube_video_id": "W9y1W7FdnlA",
+  "location": "Patan, Gujarat, India",
+  "geotag": {
+    "latitude": 23.8583,
+    "longitude": 72.1019
+  },
+  "type": "stepwell",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "rani ki vav",
+    "gujarat",
+    "stepwell",
+    "carvings"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eedf"
+  },
+  "site_id": "H072",
+  "name": "Red Fort",
+  "image_array": [
+    "/images/sites/redfort.jpg",
+    "/images/sites/redfort-2.jpg"
+  ],
+  "description": "Historic fort in Delhi, main residence of Mughal emperors.",
+  "youtube_video_id": "oM2tI0pMjFs",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.6562,
+    "longitude": 77.241
+  },
+  "type": "fort",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "red fort",
+    "delhi",
+    "mughal",
+    "fort"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee0"
+  },
+  "site_id": "H073",
+  "name": "Somnath Temple",
+  "image_array": [
+    "/images/sites/somnath.jpg",
+    "/images/sites/somnath-2.jpg"
+  ],
+  "description": "One of the twelve Jyotirlinga shrines of Lord Shiva.",
+  "youtube_video_id": "6vRHOqN6Veo",
+  "location": "Gujarat, India",
+  "geotag": {
+    "latitude": 20.888,
+    "longitude": 70.401
+  },
+  "type": "temple",
+  "era": "Ancient",
+  "tags": [
+    "somnath",
+    "jyotirlinga",
+    "gujarat",
+    "shiva",
+    "temple"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee1"
+  },
+  "site_id": "H074",
+  "name": "Sun Temple, Modhera",
+  "image_array": [
+    "/images/sites/modhera.jpg",
+    "/images/sites/modhera-2.jpg"
+  ],
+  "description": "Hindu temple dedicated to the solar deity Surya.",
+  "youtube_video_id": "kEDcQy0snfQ",
+  "location": "Modhera, Gujarat, India",
+  "geotag": {
+    "latitude": 23.6,
+    "longitude": 72.1333
+  },
+  "type": "temple",
+  "era": "Solanki",
+  "tags": [
+    "sun temple",
+    "modhera",
+    "gujarat",
+    "surya",
+    "temple"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee2"
+  },
+  "site_id": "H075",
+  "name": "Amer Fort",
+  "image_array": [
+    "/images/sites/amer.jpg",
+    "/images/sites/amer-2.jpg"
+  ],
+  "description": "Fort near Jaipur with artistic Hindu and Mughal architecture.",
+  "youtube_video_id": "8ErFqwxvQPM",
+  "location": "Jaipur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9855,
+    "longitude": 75.8513
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "amer fort",
+    "jaipur",
+    "rajasthan",
+    "fort",
+    "mughal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee3"
+  },
+  "site_id": "H076",
+  "name": "Golden Temple",
+  "image_array": [
+    "/images/sites/golden.jpg",
+    "/images/sites/golden-2.jpg"
+  ],
+  "description": "Holest Sikh shrine covered with gold leaf.",
+  "youtube_video_id": "H9oUVGbbxok",
+  "location": "Amritsar, Punjab, India",
+  "geotag": {
+    "latitude": 31.62,
+    "longitude": 74.8765
+  },
+  "type": "temple",
+  "era": "Sikh",
+  "tags": [
+    "golden temple",
+    "amritsar",
+    "sikh",
+    "gurudwara",
+    "punjab"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee4"
+  },
+  "site_id": "H077",
+  "name": "Qutb Minar",
+  "image_array": [
+    "/images/sites/qutb.jpg",
+    "/images/sites/qutb-2.jpg"
+  ],
+  "description": "Tallest brick minaret in the world, UNESCO site in Delhi.",
+  "youtube_video_id": "9aSZXlKz9rk",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5244,
+    "longitude": 77.1855
+  },
+  "type": "minaret",
+  "era": "Delhi Sultanate",
+  "tags": [
+    "unesco",
+    "qutb minar",
+    "delhi",
+    "islamic",
+    "minaret"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee5"
+  },
+  "site_id": "H078",
+  "name": "Ajanta Paintings",
+  "image_array": [
+    "/images/sites/ajantapaintings.jpg",
+    "/images/sites/ajantapaintings-2.jpg"
+  ],
+  "description": "Murals inside Ajanta caves showcasing Buddhist art.",
+  "youtube_video_id": "OfvMfWWZfH8",
+  "location": "Aurangabad, Maharashtra, India",
+  "geotag": {
+    "latitude": 20.5519,
+    "longitude": 75.7033
+  },
+  "type": "art",
+  "era": "Ancient",
+  "tags": [
+    "ajanta",
+    "paintings",
+    "murals",
+    "buddhist",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee6"
+  },
+  "site_id": "H079",
+  "name": "Sundarbans",
+  "image_array": [
+    "/images/sites/sundarbans.jpg",
+    "/images/sites/sundarbans-2.jpg"
+  ],
+  "description": "Mangrove forest and UNESCO World Heritage Site home to Bengal tigers.",
+  "youtube_video_id": "t5e6Glp3r4c",
+  "location": "West Bengal, India",
+  "geotag": {
+    "latitude": 21.9497,
+    "longitude": 89.1833
+  },
+  "type": "forest",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "sundarbans",
+    "tigers",
+    "mangroves",
+    "west bengal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee7"
+  },
+  "site_id": "H080",
+  "name": "Kaziranga National Park",
+  "image_array": [
+    "/images/sites/kaziranga.jpg",
+    "/images/sites/kaziranga-2.jpg"
+  ],
+  "description": "UNESCO site famous for the one-horned rhinoceros.",
+  "youtube_video_id": "0gOKRrOSu7A",
+  "location": "Assam, India",
+  "geotag": {
+    "latitude": 26.5775,
+    "longitude": 93.1711
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "kaziranga",
+    "assam",
+    "wildlife",
+    "rhinoceros"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee8"
+  },
+  "site_id": "H081",
+  "name": "Keoladeo National Park",
+  "image_array": [
+    "/images/sites/keoladeo.jpg",
+    "/images/sites/keoladeo-2.jpg"
+  ],
+  "description": "Bird sanctuary in Rajasthan, home to migratory birds.",
+  "youtube_video_id": "ThvTLXrKXjM",
+  "location": "Bharatpur, Rajasthan, India",
+  "geotag": {
+    "latitude": 27.1591,
+    "longitude": 77.5232
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "keoladeo",
+    "bharatpur",
+    "bird sanctuary",
+    "rajasthan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eee9"
+  },
+  "site_id": "H082",
+  "name": "Humayun's Tomb",
+  "image_array": [
+    "/images/sites/humayun.jpg",
+    "/images/sites/humayun-2.jpg"
+  ],
+  "description": "Mausoleum of Mughal Emperor Humayun, precursor to Taj Mahal.",
+  "youtube_video_id": "qWolVwvWvVY",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5933,
+    "longitude": 77.2507
+  },
+  "type": "tomb",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "humayun",
+    "delhi",
+    "mughal",
+    "tomb"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeea"
+  },
+  "site_id": "H083",
+  "name": "Jantar Mantar Jaipur",
+  "image_array": [
+    "/images/sites/jantarjaipur.jpg",
+    "/images/sites/jantarjaipur-2.jpg"
+  ],
+  "description": "Astronomical observatory built by Maharaja Jai Singh II.",
+  "youtube_video_id": "hM5nM8P6WmY",
+  "location": "Jaipur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9248,
+    "longitude": 75.8246
+  },
+  "type": "observatory",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "jantar mantar",
+    "jaipur",
+    "astronomy",
+    "rajasthan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeeb"
+  },
+  "site_id": "H084",
+  "name": "Nalanda University Ruins",
+  "image_array": [
+    "/images/sites/nalanda.jpg",
+    "/images/sites/nalanda-2.jpg"
+  ],
+  "description": "Ruins of an ancient center of learning, UNESCO World Heritage Site.",
+  "youtube_video_id": "EZC2oP6hZpw",
+  "location": "Bihar, India",
+  "geotag": {
+    "latitude": 25.1356,
+    "longitude": 85.4432
+  },
+  "type": "ruins",
+  "era": "Ancient",
+  "tags": [
+    "unesco",
+    "nalanda",
+    "bihar",
+    "university",
+    "buddhist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeec"
+  },
+  "site_id": "H085",
+  "name": "Fatehpur Sikri",
+  "image_array": [
+    "/images/sites/fatehpur.jpg",
+    "/images/sites/fatehpur-2.jpg"
+  ],
+  "description": "Mughal city built by Akbar, later abandoned.",
+  "youtube_video_id": "JYZR5ghYY8A",
+  "location": "Uttar Pradesh, India",
+  "geotag": {
+    "latitude": 27.0937,
+    "longitude": 77.6686
+  },
+  "type": "city",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "fatehpur sikri",
+    "akbar",
+    "mughal",
+    "up"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeed"
+  },
+  "site_id": "H086",
+  "name": "Red Fort",
+  "image_array": [
+    "/images/sites/redfort.jpg",
+    "/images/sites/redfort-2.jpg"
+  ],
+  "description": "Iconic Mughal fort in Delhi, site of Independence Day celebrations.",
+  "youtube_video_id": "nETQZEM1lZk",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.6562,
+    "longitude": 77.241
+  },
+  "type": "fort",
+  "era": "Mughal",
+  "tags": [
+    "unesco",
+    "red fort",
+    "delhi",
+    "mughal",
+    "fort"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeee"
+  },
+  "site_id": "H087",
+  "name": "Great Living Chola Temples",
+  "image_array": [
+    "/images/sites/cholatemples.jpg",
+    "/images/sites/cholatemples-2.jpg"
+  ],
+  "description": "Set of Chola temples including Brihadeeswarar, Gangaikonda Cholapuram, and Airavatesvara.",
+  "youtube_video_id": "Dw7uO1ojjUQ",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.7847,
+    "longitude": 79.1316
+  },
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "unesco",
+    "chola temples",
+    "tamil nadu",
+    "brihadeeswarar",
+    "airavatesvara"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeef"
+  },
+  "site_id": "H088",
+  "name": "Rani ki Vav",
+  "image_array": [
+    "/images/sites/ranikivav.jpg",
+    "/images/sites/ranikivav-2.jpg"
+  ],
+  "description": "Stepwell in Gujarat with intricate carvings, UNESCO World Heritage Site.",
+  "youtube_video_id": "nJhu0uU-3mE",
+  "location": "Patan, Gujarat, India",
+  "geotag": {
+    "latitude": 23.8589,
+    "longitude": 72.101
+  },
+  "type": "stepwell",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "rani ki vav",
+    "gujarat",
+    "stepwell",
+    "patan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef0"
+  },
+  "site_id": "H089",
+  "name": "Chhatrapati Shivaji Maharaj Terminus",
+  "image_array": [
+    "/images/sites/cst.jpg",
+    "/images/sites/cst-2.jpg"
+  ],
+  "description": "Victorian Gothic railway station and UNESCO World Heritage Site.",
+  "youtube_video_id": "cZp3K0z2MQc",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9398,
+    "longitude": 72.8355
+  },
+  "type": "station",
+  "era": "Colonial",
+  "tags": [
+    "unesco",
+    "cst",
+    "mumbai",
+    "railway",
+    "victorian"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef1"
+  },
+  "site_id": "H090",
+  "name": "Western Ghats",
+  "image_array": [
+    "/images/sites/ghats.jpg",
+    "/images/sites/ghats-2.jpg"
+  ],
+  "description": "Mountain range with rich biodiversity and UNESCO recognition.",
+  "youtube_video_id": "z5Y8gCKeUwM",
+  "location": "India",
+  "geotag": {
+    "latitude": 10.1667,
+    "longitude": 77.0667
+  },
+  "type": "mountains",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "western ghats",
+    "biodiversity",
+    "mountains",
+    "nature"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef2"
+  },
+  "site_id": "H091",
+  "name": "Valley of Flowers",
+  "image_array": [
+    "/images/sites/valley.jpg",
+    "/images/sites/valley-2.jpg"
+  ],
+  "description": "High-altitude Himalayan valley with endemic flora.",
+  "youtube_video_id": "RszsS7-yo8M",
+  "location": "Uttarakhand, India",
+  "geotag": {
+    "latitude": 30.728,
+    "longitude": 79.605
+  },
+  "type": "valley",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "valley of flowers",
+    "uttarakhand",
+    "flora",
+    "himalayas"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef3"
+  },
+  "site_id": "H092",
+  "name": "Nanda Devi National Park",
+  "image_array": [
+    "/images/sites/nandadevi.jpg",
+    "/images/sites/nandadevi-2.jpg"
+  ],
+  "description": "National park in Uttarakhand surrounding Nanda Devi peak.",
+  "youtube_video_id": "1N2Hk0U6C7A",
+  "location": "Uttarakhand, India",
+  "geotag": {
+    "latitude": 30.5361,
+    "longitude": 79.9703
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "nanda devi",
+    "uttarakhand",
+    "himalayas",
+    "national park"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef4"
+  },
+  "site_id": "H093",
+  "name": "Rock Shelters of Bhimbetka",
+  "image_array": [
+    "/images/sites/bhimbetka.jpg",
+    "/images/sites/bhimbetka-2.jpg"
+  ],
+  "description": "Prehistoric rock shelters with cave paintings.",
+  "youtube_video_id": "mPjV7P6vMGQ",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 22.9395,
+    "longitude": 77.6121
+  },
+  "type": "caves",
+  "era": "Prehistoric",
+  "tags": [
+    "unesco",
+    "bhimbetka",
+    "cave paintings",
+    "madhya pradesh",
+    "prehistoric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef5"
+  },
+  "site_id": "H094",
+  "name": "Elephanta Caves",
+  "image_array": [
+    "/images/sites/elephanta.jpg",
+    "/images/sites/elephanta-2.jpg"
+  ],
+  "description": "Cave temples with Hindu rock-cut sculptures.",
+  "youtube_video_id": "Dqg8J1mH3FY",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9633,
+    "longitude": 72.9311
+  },
+  "type": "caves",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "elephanta",
+    "mumbai",
+    "caves",
+    "hindu"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef6"
+  },
+  "site_id": "H095",
+  "name": "Churches of Goa",
+  "image_array": [
+    "/images/sites/goachurches.jpg",
+    "/images/sites/goachurches-2.jpg"
+  ],
+  "description": "UNESCO site with baroque churches and convents.",
+  "youtube_video_id": "SeUwHceSxC0",
+  "location": "Goa, India",
+  "geotag": {
+    "latitude": 15.4989,
+    "longitude": 73.8278
+  },
+  "type": "church",
+  "era": "Colonial",
+  "tags": [
+    "unesco",
+    "goa",
+    "churches",
+    "baroque",
+    "convents"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef7"
+  },
+  "site_id": "H096",
+  "name": "Darjeeling Himalayan Railway",
+  "image_array": [
+    "/images/sites/darjeelingrail.jpg",
+    "/images/sites/darjeelingrail-2.jpg"
+  ],
+  "description": "UNESCO World Heritage narrow-gauge railway in the Himalayas.",
+  "youtube_video_id": "i7LkzU4M8HY",
+  "location": "West Bengal, India",
+  "geotag": {
+    "latitude": 27.041,
+    "longitude": 88.2636
+  },
+  "type": "railway",
+  "era": "Colonial",
+  "tags": [
+    "unesco",
+    "darjeeling",
+    "railway",
+    "himalayas",
+    "narrow gauge"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef8"
+  },
+  "site_id": "H097",
+  "name": "Sundarbans National Park",
+  "image_array": [
+    "/images/sites/sundarbansnp.jpg",
+    "/images/sites/sundarbansnp-2.jpg"
+  ],
+  "description": "Mangrove ecosystem, tiger reserve, and UNESCO site.",
+  "youtube_video_id": "Y4XvtQp5rmM",
+  "location": "West Bengal, India",
+  "geotag": {
+    "latitude": 21.9497,
+    "longitude": 89.1833
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "sundarbans",
+    "tiger reserve",
+    "mangroves",
+    "west bengal"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eef9"
+  },
+  "site_id": "H098",
+  "name": "Manas Wildlife Sanctuary",
+  "image_array": [
+    "/images/sites/manas.jpg",
+    "/images/sites/manas-2.jpg"
+  ],
+  "description": "Biosphere reserve and UNESCO site in Assam.",
+  "youtube_video_id": "8r1Sw7bRr7M",
+  "location": "Assam, India",
+  "geotag": {
+    "latitude": 26.6596,
+    "longitude": 91.0011
+  },
+  "type": "wildlife sanctuary",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "manas",
+    "assam",
+    "wildlife",
+    "sanctuary"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eefa"
+  },
+  "site_id": "H099",
+  "name": "Khangchendzonga National Park",
+  "image_array": [
+    "/images/sites/khangchendzonga.jpg",
+    "/images/sites/khangchendzonga-2.jpg"
+  ],
+  "description": "UNESCO site in Sikkim surrounding the Khangchendzonga peak.",
+  "youtube_video_id": "fK6M2t4lxyw",
+  "location": "Sikkim, India",
+  "geotag": {
+    "latitude": 27.7025,
+    "longitude": 88.1475
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "khangchendzonga",
+    "sikkim",
+    "himalayas",
+    "national park"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eefb"
+  },
+  "site_id": "H100",
+  "name": "Mountain Railways of India",
+  "image_array": [
+    "/images/sites/mountainrail.jpg",
+    "/images/sites/mountainrail-2.jpg"
+  ],
+  "description": "Collection of UNESCO heritage mountain railways including Shimla, Darjeeling, and Nilgiri.",
+  "youtube_video_id": "Q5mHgzpVoOY",
+  "location": "India",
+  "geotag": {
+    "latitude": 30.9,
+    "longitude": 77.1
+  },
+  "type": "railway",
+  "era": "Colonial",
+  "tags": [
+    "unesco",
+    "mountain railways",
+    "shimla",
+    "darjeeling",
+    "nilgiri"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eefc"
+  },
+  "site_id": "H101",
+  "name": "Great Himalayan National Park",
+  "image_array": [
+    "/images/sites/himalayanpark.jpg",
+    "/images/sites/himalayanpark-2.jpg"
+  ],
+  "description": "National park in Himachal Pradesh rich in biodiversity.",
+  "youtube_video_id": "4vFz6GbSbMY",
+  "location": "Himachal Pradesh, India",
+  "geotag": {
+    "latitude": 31.7777,
+    "longitude": 77.3667
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "unesco",
+    "great himalayan park",
+    "himachal",
+    "biodiversity",
+    "himalayas"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eefd"
+  },
+  "site_id": "H102",
+  "name": "Champaner-Pavagadh Archaeological Park",
+  "image_array": [
+    "/images/sites/champaner.jpg",
+    "/images/sites/champaner-2.jpg"
+  ],
+  "description": "UNESCO site with mosques, temples, and stepwells in Gujarat.",
+  "youtube_video_id": "6rF7xj9nUIk",
+  "location": "Gujarat, India",
+  "geotag": {
+    "latitude": 22.4836,
+    "longitude": 73.5331
+  },
+  "type": "archaeological park",
+  "era": "Medieval",
+  "tags": [
+    "unesco",
+    "champaner",
+    "pavagadh",
+    "gujarat",
+    "archaeological"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eefe"
+  },
+  "site_id": "H103",
+  "name": "Group of Monuments at Pattadakal",
+  "image_array": [
+    "/images/sites/pattadakal.jpg",
+    "/images/sites/pattadakal-2.jpg"
+  ],
+  "description": "UNESCO site showcasing Chalukyan architecture.",
+  "youtube_video_id": "G8D0Ac1C5jw",
+  "location": "Karnataka, India",
+  "geotag": {
+    "latitude": 15.9474,
+    "longitude": 75.8162
+  },
+  "type": "monuments",
+  "era": "Chalukya",
+  "tags": [
+    "unesco",
+    "pattadakal",
+    "karnataka",
+    "chalukya",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301eeff"
+  },
+  "site_id": "H104",
+  "name": "Mahabodhi Temple",
+  "image_array": [
+    "/images/sites/mahabodhi.jpg",
+    "/images/sites/mahabodhi-2.jpg"
+  ],
+  "description": "Buddhist temple in Bodh Gaya marking the site of Buddha’s enlightenment.",
+  "youtube_video_id": "EZRlh8AsD3k",
+  "location": "Bihar, India",
+  "geotag": {
+    "latitude": 24.695,
+    "longitude": 84.9915
+  },
+  "type": "temple",
+  "era": "Ancient",
+  "tags": [
+    "unesco",
+    "mahabodhi",
+    "bodh gaya",
+    "buddhist",
+    "bihar"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef00"
+  },
+  "site_id": "H110",
+  "name": "Shaniwar Wada",
+  "image_array": [
+    "/images/sites/shaniwar.jpg",
+    "/images/sites/shaniwar-2.jpg"
+  ],
+  "description": "Historical fortification in Pune built in 1732, seat of the Peshwas of the Maratha Empire.",
+  "youtube_video_id": "IhzC1YtVqXc",
+  "location": "Pune, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.5195,
+    "longitude": 73.8553
+  },
+  "type": "fort",
+  "era": "Maratha",
+  "tags": [
+    "shaniwar wada",
+    "pune",
+    "maratha",
+    "fort",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef01"
+  },
+  "site_id": "H111",
+  "name": "Elephanta Caves",
+  "image_array": [
+    "/images/sites/elephanta.jpg",
+    "/images/sites/elephanta-2.jpg"
+  ],
+  "description": "Rock-cut caves on Elephanta Island featuring sculptures of Hindu deities.",
+  "youtube_video_id": "cW5mFzLMZPY",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9633,
+    "longitude": 72.9311
+  },
+  "type": "caves",
+  "era": "Medieval",
+  "tags": [
+    "elephanta",
+    "unesco",
+    "caves",
+    "mumbai",
+    "shiva"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef02"
+  },
+  "site_id": "H112",
+  "name": "Golconda Fort",
+  "image_array": [
+    "/images/sites/golconda.jpg",
+    "/images/sites/golconda-2.jpg"
+  ],
+  "description": "Famous fort known for diamond trade and acoustic architecture.",
+  "youtube_video_id": "zV2YhmlkZtg",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3833,
+    "longitude": 78.4011
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "golconda",
+    "hyderabad",
+    "fort",
+    "diamonds",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef03"
+  },
+  "site_id": "H113",
+  "name": "Sun Temple Konark",
+  "image_array": [
+    "/images/sites/konark.jpg",
+    "/images/sites/konark-2.jpg"
+  ],
+  "description": "13th-century temple shaped like a colossal chariot, UNESCO site.",
+  "youtube_video_id": "ONhW7xWwa9A",
+  "location": "Konark, Odisha, India",
+  "geotag": {
+    "latitude": 19.8876,
+    "longitude": 86.0945
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "konark",
+    "sun temple",
+    "odisha",
+    "unesco",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef04"
+  },
+  "site_id": "H114",
+  "name": "Kaziranga National Park",
+  "image_array": [
+    "/images/sites/kaziranga.jpg",
+    "/images/sites/kaziranga-2.jpg"
+  ],
+  "description": "UNESCO World Heritage Site famous for the one-horned rhinoceros.",
+  "youtube_video_id": "3Db4gYDnTOE",
+  "location": "Assam, India",
+  "geotag": {
+    "latitude": 26.5775,
+    "longitude": 93.1711
+  },
+  "type": "wildlife sanctuary",
+  "era": "Natural",
+  "tags": [
+    "kaziranga",
+    "unesco",
+    "rhinoceros",
+    "assam",
+    "wildlife"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef05"
+  },
+  "site_id": "H115",
+  "name": "Humayun’s Tomb",
+  "image_array": [
+    "/images/sites/humayun.jpg",
+    "/images/sites/humayun-2.jpg"
+  ],
+  "description": "First garden-tomb in India and inspiration for Taj Mahal.",
+  "youtube_video_id": "o3g5c1I6jGQ",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5933,
+    "longitude": 77.2507
+  },
+  "type": "tomb",
+  "era": "Mughal",
+  "tags": [
+    "humayun",
+    "tomb",
+    "delhi",
+    "mughal",
+    "unesco"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef06"
+  },
+  "site_id": "H116",
+  "name": "Nalanda University Ruins",
+  "image_array": [
+    "/images/sites/nalanda.jpg",
+    "/images/sites/nalanda-2.jpg"
+  ],
+  "description": "Ruins of ancient Nalanda University, center of learning in 5th century CE.",
+  "youtube_video_id": "rC8sZc4g6X0",
+  "location": "Nalanda, Bihar, India",
+  "geotag": {
+    "latitude": 25.1357,
+    "longitude": 85.4433
+  },
+  "type": "university ruins",
+  "era": "Ancient",
+  "tags": [
+    "nalanda",
+    "bihar",
+    "unesco",
+    "buddhism",
+    "learning"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef07"
+  },
+  "site_id": "H117",
+  "name": "Brihadeeswarar Temple",
+  "image_array": [
+    "/images/sites/brihadeeswarar.jpg",
+    "/images/sites/brihadeeswarar-2.jpg"
+  ],
+  "description": "Chola dynasty temple dedicated to Lord Shiva, UNESCO site.",
+  "youtube_video_id": "f5P8VZ2jBvQ",
+  "location": "Thanjavur, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.7844,
+    "longitude": 79.1312
+  },
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "brihadeeswarar",
+    "thanjavur",
+    "unesco",
+    "chola",
+    "shiva"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef08"
+  },
+  "site_id": "H118",
+  "name": "Chhatrapati Shivaji Terminus",
+  "image_array": [
+    "/images/sites/cst.jpg",
+    "/images/sites/cst-2.jpg"
+  ],
+  "description": "Victorian Gothic Revival railway station, UNESCO site.",
+  "youtube_video_id": "o3wJjP6uUjI",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9398,
+    "longitude": 72.8354
+  },
+  "type": "railway station",
+  "era": "Colonial",
+  "tags": [
+    "cst",
+    "mumbai",
+    "unesco",
+    "victorian",
+    "railway"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef09"
+  },
+  "site_id": "H119",
+  "name": "Mehrangarh Fort",
+  "image_array": [
+    "/images/sites/mehrangarh.jpg",
+    "/images/sites/mehrangarh-2.jpg"
+  ],
+  "description": "One of the largest forts in India located in Jodhpur.",
+  "youtube_video_id": "Rsw6jZg7_1o",
+  "location": "Jodhpur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.2986,
+    "longitude": 73.0183
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "mehrangarh",
+    "jodhpur",
+    "fort",
+    "rajasthan",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0a"
+  },
+  "site_id": "H120",
+  "name": "Rani ki Vav",
+  "image_array": [
+    "/images/sites/ranikivav.jpg",
+    "/images/sites/ranikivav-2.jpg"
+  ],
+  "description": "Stepwell in Gujarat recognized as UNESCO World Heritage Site for its intricate sculptures.",
+  "youtube_video_id": "K6c9z0oG3t0",
+  "location": "Patan, Gujarat, India",
+  "geotag": {
+    "latitude": 23.8589,
+    "longitude": 72.1014
+  },
+  "type": "stepwell",
+  "era": "Solanki",
+  "tags": [
+    "rani ki vav",
+    "stepwell",
+    "unesco",
+    "patan",
+    "gujarat"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0b"
+  },
+  "site_id": "H121",
+  "name": "Fatehpur Sikri",
+  "image_array": [
+    "/images/sites/fatehpur.jpg",
+    "/images/sites/fatehpur-2.jpg"
+  ],
+  "description": "City built by Akbar in 16th century, known for its Mughal architecture.",
+  "youtube_video_id": "7q3H3Qw5blg",
+  "location": "Uttar Pradesh, India",
+  "geotag": {
+    "latitude": 27.0937,
+    "longitude": 77.6686
+  },
+  "type": "city ruins",
+  "era": "Mughal",
+  "tags": [
+    "fatehpur sikri",
+    "unesco",
+    "mughal",
+    "agra",
+    "akbar"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0c"
+  },
+  "site_id": "H122",
+  "name": "Victoria Memorial",
+  "image_array": [
+    "/images/sites/victoria.jpg",
+    "/images/sites/victoria-2.jpg"
+  ],
+  "description": "Marble building in Kolkata dedicated to Queen Victoria.",
+  "youtube_video_id": "O2KX4O7H6fw",
+  "location": "Kolkata, West Bengal, India",
+  "geotag": {
+    "latitude": 22.5448,
+    "longitude": 88.3426
+  },
+  "type": "memorial",
+  "era": "Colonial",
+  "tags": [
+    "victoria memorial",
+    "kolkata",
+    "colonial",
+    "museum",
+    "british"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0d"
+  },
+  "site_id": "H123",
+  "name": "Chola Temples of Gangaikonda Cholapuram",
+  "image_array": [
+    "/images/sites/gangaikonda.jpg",
+    "/images/sites/gangaikonda-2.jpg"
+  ],
+  "description": "Great Living Chola Temple and UNESCO site.",
+  "youtube_video_id": "4ehWvZ3lM3s",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 11.2132,
+    "longitude": 79.4568
+  },
+  "type": "temple",
+  "era": "Chola",
+  "tags": [
+    "chola",
+    "unesco",
+    "gangaikonda",
+    "temple",
+    "tamil nadu"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0e"
+  },
+  "site_id": "H124",
+  "name": "Bodh Gaya",
+  "image_array": [
+    "/images/sites/bodhgaya.jpg",
+    "/images/sites/bodhgaya-2.jpg"
+  ],
+  "description": "Site where Lord Buddha attained enlightenment, UNESCO heritage site.",
+  "youtube_video_id": "BqivjzSg88E",
+  "location": "Bihar, India",
+  "geotag": {
+    "latitude": 24.6951,
+    "longitude": 84.9914
+  },
+  "type": "pilgrimage",
+  "era": "Ancient",
+  "tags": [
+    "bodh gaya",
+    "unesco",
+    "buddhism",
+    "mahabodhi",
+    "bihar"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef0f"
+  },
+  "site_id": "H125",
+  "name": "Sanchi Stupa",
+  "image_array": [
+    "/images/sites/sanchi.jpg",
+    "/images/sites/sanchi-2.jpg"
+  ],
+  "description": "Buddhist complex famous for Great Stupa, UNESCO site.",
+  "youtube_video_id": "2OZb5hCOj2s",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 23.4794,
+    "longitude": 77.7394
+  },
+  "type": "stupa",
+  "era": "Maurya",
+  "tags": [
+    "sanchi",
+    "unesco",
+    "buddhism",
+    "stupa",
+    "ashoka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef10"
+  },
+  "site_id": "H126",
+  "name": "Bhimbetka Rock Shelters",
+  "image_array": [
+    "/images/sites/bhimbetka.jpg",
+    "/images/sites/bhimbetka-2.jpg"
+  ],
+  "description": "Prehistoric rock shelters and cave paintings, UNESCO site.",
+  "youtube_video_id": "j91wY8YwXrI",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 22.9395,
+    "longitude": 77.6139
+  },
+  "type": "cave",
+  "era": "Prehistoric",
+  "tags": [
+    "bhimbetka",
+    "unesco",
+    "rock art",
+    "madhya pradesh",
+    "prehistoric"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef11"
+  },
+  "site_id": "H127",
+  "name": "Charminar",
+  "image_array": [
+    "/images/sites/charminar.jpg",
+    "/images/sites/charminar-2.jpg"
+  ],
+  "description": "Iconic mosque and monument in Hyderabad built in 1591.",
+  "youtube_video_id": "2iQpQzI0xPA",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3616,
+    "longitude": 78.4747
+  },
+  "type": "monument",
+  "era": "Medieval",
+  "tags": [
+    "charminar",
+    "hyderabad",
+    "mosque",
+    "monument",
+    "telangana"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef12"
+  },
+  "site_id": "H128",
+  "name": "Shore Temple Mahabalipuram",
+  "image_array": [
+    "/images/sites/shore.jpg",
+    "/images/sites/shore-2.jpg"
+  ],
+  "description": "Pallava dynasty stone temple part of UNESCO site in Mahabalipuram.",
+  "youtube_video_id": "Taz1m0J6V5g",
+  "location": "Tamil Nadu, India",
+  "geotag": {
+    "latitude": 12.6167,
+    "longitude": 80.1917
+  },
+  "type": "temple",
+  "era": "Pallava",
+  "tags": [
+    "shore temple",
+    "mahabalipuram",
+    "unesco",
+    "pallava",
+    "stone temple"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef13"
+  },
+  "site_id": "H129",
+  "name": "Lotus Temple",
+  "image_array": [
+    "/images/sites/lotus.jpg",
+    "/images/sites/lotus-2.jpg"
+  ],
+  "description": "Baháʼí House of Worship in Delhi known for its lotus-shaped architecture.",
+  "youtube_video_id": "z6Cz6oDKm1U",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.5535,
+    "longitude": 77.2588
+  },
+  "type": "temple",
+  "era": "Modern",
+  "tags": [
+    "lotus temple",
+    "bahai",
+    "delhi",
+    "modern",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef14"
+  },
+  "site_id": "H130",
+  "name": "Ajmer Sharif Dargah",
+  "image_array": [
+    "/images/sites/ajmer.jpg",
+    "/images/sites/ajmer-2.jpg"
+  ],
+  "description": "Sufi shrine of Khwaja Moinuddin Chishti, famous pilgrimage site.",
+  "youtube_video_id": "Kx1NwDj9tZw",
+  "location": "Ajmer, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.4499,
+    "longitude": 74.6399
+  },
+  "type": "dargah",
+  "era": "Medieval",
+  "tags": [
+    "ajmer sharif",
+    "sufi",
+    "dargah",
+    "pilgrimage",
+    "rajasthan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef15"
+  },
+  "site_id": "H131",
+  "name": "India Gate",
+  "image_array": [
+    "/images/sites/indiagate.jpg",
+    "/images/sites/indiagate-2.jpg"
+  ],
+  "description": "War memorial in Delhi built in honor of soldiers of World War I.",
+  "youtube_video_id": "cI7xE6M_1Wc",
+  "location": "Delhi, India",
+  "geotag": {
+    "latitude": 28.6129,
+    "longitude": 77.2295
+  },
+  "type": "monument",
+  "era": "Colonial",
+  "tags": [
+    "india gate",
+    "war memorial",
+    "delhi",
+    "colonial",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef16"
+  },
+  "site_id": "H132",
+  "name": "Belur Chennakesava Temple",
+  "image_array": [
+    "/images/sites/belur.jpg",
+    "/images/sites/belur-2.jpg"
+  ],
+  "description": "Hoysala temple renowned for intricate carvings.",
+  "youtube_video_id": "BMRuP8A2s-0",
+  "location": "Belur, Karnataka, India",
+  "geotag": {
+    "latitude": 13.1656,
+    "longitude": 75.8656
+  },
+  "type": "temple",
+  "era": "Hoysala",
+  "tags": [
+    "belur",
+    "chennakesava",
+    "hoysala",
+    "temple",
+    "karnataka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef17"
+  },
+  "site_id": "H133",
+  "name": "Hampi Virupaksha Temple",
+  "image_array": [
+    "/images/sites/hampi.jpg",
+    "/images/sites/virupaksha-2.jpg"
+  ],
+  "description": "Still-functioning temple in Hampi dedicated to Lord Shiva.",
+  "youtube_video_id": "1kX8Ogw9nEw",
+  "location": "Hampi, Karnataka, India",
+  "geotag": {
+    "latitude": 15.335,
+    "longitude": 76.462
+  },
+  "type": "temple",
+  "era": "Vijayanagara",
+  "tags": [
+    "virupaksha",
+    "hampi",
+    "temple",
+    "unesco",
+    "karnataka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef18"
+  },
+  "site_id": "H134",
+  "name": "Kumbhalgarh Fort",
+  "image_array": [
+    "/images/sites/kumbhalgarh.jpg",
+    "/images/sites/kumbhalgarh-2.jpg"
+  ],
+  "description": "Fort with second-longest continuous wall in the world.",
+  "youtube_video_id": "h5kVcVgKxM0",
+  "location": "Rajasthan, India",
+  "geotag": {
+    "latitude": 25.1478,
+    "longitude": 73.5832
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "kumbhalgarh",
+    "rajasthan",
+    "fort",
+    "unesco",
+    "maharana"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef19"
+  },
+  "site_id": "H135",
+  "name": "Chand Baori",
+  "image_array": [
+    "/images/sites/chandbaori.jpg",
+    "/images/sites/chandbaori-2.jpg"
+  ],
+  "description": "One of the deepest and largest stepwells in India.",
+  "youtube_video_id": "k3Z8sqMJkQU",
+  "location": "Abhaneri, Rajasthan, India",
+  "geotag": {
+    "latitude": 27.007,
+    "longitude": 76.606
+  },
+  "type": "stepwell",
+  "era": "Medieval",
+  "tags": [
+    "chand baori",
+    "stepwell",
+    "rajasthan",
+    "architecture",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1a"
+  },
+  "site_id": "H136",
+  "name": "Salar Jung Museum",
+  "image_array": [
+    "/images/sites/salarjung.jpg",
+    "/images/sites/salarjung-2.jpg"
+  ],
+  "description": "One of the largest art museums in India with global collections.",
+  "youtube_video_id": "0YtFwX5J2ak",
+  "location": "Hyderabad, Telangana, India",
+  "geotag": {
+    "latitude": 17.3713,
+    "longitude": 78.4803
+  },
+  "type": "museum",
+  "era": "Modern",
+  "tags": [
+    "salar jung",
+    "museum",
+    "hyderabad",
+    "art",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1b"
+  },
+  "site_id": "H137",
+  "name": "Great Himalayan National Park",
+  "image_array": [
+    "/images/sites/ghnp.jpg",
+    "/images/sites/ghnp-2.jpg"
+  ],
+  "description": "UNESCO natural site preserving Himalayan biodiversity.",
+  "youtube_video_id": "A0wNlfN2KgY",
+  "location": "Himachal Pradesh, India",
+  "geotag": {
+    "latitude": 31.8833,
+    "longitude": 77.4333
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "great himalayan",
+    "unesco",
+    "himachal",
+    "national park",
+    "wildlife"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1c"
+  },
+  "site_id": "H138",
+  "name": "Cellular Jail",
+  "image_array": [
+    "/images/sites/cellular.jpg",
+    "/images/sites/cellular-2.jpg"
+  ],
+  "description": "Colonial prison in Andaman Islands used by British to exile freedom fighters.",
+  "youtube_video_id": "EcZk9HgCkAc",
+  "location": "Port Blair, Andaman & Nicobar Islands, India",
+  "geotag": {
+    "latitude": 11.6743,
+    "longitude": 92.748
+  },
+  "type": "prison",
+  "era": "Colonial",
+  "tags": [
+    "cellular jail",
+    "andaman",
+    "british",
+    "freedom fighters",
+    "history"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1d"
+  },
+  "site_id": "H139",
+  "name": "Khajjiar",
+  "image_array": [
+    "/images/sites/khajjiar.jpg",
+    "/images/sites/khajjiar-2.jpg"
+  ],
+  "description": "Scenic hill station known as 'Mini Switzerland of India'.",
+  "youtube_video_id": "YDcRwDGrgSg",
+  "location": "Himachal Pradesh, India",
+  "geotag": {
+    "latitude": 32.55,
+    "longitude": 76.05
+  },
+  "type": "hill station",
+  "era": "Natural",
+  "tags": [
+    "khajjiar",
+    "himachal",
+    "hill station",
+    "nature",
+    "tourism"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1e"
+  },
+  "site_id": "H140",
+  "name": "Mahabalipuram Shore Temple",
+  "image_array": [
+    "/images/sites/shoretemple.jpg",
+    "/images/sites/shoretemple-2.jpg"
+  ],
+  "description": "Ancient Pallava dynasty temple complex by the sea, UNESCO site.",
+  "youtube_video_id": "3fJQ5KH6bY0",
+  "location": "Mahabalipuram, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 12.6158,
+    "longitude": 80.1942
+  },
+  "type": "temple",
+  "era": "Pallava",
+  "tags": [
+    "shore temple",
+    "mahabalipuram",
+    "unesco",
+    "pallava",
+    "temple"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef1f"
+  },
+  "site_id": "H141",
+  "name": "Chittorgarh Fort",
+  "image_array": [
+    "/images/sites/chittorgarh.jpg",
+    "/images/sites/chittorgarh-2.jpg"
+  ],
+  "description": "Largest fort in India, historic seat of the Mewar kingdom.",
+  "youtube_video_id": "Yb0G8FZB7WA",
+  "location": "Rajasthan, India",
+  "geotag": {
+    "latitude": 24.8888,
+    "longitude": 74.6265
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "chittorgarh",
+    "fort",
+    "rajasthan",
+    "unesco",
+    "mewar"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef20"
+  },
+  "site_id": "H142",
+  "name": "Meenakshi Amman Temple",
+  "image_array": [
+    "/images/sites/meenakshi.jpg",
+    "/images/sites/meenakshi-2.jpg"
+  ],
+  "description": "Historic temple in Madurai dedicated to Goddess Meenakshi.",
+  "youtube_video_id": "8Ynq0XED1yM",
+  "location": "Madurai, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 9.9196,
+    "longitude": 78.1193
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "meenakshi",
+    "madurai",
+    "temple",
+    "hindu",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef21"
+  },
+  "site_id": "H143",
+  "name": "Konark Sun Temple",
+  "image_array": [
+    "/images/sites/konark.jpg",
+    "/images/sites/konark-2.jpg"
+  ],
+  "description": "13th-century temple in Odisha, designed as a colossal chariot.",
+  "youtube_video_id": "sJnq3Sh8Fsk",
+  "location": "Konark, Odisha, India",
+  "geotag": {
+    "latitude": 19.8871,
+    "longitude": 86.0948
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "konark",
+    "sun temple",
+    "unesco",
+    "odisha",
+    "chariot"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef22"
+  },
+  "site_id": "H144",
+  "name": "Sundarbans National Park",
+  "image_array": [
+    "/images/sites/sundarbans.jpg",
+    "/images/sites/sundarbans-2.jpg"
+  ],
+  "description": "Largest mangrove forest in the world, UNESCO site, habitat of Royal Bengal Tigers.",
+  "youtube_video_id": "6LptYmOl5Rs",
+  "location": "West Bengal, India",
+  "geotag": {
+    "latitude": 21.9497,
+    "longitude": 88.88
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "sundarbans",
+    "unesco",
+    "wildlife",
+    "national park",
+    "bengal tigers"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef23"
+  },
+  "site_id": "H145",
+  "name": "Mysore Dasara",
+  "image_array": [
+    "/images/sites/dasara.jpg",
+    "/images/sites/dasara-2.jpg"
+  ],
+  "description": "Royal festival celebrating victory of good over evil in Karnataka.",
+  "youtube_video_id": "yXK3mVe8Wv0",
+  "location": "Mysuru, Karnataka, India",
+  "geotag": {
+    "latitude": 12.2958,
+    "longitude": 76.6394
+  },
+  "type": "festival",
+  "era": "Traditional",
+  "tags": [
+    "dasara",
+    "mysore",
+    "festival",
+    "karnataka",
+    "celebration"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef24"
+  },
+  "site_id": "H146",
+  "name": "Ranthambore National Park",
+  "image_array": [
+    "/images/sites/ranthambore.jpg",
+    "/images/sites/ranthambore-2.jpg"
+  ],
+  "description": "Famous tiger reserve and historic fort in Rajasthan.",
+  "youtube_video_id": "8JxPKtTgL5o",
+  "location": "Rajasthan, India",
+  "geotag": {
+    "latitude": 26.0176,
+    "longitude": 76.5026
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "ranthambore",
+    "tiger reserve",
+    "rajasthan",
+    "fort",
+    "wildlife"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef25"
+  },
+  "site_id": "H147",
+  "name": "Sanchi Stupa",
+  "image_array": [
+    "/images/sites/sanchi.jpg",
+    "/images/sites/sanchi-2.jpg"
+  ],
+  "description": "Ancient Buddhist stupa built by Emperor Ashoka, UNESCO World Heritage Site.",
+  "youtube_video_id": "8Nsw0hQwoMQ",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 23.48,
+    "longitude": 77.74
+  },
+  "type": "stupa",
+  "era": "Maurya",
+  "tags": [
+    "unesco",
+    "stupa",
+    "buddhist",
+    "sanchi",
+    "ashoka"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef26"
+  },
+  "site_id": "H148",
+  "name": "Chandigarh Rock Garden",
+  "image_array": [
+    "/images/sites/rockgarden.jpg",
+    "/images/sites/rockgarden-2.jpg"
+  ],
+  "description": "Sculptural garden made entirely from industrial & urban waste.",
+  "youtube_video_id": "7e6xONzB5Q0",
+  "location": "Chandigarh, India",
+  "geotag": {
+    "latitude": 30.7333,
+    "longitude": 76.7794
+  },
+  "type": "art",
+  "era": "Modern",
+  "tags": [
+    "rock garden",
+    "chandigarh",
+    "art",
+    "sculpture",
+    "modern"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef27"
+  },
+  "site_id": "H149",
+  "name": "Hemis Monastery",
+  "image_array": [
+    "/images/sites/hemis.jpg",
+    "/images/sites/hemis-2.jpg"
+  ],
+  "description": "Largest and wealthiest monastery in Ladakh, famous for annual festival.",
+  "youtube_video_id": "vZpQbZp3x90",
+  "location": "Ladakh, India",
+  "geotag": {
+    "latitude": 34.1642,
+    "longitude": 77.5822
+  },
+  "type": "monastery",
+  "era": "Ancient",
+  "tags": [
+    "hemis",
+    "ladakh",
+    "monastery",
+    "festival",
+    "buddhist"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef28"
+  },
+  "site_id": "H150",
+  "name": "Jaipur City Palace",
+  "image_array": [
+    "/images/sites/citypalace.jpg",
+    "/images/sites/citypalace-2.jpg"
+  ],
+  "description": "Royal palace complex in Jaipur, Rajasthan with museums and courtyards.",
+  "youtube_video_id": "P6zKxN1oE58",
+  "location": "Jaipur, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9258,
+    "longitude": 75.8267
+  },
+  "type": "palace",
+  "era": "Medieval",
+  "tags": [
+    "jaipur",
+    "city palace",
+    "rajasthan",
+    "royal",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef29"
+  },
+  "site_id": "H151",
+  "name": "Bundi Palace",
+  "image_array": [
+    "/images/sites/bundi.jpg",
+    "/images/sites/bundi-2.jpg"
+  ],
+  "description": "Fortified palace famous for murals, stepwells, and intricate architecture.",
+  "youtube_video_id": "8xRmQ6R9zBQ",
+  "location": "Bundi, Rajasthan, India",
+  "geotag": {
+    "latitude": 25.426,
+    "longitude": 75.639
+  },
+  "type": "palace",
+  "era": "Medieval",
+  "tags": [
+    "bundi",
+    "palace",
+    "rajasthan",
+    "murals",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2a"
+  },
+  "site_id": "H152",
+  "name": "Ajmer Sharif Dargah",
+  "image_array": [
+    "/images/sites/ajmer.jpg",
+    "/images/sites/ajmer-2.jpg"
+  ],
+  "description": "Sufi shrine of Khwaja Moinuddin Chishti, famous pilgrimage site.",
+  "youtube_video_id": "Kx1NwDj9tZw",
+  "location": "Ajmer, Rajasthan, India",
+  "geotag": {
+    "latitude": 26.4499,
+    "longitude": 74.6399
+  },
+  "type": "dargah",
+  "era": "Medieval",
+  "tags": [
+    "ajmer sharif",
+    "sufi",
+    "dargah",
+    "pilgrimage",
+    "rajasthan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2b"
+  },
+  "site_id": "H153",
+  "name": "Gwalior Fort",
+  "image_array": [
+    "/images/sites/gwalior.jpg",
+    "/images/sites/gwalior-2.jpg"
+  ],
+  "description": "Massive hilltop fort known for its palaces, temples, and sound echoes.",
+  "youtube_video_id": "pR4KxH1dXJc",
+  "location": "Gwalior, Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 26.223,
+    "longitude": 78.1798
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "gwalior",
+    "fort",
+    "mp",
+    "architecture",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2c"
+  },
+  "site_id": "H154",
+  "name": "Ranakpur Jain Temple",
+  "image_array": [
+    "/images/sites/ranakpur.jpg",
+    "/images/sites/ranakpur-2.jpg"
+  ],
+  "description": "Famous marble temple complex in Rajasthan dedicated to Tirthankaras.",
+  "youtube_video_id": "z3XmP0nWc5k",
+  "location": "Rajasthan, India",
+  "geotag": {
+    "latitude": 25.885,
+    "longitude": 73.475
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "ranakpur",
+    "jain",
+    "temple",
+    "marble",
+    "rajasthan"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2d"
+  },
+  "site_id": "H155",
+  "name": "Nalanda University Ruins",
+  "image_array": [
+    "/images/sites/nalanda.jpg",
+    "/images/sites/nalanda-2.jpg"
+  ],
+  "description": "Ancient Buddhist university ruins and UNESCO World Heritage Site.",
+  "youtube_video_id": "9LZ_kFq7XcE",
+  "location": "Bihar, India",
+  "geotag": {
+    "latitude": 25.1351,
+    "longitude": 85.4439
+  },
+  "type": "ruins",
+  "era": "Ancient",
+  "tags": [
+    "nalanda",
+    "buddhist",
+    "unesco",
+    "ruins",
+    "bihar"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2e"
+  },
+  "site_id": "H156",
+  "name": "Kaziranga National Park",
+  "image_array": [
+    "/images/sites/kaziranga.jpg",
+    "/images/sites/kaziranga-2.jpg"
+  ],
+  "description": "Home to the one-horned rhinoceros, UNESCO World Heritage Site.",
+  "youtube_video_id": "0NfD8uWg4gY",
+  "location": "Assam, India",
+  "geotag": {
+    "latitude": 26.5775,
+    "longitude": 93.1711
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "kaziranga",
+    "unesco",
+    "assam",
+    "wildlife",
+    "rhinoceros"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef2f"
+  },
+  "site_id": "H157",
+  "name": "Meghalaya Living Root Bridges",
+  "image_array": [
+    "/images/sites/rootbridges.jpg",
+    "/images/sites/rootbridges-2.jpg"
+  ],
+  "description": "Unique bridges grown from rubber tree roots by Khasi tribes.",
+  "youtube_video_id": "d9Qk3vJpX6M",
+  "location": "Meghalaya, India",
+  "geotag": {
+    "latitude": 25.2966,
+    "longitude": 91.7109
+  },
+  "type": "architecture",
+  "era": "Traditional",
+  "tags": [
+    "root bridges",
+    "living bridges",
+    "meghalaya",
+    "tribal",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef30"
+  },
+  "site_id": "H158",
+  "name": "Srirangam Temple",
+  "image_array": [
+    "/images/sites/srirangam.jpg",
+    "/images/sites/srirangam-2.jpg"
+  ],
+  "description": "Largest functioning Hindu temple in the world dedicated to Lord Ranganatha.",
+  "youtube_video_id": "L9xQ7Pq3xB4",
+  "location": "Srirangam, Tamil Nadu, India",
+  "geotag": {
+    "latitude": 10.8539,
+    "longitude": 78.6936
+  },
+  "type": "temple",
+  "era": "Medieval",
+  "tags": [
+    "srirangam",
+    "temple",
+    "hindu",
+    "tamil nadu",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef31"
+  },
+  "site_id": "H159",
+  "name": "Warangal Fort",
+  "image_array": [
+    "/images/sites/warangal.jpg",
+    "/images/sites/warangal-2.jpg"
+  ],
+  "description": "Historic fort built by Kakatiya dynasty in Telangana.",
+  "youtube_video_id": "XzP0kN9cQ2M",
+  "location": "Warangal, Telangana, India",
+  "geotag": {
+    "latitude": 17.9783,
+    "longitude": 79.59
+  },
+  "type": "fort",
+  "era": "Medieval",
+  "tags": [
+    "warangal",
+    "fort",
+    "telangana",
+    "kakatiya",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef32"
+  },
+  "site_id": "H160",
+  "name": "Bhimbetka Rock Shelters",
+  "image_array": [
+    "/images/sites/bhimbetka.jpg",
+    "/images/sites/bhimbetka-2.jpg"
+  ],
+  "description": "Prehistoric rock shelters with ancient cave paintings, UNESCO site.",
+  "youtube_video_id": "F9hJx5XlD2I",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 22.9375,
+    "longitude": 78.2197
+  },
+  "type": "cave",
+  "era": "Prehistoric",
+  "tags": [
+    "bhimbetka",
+    "unesco",
+    "cave",
+    "prehistoric",
+    "paintings"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef33"
+  },
+  "site_id": "H161",
+  "name": "Thar Desert",
+  "image_array": [
+    "/images/sites/thar.jpg",
+    "/images/sites/thar-2.jpg"
+  ],
+  "description": "Vast arid region in Rajasthan, famous for dunes and desert culture.",
+  "youtube_video_id": "R8uW7GdJ1KQ",
+  "location": "Rajasthan, India",
+  "geotag": {
+    "latitude": 26.9124,
+    "longitude": 70.9131
+  },
+  "type": "natural site",
+  "era": "Natural",
+  "tags": [
+    "thar",
+    "desert",
+    "rajasthan",
+    "dunes",
+    "culture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef34"
+  },
+  "site_id": "H162",
+  "name": "Pattadakal Temples",
+  "image_array": [
+    "/images/sites/pattadakal.jpg",
+    "/images/sites/pattadakal-2.jpg"
+  ],
+  "description": "UNESCO site of 7th-8th century Chalukya architecture in Karnataka.",
+  "youtube_video_id": "X3oZ9Pq2V5I",
+  "location": "Karnataka, India",
+  "geotag": {
+    "latitude": 16.1061,
+    "longitude": 75.92
+  },
+  "type": "temple",
+  "era": "Chalukya",
+  "tags": [
+    "pattadakal",
+    "unesco",
+    "temple",
+    "karnataka",
+    "architecture"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef35"
+  },
+  "site_id": "H163",
+  "name": "Chilika Lake",
+  "image_array": [
+    "/images/sites/chilika.jpg",
+    "/images/sites/chilika-2.jpg"
+  ],
+  "description": "Largest coastal lagoon in India, habitat of migratory birds.",
+  "youtube_video_id": "N5tJxPq4D9L",
+  "location": "Odisha, India",
+  "geotag": {
+    "latitude": 19.7,
+    "longitude": 85.3
+  },
+  "type": "natural site",
+  "era": "Natural",
+  "tags": [
+    "chilika",
+    "lake",
+    "odisha",
+    "birds",
+    "wetland"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef36"
+  },
+  "site_id": "H164",
+  "name": "Hazaribagh National Park",
+  "image_array": [
+    "/images/sites/hazaribagh.jpg",
+    "/images/sites/hazaribagh-2.jpg"
+  ],
+  "description": "Park with diverse flora and fauna in Jharkhand.",
+  "youtube_video_id": "Q6uZk3V7X8A",
+  "location": "Jharkhand, India",
+  "geotag": {
+    "latitude": 23.998,
+    "longitude": 85.36
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "hazaribagh",
+    "national park",
+    "jharkhand",
+    "wildlife",
+    "flora fauna"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef37"
+  },
+  "site_id": "H165",
+  "name": "Kanha National Park",
+  "image_array": [
+    "/images/sites/kanha.jpg",
+    "/images/sites/kanha-2.jpg"
+  ],
+  "description": "Famous tiger reserve in Madhya Pradesh with rich biodiversity.",
+  "youtube_video_id": "Y6oR7Dk2V3Q",
+  "location": "Madhya Pradesh, India",
+  "geotag": {
+    "latitude": 22.334,
+    "longitude": 80.611
+  },
+  "type": "national park",
+  "era": "Natural",
+  "tags": [
+    "kanha",
+    "tiger reserve",
+    "mp",
+    "wildlife",
+    "biodiversity"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef38"
+  },
+  "site_id": "H166",
+  "name": "Bhadrakali Temple",
+  "image_array": [
+    "/images/sites/bhadrakali.jpg",
+    "/images/sites/bhadrakali-2.jpg"
+  ],
+  "description": "Ancient temple dedicated to Goddess Bhadrakali in Andhra Pradesh.",
+  "youtube_video_id": "V9oJ3Xk1Q2L",
+  "location": "Andhra Pradesh, India",
+  "geotag": {
+    "latitude": 16.5062,
+    "longitude": 80.648
+  },
+  "type": "temple",
+  "era": "Ancient",
+  "tags": [
+    "bhadrakali",
+    "temple",
+    "andhra pradesh",
+    "hindu",
+    "heritage"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef39"
+  },
+  "site_id": "H167",
+  "name": "Ranganathittu Bird Sanctuary",
+  "image_array": [
+    "/images/sites/ranganathittu.jpg",
+    "/images/sites/ranganathittu-2.jpg"
+  ],
+  "description": "Popular bird sanctuary in Karnataka along the Kaveri river.",
+  "youtube_video_id": "M3oL7Xq2V5K",
+  "location": "Karnataka, India",
+  "geotag": {
+    "latitude": 12.4032,
+    "longitude": 76.515
+  },
+  "type": "sanctuary",
+  "era": "Natural",
+  "tags": [
+    "ranganathittu",
+    "bird sanctuary",
+    "karnataka",
+    "birds",
+    "kaveri river"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef3a"
+  },
+  "site_id": "H168",
+  "name": "Ganga Aarti at Varanasi",
+  "image_array": [
+    "/images/sites/gangaaarti.jpg",
+    "/images/sites/gangaaarti-2.jpg"
+  ],
+  "description": "Evening ritual worship on the ghats of River Ganga in Varanasi.",
+  "youtube_video_id": "P4xJ7Rk2L8M",
+  "location": "Varanasi, Uttar Pradesh, India",
+  "geotag": {
+    "latitude": 25.3176,
+    "longitude": 82.9739
+  },
+  "type": "ritual",
+  "era": "Traditional",
+  "tags": [
+    "ganga aarti",
+    "varanasi",
+    "ritual",
+    "ghats",
+    "hindu"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef3b"
+  },
+  "site_id": "H169",
+  "name": "Sundernagar Buddha Statue",
+  "image_array": [
+    "/images/sites/sundernagar.jpg",
+    "/images/sites/sundernagar-2.jpg"
+  ],
+  "description": "Giant statue of Lord Buddha in Himachal Pradesh.",
+  "youtube_video_id": "H7oK3Vd2Q9L",
+  "location": "Himachal Pradesh, India",
+  "geotag": {
+    "latitude": 31.4929,
+    "longitude": 76.9172
+  },
+  "type": "statue",
+  "era": "Modern",
+  "tags": [
+    "buddha statue",
+    "sundernagar",
+    "himachal pradesh",
+    "religion",
+    "monument"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e02406ec13f52bd301ef3c"
+  },
+  "site_id": "H170",
+  "name": "Elephanta Caves",
+  "image_array": [
+    "/images/sites/elephanta.jpg",
+    "/images/sites/elephanta-2.jpg"
+  ],
+  "description": "Rock-cut cave temples near Mumbai, UNESCO World Heritage Site.",
+  "youtube_video_id": "J3xL7Tq2V1O",
+  "location": "Mumbai, Maharashtra, India",
+  "geotag": {
+    "latitude": 18.9634,
+    "longitude": 72.9317
+  },
+  "type": "cave",
+  "era": "Ancient",
+  "tags": [
+    "elephanta",
+    "unesco",
+    "caves",
+    "mumbai",
+    "temples"
+  ]
+}]

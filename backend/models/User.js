@@ -10,6 +10,9 @@ const userSchema = new Schema({
     site: { type: Schema.Types.ObjectId, ref: 'HeritageSite', required: true },
     visitedAt: { type: Date, default: Date.now }
   }],
+  badges: [{ type: Schema.Types.ObjectId, ref: 'Badge' }],
+  quizAttempts: [{ type: Schema.Types.ObjectId, ref: 'QuizAttempt' }],
+  visitedMonuments: [{ type: String }],
   posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
   refreshTokens: { type: [String], default: [] },
 }, { timestamps: true });
