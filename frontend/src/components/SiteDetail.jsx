@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import heritageSites from "../assets/heritageSites.json";
+import heritageSites from '../assets/heritageSites.json';
 import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
 import Quiz from './Quiz';
-import { useState, useEffect } from 'react';
-import HotelsList from './HotelsList';
+// import { useState, useEffect } from 'react';
+import HotelsList from './HotelList';
 import ThingsToDo from './ThingsToDo';
 
 export default function SiteDetail() {
@@ -103,12 +103,7 @@ export default function SiteDetail() {
               <div className="brand-sub">A new way to connect with culture</div>
             </div>
           </div>
-        <div style={{ marginTop: 16 }}>
-  <HotelsList lat={site.lat} lon={site.lon} city={site.cityCode || site.city} />
-</div>
-<div style={{ marginTop: 12 }}>
-  <ThingsToDo lat={site.lat} lon={site.lon} />
-</div>
+
           <div style={{ textAlign: "center", flex: 1 }}>
             <h1 className="page-title">Loading...</h1>
           </div>
@@ -192,7 +187,6 @@ export default function SiteDetail() {
             <div className="brand-sub">A new way to connect with culture</div>
           </div>
         </div>
-{showQuiz && <Quiz monumentId={site.slug || site._id || site.name} />}
 
         <div style={{ textAlign: "center", flex: 1 }}>
           <h1 className="page-title">{site.name}</h1>
@@ -277,6 +271,14 @@ export default function SiteDetail() {
             <Quiz monumentId={site.slug || site._id || site.name} />
           </div>
         )}
+
+        {/* Hotels and Activities */}
+        <div style={{ marginTop: 24 }}>
+          <HotelsList lat={lat} lon={lon} city={site.cityCode || site.city} />
+        </div>
+        <div style={{ marginTop: 16 }}>
+          <ThingsToDo lat={lat} lon={lon} />
+        </div>
 
         {/* Thumbnails row */}
         <div className="site-thumbnails">

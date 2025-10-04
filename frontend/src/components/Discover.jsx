@@ -6,7 +6,7 @@ import { fetchHeritageSites } from "../utils/api";
 
 export default function Discover() {
   const navigate = useNavigate();
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   const [sites, setSites] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

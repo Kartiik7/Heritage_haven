@@ -207,17 +207,54 @@ export const getUserProfile = async (token) => {
  */
 export const fetchPosts = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/posts`);
+    console.log('Fetching posts from:', `${API_BASE_URL}/posts`);
     
-    if (!response.ok) {
-      throw new Error(`Failed to fetch posts: ${response.status} ${response.statusText}`);
+    // First, let's try to see if the backend is even running
+    try {
+      const response = await fetch(`${API_BASE_URL}/posts`);
+      
+      if (!response.ok) {
+        console.warn(`Backend returned ${response.status}: ${response.statusText}`);
+        
+        // If backend is not available, return empty array instead of mock data
+        if (response.status >= 500 || response.status === 404) {
+          console.log('Backend not available, returning empty posts array');
+          return [];
+        }
+        
+        throw new Error(`Failed to fetch posts: ${response.status} ${response.statusText}`);
+      }
+      
+      const posts = await response.json();
+      console.log('Fetched posts from backend:', posts.length, 'posts');
+      
+      // Log each post's ID to identify problematic ones
+      posts.forEach((post, index) => {
+        const isNumericId = /^\d+$/.test(String(post._id));
+        const isObjectId = /^[0-9a-fA-F]{24}$/.test(post._id);
+        console.log(`Post ${index}:`, {
+          _id: post._id,
+          title: post.title,
+          idType: typeof post._id,
+          idLength: post._id?.length,
+          isNumericId,
+          isObjectId,
+          isValid: isNumericId || isObjectId
+        });
+      });
+      
+      return posts;
+      
+    } catch (fetchError) {
+      console.error('Network error fetching posts:', fetchError);
+      console.log('Backend appears to be down, returning empty array');
+      return [];
     }
     
-    const posts = await response.json();
-    return posts;
   } catch (error) {
-    console.error('Error fetching posts:', error);
-    throw error;
+    console.error('Error in fetchPosts:', error);
+    // Return empty array instead of throwing to prevent app crash
+    return [];
   }
 };
 
@@ -234,6 +271,8 @@ export const fetchPosts = async () => {
  */
 export const createPost = async (postData, token) => {
   try {
+    console.log('Creating post with data:', postData);
+    
     const response = await fetch(`${API_BASE_URL}/posts`, {
       method: 'POST',
       headers: {
@@ -243,10 +282,18 @@ export const createPost = async (postData, token) => {
       body: JSON.stringify(postData),
     });
 
+    console.log('Server response status:', response.status);
+    
     const data = await response.json();
+    console.log('Server response data:', data);
 
     if (!response.ok) {
-      throw new Error(data.message || 'Failed to create post');
+      console.error('Create post failed:', {
+        status: response.status,
+        statusText: response.statusText,
+        data
+      });
+      throw new Error(data.message || 'Server Error');
     }
 
     return data;
@@ -264,7 +311,19 @@ export const createPost = async (postData, token) => {
  */
 export const likePost = async (postId, token) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/posts/${postId}/like`, {
+    // Validate input parameters
+    if (!postId) {
+      throw new Error('Post ID is required');
+    }
+    if (!token) {
+      throw new Error('Authentication token is required');
+    }
+
+    // Convert numeric IDs to strings for the API call
+    const apiPostId = String(postId);
+    console.log('Attempting to like post:', apiPostId);
+    
+    const response = await fetch(`${API_BASE_URL}/posts/${apiPostId}/like`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -275,7 +334,8 @@ export const likePost = async (postId, token) => {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.message || 'Failed to like post');
+      console.error('Server response:', { status: response.status, statusText: response.statusText, data });
+      throw new Error(data.message || 'Post not found');
     }
 
     return data;
