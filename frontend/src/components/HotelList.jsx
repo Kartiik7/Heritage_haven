@@ -1,138 +1,84 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
 // frontend/src/components/HotelList.jsx
 import React, { useState } from 'react';
 import HotelCard from './HotelCard';
->>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
 
 export default function HotelList({ lat, lon, city }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [results, setResults] = useState([]);
-  const [checkIn, setCheckIn] = useState("");
-  const [checkOut, setCheckOut] = useState("");
+  const [hotels, setHotels] = useState([]);
+  const [dates, setDates] = useState({
+    checkIn: "",
+    checkOut: ""
+  });
   const [adults, setAdults] = useState(2);
 
-  const handleSearch = async () => {
+  const search = async () => {
+    if (!dates.checkIn || !dates.checkOut) {
+      setError('Please select check-in and check-out dates');
+      return;
+    }
+    
     setLoading(true);
     setError(null);
-    setResults([]);
+    setHotels([]);
+    
     try {
-<<<<<<< HEAD
-      const url = `/api/hotels/search?lat=${lat}&lon=${lon}&city=${city || ""}&checkInDate=${checkIn}&checkOutDate=${checkOut}&adults=${adults}`;
-      const res = await fetch(url);
+      const params = new URLSearchParams({
+        lat, 
+        lon, 
+        city: city || "", 
+        checkInDate: dates.checkIn, 
+        checkOutDate: dates.checkOut, 
+        adults
+      });
+      const res = await fetch(`/api/hotels/search?${params.toString()}`);
+      
       if (!res.ok) {
-        setError(`API error: ${res.status}`);
-        setLoading(false);
-        return;
+        throw new Error(`API error: ${res.status}`);
       }
+      
       const contentType = res.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
-        setError("API did not return JSON");
-        setLoading(false);
-        return;
+        throw new Error("API did not return JSON");
       }
-      const data = await res.json();
-      if (data && data.results && data.results.length > 0) {
-        setResults(data.results);
-      } else {
-        setError("No hotels found");
+      
+      const json = await res.json();
+      setHotels(json.results || []);
+      
+      if (!json.results || json.results.length === 0) {
+        setError('No hotels found for the selected dates');
       }
     } catch (err) {
       console.error("Hotel search error:", err);
-      setError("Failed to fetch hotels");
+      setError('Failed to load hotels. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="hotel-search-box">
-      <h3>Hotels & Compare</h3>
-      <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
-        <input type="date" value={checkIn} onChange={e => setCheckIn(e.target.value)} />
-        <input type="date" value={checkOut} onChange={e => setCheckOut(e.target.value)} />
-        <input
-          type="number"
-          min="1"
-          value={adults}
-          onChange={e => setAdults(e.target.value)}
-          style={{ width: "60px" }}
-        />
-        <button className="btn" onClick={handleSearch}>Search</button>
-      </div>
-
-      {loading && <p>Loading hotels...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-
-      <div className="hotel-grid">
-        {results.map((h, i) => (
-          <div key={h.id || i} className="hotel-card">
-            {/* Image (Amadeus rarely returns, so fallback image if missing) */}
-            {h.thumbnail ? (
-              <img src={h.thumbnail} alt={h.name} />
-            ) : (
-              <img src="/default-hotel.jpg" alt="Hotel" />
-            )}
-
-            <h4>{h.name}</h4>
-
-            {/* Address or fallback */}
-            <p>{h.address || "No address available"}</p>
-
-            {/* Rating */}
-            {h.rating && <p>⭐ {h.rating}</p>}
-
-            {/* Price or external link */}
-            {h.price ? (
-              <p><strong>{h.price} {h.currency}</strong></p>
-            ) : (
-              <p><a href={h.bookingUrl || h.mapsUrl} target="_blank" rel="noreferrer">View Details</a></p>
-            )}
-
-            {/* Booking / Maps Link */}
-            {h.bookingUrl && (
-              <a href={h.bookingUrl} target="_blank" rel="noreferrer" className="btn btn-small">
-                Book Now
-              </a>
-            )}
-          </div>
-        ))}
-=======
-      const params = new URLSearchParams({
-        lat, lon, city, checkInDate: dates.checkIn, checkOutDate: dates.checkOut, adults
-      });
-      const res = await fetch(`/api/hotels/search?${params.toString()}`);
-      const json = await res.json();
-      setHotels(json.results || []);
-    } catch { setError('Failed to load hotels. Please try again.'); }
-    setLoading(false);
-  }
-
-  return (
     <div className="card">
       <h3>🏨 Hotels & Accommodation</h3>
-      <div className="hotel-search-form">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+      <div className="hotel-search-form" style={{ display: 'flex', gap: '12px', marginBottom: '16px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '140px' }}>
           <label style={{ fontSize: '12px', color: '#666', fontWeight: '500' }}>Check-in</label>
           <input 
             type="date" 
             value={dates.checkIn} 
             onChange={e => setDates({...dates, checkIn: e.target.value})}
-            placeholder="Check-in date" 
+            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
           />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '140px' }}>
           <label style={{ fontSize: '12px', color: '#666', fontWeight: '500' }}>Check-out</label>
           <input 
             type="date" 
             value={dates.checkOut} 
             onChange={e => setDates({...dates, checkOut: e.target.value})}
-            placeholder="Check-out date" 
+            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
           />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '80px' }}>
           <label style={{ fontSize: '12px', color: '#666', fontWeight: '500' }}>Adults</label>
           <input 
             type="number" 
@@ -140,7 +86,7 @@ export default function HotelList({ lat, lon, city }) {
             max="9" 
             value={adults} 
             onChange={e => setAdults(e.target.value)}
-            placeholder="Adults" 
+            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
           />
         </div>
         <button 
@@ -149,12 +95,17 @@ export default function HotelList({ lat, lon, city }) {
           disabled={!dates.checkIn || !dates.checkOut || loading}
           style={{ 
             alignSelf: 'flex-end',
-            opacity: (!dates.checkIn || !dates.checkOut || loading) ? 0.6 : 1 
+            opacity: (!dates.checkIn || !dates.checkOut || loading) ? 0.6 : 1,
+            padding: '8px 16px',
+            borderRadius: '4px',
+            backgroundColor: '#007bff',
+            color: 'white',
+            border: 'none',
+            cursor: 'pointer'
           }}
         >
           {loading ? 'Searching...' : 'Search Hotels'}
         </button>
->>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
       </div>
       
       {error && (

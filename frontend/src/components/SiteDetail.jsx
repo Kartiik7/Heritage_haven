@@ -5,22 +5,14 @@ import { useAuth } from "../hooks/useAuth";
 import heritageSites from '../assets/heritageSites.json';
 import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
-<<<<<<< HEAD
-
 import Quiz from "./Quiz";
 import HotelList from "./HotelList";
 import ThingsToDo from "./ThingsToDo";
-=======
-import Quiz from './Quiz';
-// import { useState, useEffect } from 'react';
-import HotelsList from './HotelList';
-import ThingsToDo from './ThingsToDo';
->>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
 
 export default function SiteDetail() {
   const { siteId } = useParams();
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user: _user } = useAuth();
 
   const [site, setSite] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +74,7 @@ export default function SiteDetail() {
         if (!res.ok) return;
         const data = await res.json();
         if (mounted && data?.name) setUserName(data.name);
-      } catch (e) {
+      } catch {
         // ignore - keep Guest
       }
     }

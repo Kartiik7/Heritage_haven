@@ -1,6 +1,18 @@
-# Heritage Haven India 🇮🇳✨
+# DevCreateBuildTest
+# Heritage Haven India 🇮🇳✨ 
 
-**Explore India's rich heritage like never before!** Heritage Haven India is a web platform, built for the **[Your Hackathon Name]** hackathon, that transforms the way we discover and experience India's magnificent cultural treasures. We go beyond static images and text, offering a dynamic, immersive, and personalized journey through history.
+# Namaste Techies - T119
+Namit Sharma - Full-Stack Coordinator
+Kartik Patel - Backend Developer
+Prannoy Chandola - Frontend Developer
+Vriddhi Kakkar - DB and Content Manager
+ 
+
+**Problem Statement:** Heritage lovers struggle to find consolidated, reliable details on monuments, their history, and nearby services — everything is scattered across multiple apps and websites. Planning an itinerary combining multiple sites is time-consuming and complex, with no intelligent tools to optimize routes or discover hidden gems. The gap is clear: there's no unified, intelligent platform designed specifically for cultural tourism in India.
+
+**Tech Stack:** React.js, Node.js, Express.js, CSS, natural.js, MongoDB
+
+**Explore India's rich heritage like never before!** Heritage Haven India is a web platform, built for the **[DevCreate BuildFest 1.0]** hackathon, that transforms the way we discover and experience India's magnificent cultural treasures. We go beyond static images and text, offering a dynamic, immersive, and personalized journey through history.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](your-live-demo-link.com)
 
@@ -27,7 +39,7 @@
 
 ### 🏆 Hackathon Project
 
-This project was conceived and built during the **[Your Hackathon Name] 2025**. Our goal was to tackle the challenge of making cultural heritage more accessible and engaging for a digital-first generation.
+This project was conceived and built during the **[DevCreate BuildFest 1.0] 2025**. Our goal was to tackle the challenge of making cultural heritage more accessible and engaging for a digital-first generation.
 
 ---
 
@@ -35,7 +47,7 @@ This project was conceived and built during the **[Your Hackathon Name] 2025**. 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your-repo-link]
+    git clone https://github.com/Kartiik7/Heritage_haven
     ```
 2.  **Install dependencies (frontend & backend):**
     ```bash
