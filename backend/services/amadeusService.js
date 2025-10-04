@@ -1,180 +1,148 @@
-// backend/controllers/hotelsController.js
-// Updated: prefer lat/lon -> Amadeus geocode -> Amadeus offers; fallback to city -> Amadeus; then Google Places
+// backend/services/amadeusService.js
+const axios = require('axios');
+const qs = require('qs');
+require('dotenv').config();
 
-const HotelCache = require('../models/HotelCache');
-const {
-  searchHotels,            // existing function: cityCode based search
-  searchHotelsByGeo        // NEW: must be implemented in services/amadeusService
-} = require('../services/amadeusService');
-const { nearbyPlaces, textSearchPlaces } = require('../services/googlePlacesService');
+const AMADEUS_TOKEN_URL = 'https://test.api.amadeus.com/v1/security/oauth2/token'; // use test for dev
+const AMADEUS_BASE = 'https://test.api.amadeus.com';
 
-function makeCacheKey({ lat, lon, city, checkInDate, checkOutDate, adults, currency }) {
-  return `hotels:${lat || city}:${lon || ''}:${checkInDate}:${checkOutDate}:${adults}:${currency}`;
-}
+let tokenCache = { token: null, expiresAt: 0 };
 
-function mapPlaceToNormalized(place) {
-  const name = place.name || 'Unknown';
-  const thumbnail = place.photos && place.photos.length
-    ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${process.env.GOOGLE_API_KEY}`
-    : null;
-  const address = place.vicinity || place.formatted_address || null;
-  const rating = place.rating || null;
-  const mapsUrl = place.place_id
-    ? `https://www.google.com/maps/search/?api=1&query=place_id:${place.place_id}`
-    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + (address ? ' ' + address : ''))}`;
-  const bookingSearchUrl = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(name + (address ? ' ' + address : ''))}`;
-
-  return {
-    source: 'google_places',
-    id: place.place_id || null,
-    name,
-    rating,
-    address,
-    thumbnail,
-    price: null,
-    currency: null,
-    bookingUrl: bookingSearchUrl,
-    mapsUrl,
-    raw: place
-  };
-}
-
-exports.search = async (req, res) => {
-  const start = Date.now();
+async function getToken() {
+  if (tokenCache.token && Date.now() < tokenCache.expiresAt - 60000) return tokenCache.token;
+  
   try {
-    const { lat, lon, city, checkInDate, checkOutDate, adults = 1, currency } = req.query;
-    const cur = currency || process.env.CURRENCY || 'INR';
-    const key = makeCacheKey({ lat, lon, city, checkInDate, checkOutDate, adults, currency: cur });
-
-    console.log('[hotelsController] Search start', { lat, lon, city, checkInDate, checkOutDate, adults, currency: cur });
-
-    // cache check
-    const cached = await HotelCache.findOne({ key }).lean();
-    if (cached) {
-      console.log('[hotelsController] returning cached results');
-      return res.json({ cached: true, results: cached.response });
-    }
-
-    // 1) Amadeus search by geocode if lat/lon provided
-    if (lat && lon) {
-      try {
-        console.log('[hotelsController] attempting Amadeus search by geocode');
-        const amadeusResults = await searchHotelsByGeo({
-          lat: Number(lat),
-          lon: Number(lon),
-          checkInDate,
-          checkOutDate,
-          adults: Number(adults),
-          currency: cur
-        });
-
-        if (Array.isArray(amadeusResults) && amadeusResults.length > 0) {
-          const normalized = amadeusResults.map(item => {
-            const hotel = item.hotel || item;
-            const name = hotel.name || hotel.hotel?.name || 'Unknown';
-            const offers = item.offers || item.hotelOffers || [];
-            const price = offers[0]?.price?.total || offers[0]?.price?.base || null;
-            const currencyVal = offers[0]?.price?.currency || cur;
-            const thumbnail = hotel.media?.[0]?.uri || hotel.images?.[0]?.uri || null;
-            return {
-              source: 'amadeus',
-              id: hotel.hotelId || hotel.id || null,
-              name,
-              price,
-              currency: currencyVal,
-              thumbnail,
-              raw: item
-            };
-          });
-
-          await HotelCache.updateOne({ key }, { $set: { response: normalized, createdAt: new Date() } }, { upsert: true });
-          console.log('[hotelsController] returning amadeus-by-geo results', normalized.length);
-          return res.json({ cached: false, source: 'amadeus', results: normalized });
-        }
-        console.log('[hotelsController] Amadeus by-geo returned no offers');
-      } catch (e) {
-        console.warn('[hotelsController] Amadeus by-geo error:', e.message || e);
-      }
-    }
-
-    // 2) Amadeus search by cityCode fallback
-    if (city) {
-      try {
-        console.log('[hotelsController] attempting Amadeus search by cityCode', city);
-        const amadeusResults = await searchHotels({
-          cityCode: city,
-          checkInDate,
-          checkOutDate,
-          adults: Number(adults),
-          currency: cur
-        });
-
-        if (Array.isArray(amadeusResults) && amadeusResults.length > 0) {
-          const normalized = amadeusResults.map(item => {
-            const hotel = item.hotel || item;
-            const name = hotel.name || hotel.hotel?.name || 'Unknown';
-            const offers = item.offers || item.hotelOffers || [];
-            const price = offers[0]?.price?.total || offers[0]?.price?.base || null;
-            const currencyVal = offers[0]?.price?.currency || cur;
-            const thumbnail = hotel.media?.[0]?.uri || hotel.images?.[0]?.uri || null;
-            return {
-              source: 'amadeus',
-              id: hotel.hotelId || hotel.id || null,
-              name,
-              price,
-              currency: currencyVal,
-              thumbnail,
-              raw: item
-            };
-          });
-
-          await HotelCache.updateOne({ key }, { $set: { response: normalized, createdAt: new Date() } }, { upsert: true });
-          console.log('[hotelsController] returning amadeus-by-city results', normalized.length);
-          return res.json({ cached: false, source: 'amadeus', results: normalized });
-        }
-        console.log('[hotelsController] Amadeus by-city returned no offers');
-      } catch (e) {
-        console.warn('[hotelsController] Amadeus by-city error:', e.message || e);
-      }
-    }
-
-    // 3) Google Places fallback
-    if (!lat || !lon) {
-      console.log('[hotelsController] no coords available for Google fallback');
-      return res.json({ cached: false, source: 'none', results: [] });
-    }
-
-    let places = [];
-    try {
-      console.log('[hotelsController] Google Places nearby (lodging)');
-      places = await nearbyPlaces({ lat, lon, radius: 5000, type: 'lodging', limit: 30 });
-    } catch (gpErr) {
-      console.warn('[hotelsController] nearbyPlaces error:', gpErr.message || gpErr);
-    }
-
-    if (!places || places.length === 0) {
-      try {
-        const query = `hotels near ${lat},${lon}`;
-        console.log('[hotelsController] Google Places Text Search fallback');
-        places = await textSearchPlaces({ query, limit: 30 });
-      } catch (txtErr) {
-        console.warn('[hotelsController] textSearchPlaces error:', txtErr.message || txtErr);
-      }
-    }
-
-    if (!places || places.length === 0) {
-      console.log('[hotelsController] Google Places returned no results');
-      await HotelCache.updateOne({ key }, { $set: { response: [], createdAt: new Date() } }, { upsert: true });
-      return res.json({ cached: false, source: 'none', results: [] });
-    }
-
-    const normalizedPlaces = places.map(mapPlaceToNormalized);
-    await HotelCache.updateOne({ key }, { $set: { response: normalizedPlaces, createdAt: new Date() } }, { upsert: true });
-    console.log('[hotelsController] returning google_places results', normalizedPlaces.length);
-    return res.json({ cached: false, source: 'google_places', results: normalizedPlaces });
-
-  } catch (err) {
-    console.error('[hotelsController] fatal:', err);
-    return res.status(500).json({ error: 'hotel search failed', detail: err.message || err });
+    const res = await axios.post(AMADEUS_TOKEN_URL,
+      qs.stringify({ 
+        grant_type: 'client_credentials', 
+        client_id: process.env.AMADEUS_CLIENT_ID, 
+        client_secret: process.env.AMADEUS_CLIENT_SECRET 
+      }),
+      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+    );
+    
+    tokenCache.token = res.data.access_token;
+    tokenCache.expiresAt = Date.now() + (res.data.expires_in * 1000);
+    return tokenCache.token;
+  } catch (error) {
+    console.error('Failed to get Amadeus token:', error.message);
+    throw new Error('Amadeus authentication failed');
   }
+}
+
+// Search hotels by city code with batch processing
+async function searchHotels({ cityCode, checkInDate, checkOutDate, adults = 1, currency = 'INR', maxHotelIds = 120, batchSize = 12 }) {
+  try {
+    const token = await getToken();
+    
+    // Get hotel list by city
+    const hotelListRes = await axios.get(`${AMADEUS_BASE}/v1/reference-data/locations/hotels/by-city`, {
+      params: { cityCode },
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    
+    const hotels = hotelListRes?.data?.data || [];
+    if (hotels.length === 0) {
+      return { offers: [], triedHotelIdsCount: 0, batchesTried: 0, error: 'No hotels found for city' };
+    }
+    
+    // Process in batches
+    const hotelIds = hotels.slice(0, maxHotelIds).map(h => h.hotelId).filter(Boolean);
+    const offers = [];
+    let batchesTried = 0;
+    
+    for (let i = 0; i < hotelIds.length; i += batchSize) {
+      const batch = hotelIds.slice(i, i + batchSize);
+      batchesTried++;
+      
+      try {
+        const offersRes = await axios.get(`${AMADEUS_BASE}/v3/shopping/hotel-offers`, {
+          params: { 
+            hotelIds: batch.join(','), 
+            adults, 
+            checkInDate, 
+            checkOutDate, 
+            currency 
+          },
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        
+        const batchOffers = offersRes?.data?.data || [];
+        offers.push(...batchOffers);
+        
+        // If we got enough offers, stop processing
+        if (offers.length >= 20) break;
+      } catch (batchError) {
+        console.warn(`Batch ${batchesTried} failed:`, batchError.message);
+      }
+    }
+    
+    return { 
+      offers, 
+      triedHotelIdsCount: hotelIds.length, 
+      batchesTried, 
+      error: null 
+    };
+  } catch (error) {
+    console.error('Hotel search failed:', error.message);
+    return { 
+      offers: [], 
+      triedHotelIdsCount: 0, 
+      batchesTried: 0, 
+      error: error.message 
+    };
+  }
+}
+
+// Search hotels by geocode (latitude, longitude)
+async function searchHotelsByGeo({ lat, lon, checkInDate, checkOutDate, adults = 1, currency = 'INR', radiusKm = 5 }) {
+  try {
+    const token = await getToken();
+    
+    // Get hotels by geocode
+    const hotelListRes = await axios.get(`${AMADEUS_BASE}/v1/reference-data/locations/hotels/by-geocode`, {
+      params: { latitude: lat, longitude: lon, radius: radiusKm },
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    
+    const hotels = hotelListRes?.data?.data || [];
+    if (hotels.length === 0) {
+      return { offers: [], error: 'No hotels found for location' };
+    }
+    
+    // Get offers for found hotels
+    const hotelIds = hotels.slice(0, 20).map(h => h.hotelId).filter(Boolean);
+    
+    if (hotelIds.length === 0) {
+      return { offers: [], error: 'No valid hotel IDs found' };
+    }
+    
+    const offersRes = await axios.get(`${AMADEUS_BASE}/v3/shopping/hotel-offers`, {
+      params: { 
+        hotelIds: hotelIds.join(','), 
+        adults, 
+        checkInDate, 
+        checkOutDate, 
+        currency 
+      },
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    
+    return { 
+      offers: offersRes?.data?.data || [], 
+      error: null 
+    };
+  } catch (error) {
+    console.error('Geo hotel search failed:', error.message);
+    return { 
+      offers: [], 
+      error: error.message 
+    };
+  }
+}
+
+module.exports = { 
+  searchHotels, 
+  searchHotelsByGeo, 
+  getToken 
 };

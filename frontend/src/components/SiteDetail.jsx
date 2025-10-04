@@ -273,7 +273,7 @@ export default function SiteDetail() {
 
         {/* Hotels and Activities */}
         <div style={{ marginTop: 24 }}>
-          <HotelsList lat={lat} lon={lon} city={site.cityCode || site.city} />
+          <HotelList lat={lat} lon={lon} city={site.cityCode || site.city} />
         </div>
         <div style={{ marginTop: 16 }}>
           <ThingsToDo lat={lat} lon={lon} />

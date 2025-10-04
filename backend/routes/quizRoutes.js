@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-<<<<<<< HEAD
 // controller with named exports (object with functions)
 const quizCtrl = require('../controllers/quizController');
 
@@ -19,10 +18,6 @@ if (typeof authMiddleware !== 'function') {
   authMiddleware = (req, res, next) => { next(); };
 }
 
-// routes
-router.get('/:monumentId', authMiddleware, quizCtrl.getQuestions);
-router.post('/:monumentId/submit', authMiddleware, quizCtrl.submitQuiz);
-=======
 // Validation middleware for monumentId
 const validateMonumentId = (req, res, next) => {
   const { monumentId } = req.params;
@@ -62,8 +57,8 @@ const validateQuizSubmission = (req, res, next) => {
   next();
 };
 
-router.get('/:monumentId', validateMonumentId, authMiddleware.protect, quizCtrl.getQuestions);
-router.post('/:monumentId/submit', validateMonumentId, validateQuizSubmission, authMiddleware.protect, quizCtrl.submitQuiz);
->>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
+// routes
+router.get('/:monumentId', validateMonumentId, authMiddleware, quizCtrl.getQuestions);
+router.post('/:monumentId/submit', validateMonumentId, validateQuizSubmission, authMiddleware, quizCtrl.submitQuiz);
 
 module.exports = router;
