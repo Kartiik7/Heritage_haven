@@ -200,3 +200,87 @@ export const getUserProfile = async (token) => {
     throw error;
   }
 };
+
+/**
+ * Fetch all posts from the backend
+ * @returns {Promise<Array>} Array of posts
+ */
+export const fetchPosts = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/posts`);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch posts: ${response.status} ${response.statusText}`);
+    }
+    
+    const posts = await response.json();
+    return posts;
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    throw error;
+  }
+};
+
+/**
+ * Create a new post
+ * @param {Object} postData - Post data
+ * @param {string} postData.title - Post title
+ * @param {string} postData.content - Post content
+ * @param {string} postData.imageUrl - Post image URL (optional)
+ * @param {Array} postData.tags - Post tags (optional)
+ * @param {string} postData.heritageSite - Heritage site ID (optional)
+ * @param {string} token - Authentication token
+ * @returns {Promise<Object>} Created post data
+ */
+export const createPost = async (postData, token) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/posts`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify(postData),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to create post');
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error creating post:', error);
+    throw error;
+  }
+};
+
+/**
+ * Like or unlike a post
+ * @param {string} postId - Post ID
+ * @param {string} token - Authentication token
+ * @returns {Promise<Object>} Updated post data
+ */
+export const likePost = async (postId, token) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/posts/${postId}/like`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to like post');
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error liking post:', error);
+    throw error;
+  }
+};
