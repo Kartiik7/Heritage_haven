@@ -1,6 +1,7 @@
 // frontend/src/components/HotelList.jsx
 import React, { useState } from 'react';
 import HotelCard from './HotelCard';
+import { getApiBaseUrl } from '../utils/api';
 
 export default function HotelList({ lat, lon, city }) {
   const [loading, setLoading] = useState(false);
@@ -31,7 +32,8 @@ export default function HotelList({ lat, lon, city }) {
         checkOutDate: dates.checkOut, 
         adults
       });
-      const res = await fetch(`/api/hotels/search?${params.toString()}`);
+      const apiBaseUrl = getApiBaseUrl();
+      const res = await fetch(`${apiBaseUrl}/api/hotels/search?${params.toString()}`);
       
       if (!res.ok) {
         throw new Error(`API error: ${res.status}`);

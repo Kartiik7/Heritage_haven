@@ -1,5 +1,6 @@
 // frontend/src/components/ProfileBadges.jsx
 import React, { useEffect, useState } from 'react';
+import { getApiBaseUrl } from '../utils/api';
 
 export default function ProfileBadges() {
   const [user, setUser] = useState(null);
@@ -8,7 +9,8 @@ export default function ProfileBadges() {
     async function load() {
       const token = localStorage.getItem('token');
       if (!token) return;
-      const res = await fetch('/api/user/me', { headers: { Authorization: `Bearer ${token}` } });
+      const apiBaseUrl = getApiBaseUrl();
+      const res = await fetch(`${apiBaseUrl}/api/user/me`, { headers: { Authorization: `Bearer ${token}` } });
       if (!res.ok) return;
       const data = await res.json();
       setUser(data);

@@ -1,6 +1,15 @@
 // API utility functions for Heritage Haven frontend
 
-const API_BASE_URL = 'http://localhost:5000/api';
+// Get API base URL from environment variables.
+// In development, this will be http://localhost:5000 from .env.development
+// In production, this will be your backend URL from Render's environment variables.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ;
+
+/**
+ * Get the API base URL for use in other components
+ * @returns {string} The API base URL
+ */
+export const getApiBaseUrl = () => API_BASE_URL;
 
 /**
  * Fetch all heritage sites from the backend
@@ -8,7 +17,8 @@ const API_BASE_URL = 'http://localhost:5000/api';
  */
 export const fetchHeritageSites = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/sites`);
+    // Correctly uses the API_BASE_URL variable
+    const response = await fetch(`${API_BASE_URL}/api/sites`);
     
     if (!response.ok) {
       throw new Error(`Failed to fetch heritage sites: ${response.status} ${response.statusText}`);
@@ -29,13 +39,12 @@ export const fetchHeritageSites = async () => {
  */
 export const fetchHeritageSiteById = async (siteId) => {
   try {
-    const sites = await fetchHeritageSites();
-    const site = sites.find(s => s.site_id === siteId);
-    
-    if (!site) {
-      throw new Error(`Heritage site with ID ${siteId} not found`);
+    // This function was making another network call, let's point it to the backend directly
+    const response = await fetch(`${API_BASE_URL}/api/sites/${siteId}`);
+    if (!response.ok) {
+        throw new Error(`Heritage site with ID ${siteId} not found`);
     }
-    
+    const site = await response.json();
     return site;
   } catch (error) {
     console.error(`Error fetching heritage site ${siteId}:`, error);
@@ -43,99 +52,24 @@ export const fetchHeritageSiteById = async (siteId) => {
   }
 };
 
-/**
- * Track a user visit to a heritage site
- * @param {string} siteId - The site ID
- * @param {string} token - Authentication token
- * @returns {Promise<Object>} Response from the API
- */
-export const trackSiteVisit = async (siteId, token) => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/sites/${siteId}/visit`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      }
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Failed to track visit: ${response.status} ${response.statusText}`);
-    }
-    
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error('Error tracking site visit:', error);
-    throw error;
-  }
-};
-
-/**
- * Get recommendations for a specific site
- * @param {string} siteId - The site ID
- * @returns {Promise<Array>} Array of recommended sites
- */
-export const fetchSiteRecommendations = async (siteId) => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/sites/${siteId}/recommendations`);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch recommendations: ${response.status} ${response.statusText}`);
-    }
-    
-    const recommendations = await response.json();
-    return recommendations;
-  } catch (error) {
-    console.error('Error fetching recommendations:', error);
-    throw error;
-  }
-};
-
-/**
- * Get personalized recommendations for the home page
- * @param {number} limit - Maximum number of recommendations to return (default: 10)
- * @returns {Promise<Array>} Array of recommended heritage sites
- */
-export const fetchHomeRecommendations = async (limit = 10) => {
-  try {
-    // For now, we'll fetch all sites and return a random selection
-    // In a real implementation, this would be based on user preferences, history, etc.
-    const allSites = await fetchHeritageSites();
-    
-    // Shuffle the array and take the first 'limit' items
-    const shuffled = allSites.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, limit);
-  } catch (error) {
-    console.error('Error fetching home recommendations:', error);
-    throw error;
-  }
-};
+// ... (keep the rest of the functions as they are, they all use API_BASE_URL)
 
 /**
  * Register a new user
  * @param {Object} userData - User registration data
- * @param {string} userData.username - Username
- * @param {string} userData.email - Email address
- * @param {string} userData.password - Password
  * @returns {Promise<Object>} User data with token
  */
 export const registerUser = async (userData) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/auth/register`, {
+    const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userData),
     });
-
     const data = await response.json();
-
     if (!response.ok) {
       throw new Error(data.message || 'Registration failed');
     }
-
     return data;
   } catch (error) {
     console.error('Error registering user:', error);
@@ -146,26 +80,19 @@ export const registerUser = async (userData) => {
 /**
  * Login user
  * @param {Object} credentials - User login credentials
- * @param {string} credentials.email - Email address
- * @param {string} credentials.password - Password
  * @returns {Promise<Object>} User data with token
  */
 export const loginUser = async (credentials) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/auth/login`, {
+    const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(credentials),
     });
-
     const data = await response.json();
-
     if (!response.ok) {
       throw new Error(data.message || 'Login failed');
     }
-
     return data;
   } catch (error) {
     console.error('Error logging in user:', error);
@@ -173,27 +100,21 @@ export const loginUser = async (credentials) => {
   }
 };
 
-/**
- * Get user profile
- * @param {string} token - Authentication token
- * @returns {Promise<Object>} User profile data
- */
+// ... (The rest of your api.js file remains the same)
+// Ensure all fetch calls use `${API_BASE_URL}/api/...`
 export const getUserProfile = async (token) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/auth/profile`, {
+    const response = await fetch(`${API_BASE_URL}/api/auth/profile`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
     });
-
     const data = await response.json();
-
     if (!response.ok) {
       throw new Error(data.message || 'Failed to fetch user profile');
     }
-
     return data;
   } catch (error) {
     console.error('Error fetching user profile:', error);
@@ -201,146 +122,256 @@ export const getUserProfile = async (token) => {
   }
 };
 
-/**
- * Fetch all posts from the backend
- * @returns {Promise<Array>} Array of posts
- */
 export const fetchPosts = async () => {
   try {
-    console.log('Fetching posts from:', `${API_BASE_URL}/posts`);
-    
-    // First, let's try to see if the backend is even running
-    try {
-      const response = await fetch(`${API_BASE_URL}/posts`);
-      
-      if (!response.ok) {
-        console.warn(`Backend returned ${response.status}: ${response.statusText}`);
-        
-        // If backend is not available, return empty array instead of mock data
-        if (response.status >= 500 || response.status === 404) {
-          console.log('Backend not available, returning empty posts array');
-          return [];
-        }
-        
-        throw new Error(`Failed to fetch posts: ${response.status} ${response.statusText}`);
-      }
-      
-      const posts = await response.json();
-      console.log('Fetched posts from backend:', posts.length, 'posts');
-      
-      // Log each post's ID to identify problematic ones
-      posts.forEach((post, index) => {
-        const isNumericId = /^\d+$/.test(String(post._id));
-        const isObjectId = /^[0-9a-fA-F]{24}$/.test(post._id);
-        console.log(`Post ${index}:`, {
-          _id: post._id,
-          title: post.title,
-          idType: typeof post._id,
-          idLength: post._id?.length,
-          isNumericId,
-          isObjectId,
-          isValid: isNumericId || isObjectId
-        });
-      });
-      
-      return posts;
-      
-    } catch (fetchError) {
-      console.error('Network error fetching posts:', fetchError);
-      console.log('Backend appears to be down, returning empty array');
-      return [];
+    const response = await fetch(`${API_BASE_URL}/api/posts`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch posts: ${response.statusText}`);
     }
-    
+    return await response.json();
   } catch (error) {
     console.error('Error in fetchPosts:', error);
-    // Return empty array instead of throwing to prevent app crash
-    return [];
+    return []; // Return empty array to prevent app crash
+  }
+};
+
+export const createPost = async (postData, token) => {
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/posts`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify(postData),
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.message || 'Server Error');
+        }
+        return data;
+    } catch (error) {
+        console.error('Error creating post:', error);
+        throw error;
+    }
+};
+
+export const likePost = async (postId, token) => {
+    try {
+        const apiPostId = String(postId);
+        const response = await fetch(`${API_BASE_URL}/api/posts/${apiPostId}/like`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.message || 'Post not found');
+        }
+        return data;
+    } catch (error) {
+        console.error('Error liking post:', error);
+        throw error;
+    }
+};
+
+/**
+ * Fetch quiz questions for a specific monument.
+ * @param {string} monumentId - The ID of the monument.
+ * @param {string} token - The user's authentication token.
+ * @returns {Promise<Array>} An array of quiz questions.
+ */
+export const fetchQuizQuestions = async (monumentId, token) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/quiz/${monumentId}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to fetch quiz questions');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching quiz questions:', error);
+    throw error;
   }
 };
 
 /**
- * Create a new post
- * @param {Object} postData - Post data
- * @param {string} postData.title - Post title
- * @param {string} postData.content - Post content
- * @param {string} postData.imageUrl - Post image URL (optional)
- * @param {Array} postData.tags - Post tags (optional)
- * @param {string} postData.heritageSite - Heritage site ID (optional)
- * @param {string} token - Authentication token
- * @returns {Promise<Object>} Created post data
+ * Submit quiz answers for a specific monument.
+ * @param {string} monumentId - The ID of the monument.
+ * @param {Array} answers - An array of answer objects [{ questionId, chosenIndex }].
+ * @param {string} token - The user's authentication token.
+ * @returns {Promise<Object>} The result of the quiz submission.
  */
-export const createPost = async (postData, token) => {
+export const submitQuiz = async (monumentId, answers, token) => {
   try {
-    console.log('Creating post with data:', postData);
-    
-    const response = await fetch(`${API_BASE_URL}/posts`, {
+    const response = await fetch(`${API_BASE_URL}/api/quiz/${monumentId}/submit`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
-      body: JSON.stringify(postData),
+      body: JSON.stringify({ answers }),
     });
-
-    console.log('Server response status:', response.status);
-    
-    const data = await response.json();
-    console.log('Server response data:', data);
-
     if (!response.ok) {
-      console.error('Create post failed:', {
-        status: response.status,
-        statusText: response.statusText,
-        data
-      });
-      throw new Error(data.message || 'Server Error');
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to submit quiz');
     }
-
-    return data;
+    return await response.json();
   } catch (error) {
-    console.error('Error creating post:', error);
+    console.error('Error submitting quiz:', error);
     throw error;
   }
 };
 
 /**
- * Like or unlike a post
- * @param {string} postId - Post ID
- * @param {string} token - Authentication token
- * @returns {Promise<Object>} Updated post data
+ * Track a user's visit to a heritage site.
+ * @param {string} siteId - The custom ID of the site (e.g., "H041").
+ * @param {string} token - The user's authentication token.
+ * @returns {Promise<Object>} The server response.
  */
-export const likePost = async (postId, token) => {
+export const trackVisit = async (siteId, token) => {
   try {
-    // Validate input parameters
-    if (!postId) {
-      throw new Error('Post ID is required');
-    }
-    if (!token) {
-      throw new Error('Authentication token is required');
-    }
-
-    // Convert numeric IDs to strings for the API call
-    const apiPostId = String(postId);
-    console.log('Attempting to like post:', apiPostId);
-    
-    const response = await fetch(`${API_BASE_URL}/posts/${apiPostId}/like`, {
-      method: 'PUT',
+    const response = await fetch(`${API_BASE_URL}/api/sites/${siteId}/visit`, {
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
     });
-
-    const data = await response.json();
-
     if (!response.ok) {
-      console.error('Server response:', { status: response.status, statusText: response.statusText, data });
-      throw new Error(data.message || 'Post not found');
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Failed to track visit');
     }
-
-    return data;
+    return await response.json();
   } catch (error) {
-    console.error('Error liking post:', error);
+    console.error('Error tracking visit:', error);
     throw error;
   }
 };
+
+/**
+ * Fetches content-based recommendations for a given site.
+ * @param {string} siteId - The custom ID of the site.
+ * @param {number} [lat] - Optional latitude for location-aware recommendations.
+ * @param {number} [lon] - Optional longitude for location-aware recommendations.
+ * @returns {Promise<Array>} An array of recommended sites.
+ */
+export const fetchRecommendationsForSite = async (siteId, lat, lon) => {
+    try {
+        const url = new URL(`${API_BASE_URL}/api/sites/${siteId}/recommendations`);
+        if (lat && lon) {
+            url.searchParams.append('lat', lat);
+            url.searchParams.append('lon', lon);
+        }
+        const response = await fetch(url);
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to fetch recommendations');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching recommendations for site:', error);
+        throw error;
+    }
+};
+
+/**
+ * Fetches personalized recommendations for the logged-in user.
+ * @param {string} token - The user's authentication token.
+ * @param {number} [lat] - Optional user latitude.
+ * @param {number} [lon] - Optional user longitude.
+ * @returns {Promise<Array>} An array of recommended sites.
+ */
+export const fetchPersonalizedRecommendations = async (token, lat, lon) => {
+    try {
+        const url = new URL(`${API_BASE_URL}/api/recommendations/user`);
+        if (lat && lon) {
+            url.searchParams.append('lat', lat);
+            url.searchParams.append('lon', lon);
+        }
+        const response = await fetch(url, {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to fetch personalized recommendations');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching personalized recommendations:', error);
+        throw error;
+    }
+};
+
+/**
+ * Searches for hotels based on provided criteria.
+ * @param {object} params - The search parameters.
+ * @param {string} params.city - The city code (e.g., "DEL").
+ * @param {string} params.checkInDate - The check-in date (YYYY-MM-DD).
+ * @param {string} params.checkOutDate - The check-out date (YYYY-MM-DD).
+ * @param {number} [params.adults=1] - The number of adults.
+ * @returns {Promise<Object>} The hotel search results.
+ */
+export const searchHotels = async (params) => {
+    try {
+        const url = new URL(`${API_BASE_URL}/api/hotels/search`);
+        Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+        const response = await fetch(url);
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Failed to search for hotels');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error searching for hotels:', error);
+        throw error;
+    }
+};
+
+/**
+ * Fetches nearby tourist attractions from Google Places API via our backend.
+ * @param {number} lat - The latitude.
+ * @param {number} lon - The longitude.
+ * @returns {Promise<Array>} An array of nearby places.
+ */
+export const fetchNearbyPlaces = async (lat, lon) => {
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/places/nearby?lat=${lat}&lon=${lon}`);
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Failed to fetch nearby places');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching nearby places:', error);
+        throw error;
+    }
+};
+
+/**
+ * Fetches recommendations for the home page.
+ * If the user is logged in (token provided), it fetches personalized recommendations.
+ * Otherwise, it fetches a general list of all heritage sites.
+ * @param {string|null} token - The user's authentication token, or null if not logged in.
+ * @param {number} [lat] - Optional user latitude.
+ * @param {number} [lon] - Optional user longitude.
+ * @returns {Promise<Array>} An array of recommended sites.
+ */
+export const fetchHomeRecommendations = async (token, lat, lon) => {
+    if (token) {
+        // If logged in, get personalized recommendations
+        return fetchPersonalizedRecommendations(token, lat, lon);
+    } else {
+        // If not logged in, get a general list of all sites as a fallback
+        return fetchHeritageSites();
+    }
+};
+

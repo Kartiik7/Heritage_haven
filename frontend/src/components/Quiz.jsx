@@ -1,5 +1,6 @@
 // frontend/src/components/Quiz.jsx
 import React, { useEffect, useState } from 'react';
+import { getApiBaseUrl } from '../utils/api';
 
 export default function Quiz({ monumentId }) {
   const [questions, setQuestions] = useState([]);
@@ -11,7 +12,8 @@ export default function Quiz({ monumentId }) {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch(`/api/quiz/${monumentId}`, {
+        const apiBaseUrl = getApiBaseUrl();
+        const res = await fetch(`${apiBaseUrl}/api/quiz/${monumentId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         if (!res.ok) throw new Error('Failed to load quiz');
@@ -31,7 +33,8 @@ export default function Quiz({ monumentId }) {
   async function submit() {
     try {
       const payload = { answers: Object.entries(answers).map(([questionId, chosenIndex]) => ({ questionId, chosenIndex })) };
-      const res = await fetch(`/api/quiz/${monumentId}/submit`, {
+      const apiBaseUrl = getApiBaseUrl();
+      const res = await fetch(`${apiBaseUrl}/api/quiz/${monumentId}/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 // frontend/src/components/ThingsToDo.jsx
 import React, { useEffect, useState } from 'react';
+import { getApiBaseUrl } from '../utils/api';
 
 export default function ThingsToDo({ lat, lon }) {
   const [places, setPlaces] = useState([]);
@@ -9,7 +10,8 @@ export default function ThingsToDo({ lat, lon }) {
     if (!lat || !lon) return;
     
     setLoading(true);
-    fetch(`/api/places/nearby?lat=${lat}&lon=${lon}`)
+    const apiBaseUrl = getApiBaseUrl();
+    fetch(`${apiBaseUrl}/api/places/nearby?lat=${lat}&lon=${lon}`)
       .then(r => r.json())
       .then(data => {
         setPlaces(data);

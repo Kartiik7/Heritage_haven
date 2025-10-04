@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import heritageSites from '../assets/heritageSites.json';
-import { fetchHeritageSiteById } from "../utils/api";
+import { fetchHeritageSiteById, getApiBaseUrl } from "../utils/api";
 import "../app.css";
 import Quiz from "./Quiz";
 import HotelList from "./HotelList";
@@ -68,7 +68,8 @@ export default function SiteDetail() {
       try {
         const token = localStorage.getItem("token");
         if (!token) return;
-        const res = await fetch("/api/user/me", {
+        const apiBaseUrl = getApiBaseUrl();
+        const res = await fetch(`${apiBaseUrl}/api/user/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) return;
