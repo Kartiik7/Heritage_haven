@@ -1,24 +1,17 @@
 // src/components/HomePage.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext.jsx";
+import { useAuth } from "../hooks/useAuth";
 import { fetchHomeRecommendations } from "../utils/api";
 import "../app.css";
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const { user, logout, loading: authLoading, isAuthenticated } = useAuth();
+  const { user, logout } = useAuth();
 
   // Recommendations state
   const [recommendations, setRecommendations] = useState([]);
   const [recommendationsLoading, setRecommendationsLoading] = useState(true);
-
-  // Redirect to login if not authenticated
-  useEffect(() => {
-    if (!authLoading && !isAuthenticated) {
-      navigate("/login");
-    }
-  }, [authLoading, isAuthenticated, navigate]);
 
   useEffect(() => {
     document.body.classList.add("home-mode");
@@ -44,35 +37,15 @@ export default function HomePage() {
       }
     };
 
-    if (isAuthenticated) {
-      loadRecommendations();
-    }
-  }, [isAuthenticated]);
+    loadRecommendations();
+  }, []);
 
   const handleLogout = () => {
     logout();
     navigate("/login");
   };
 
-  // Show loading while checking authentication
-  if (authLoading) {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100vh',
-        fontSize: '18px'
-      }}>
-        Loading...
-      </div>
-    );
-  }
 
-  // Don't render if not authenticated (will redirect)
-  if (!isAuthenticated) {
-    return null;
-  }
 
   const userName = user?.username || "Guest";
 

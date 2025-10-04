@@ -1,17 +1,26 @@
 // src/components/SiteDetail.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 import heritageSites from "../assets/heritageSites.json";
 import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
+<<<<<<< HEAD
 
 import Quiz from "./Quiz";
 import HotelList from "./HotelList";
 import ThingsToDo from "./ThingsToDo";
+=======
+import Quiz from './Quiz';
+import { useState, useEffect } from 'react';
+import HotelsList from './HotelsList';
+import ThingsToDo from './ThingsToDo';
+>>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
 
 export default function SiteDetail() {
   const { siteId } = useParams();
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const [site, setSite] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -101,7 +110,12 @@ export default function SiteDetail() {
               <div className="brand-sub">A new way to connect with culture</div>
             </div>
           </div>
-
+        <div style={{ marginTop: 16 }}>
+  <HotelsList lat={site.lat} lon={site.lon} city={site.cityCode || site.city} />
+</div>
+<div style={{ marginTop: 12 }}>
+  <ThingsToDo lat={site.lat} lon={site.lon} />
+</div>
           <div style={{ textAlign: "center", flex: 1 }}>
             <h1 className="page-title">Loading...</h1>
           </div>
@@ -185,13 +199,7 @@ export default function SiteDetail() {
             <div className="brand-sub">A new way to connect with culture</div>
           </div>
         </div>
-
-        {/* Take Quiz CTA */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <button className="btn" onClick={() => setShowQuiz((p) => !p)}>
-            {showQuiz ? "Hide Quiz" : "Take Quiz"}
-          </button>
-        </div>
+{showQuiz && <Quiz monumentId={site.slug || site._id || site.name} />}
 
         <div style={{ textAlign: "center", flex: 1 }}>
           <h1 className="page-title">{site.name}</h1>
@@ -259,9 +267,23 @@ export default function SiteDetail() {
               >
                 Open in Maps
               </button>
+
+              <button
+                className="site-btn"
+                onClick={() => setShowQuiz(prev => !prev)}
+              >
+                {showQuiz ? 'Hide Quiz' : 'Take Quiz'}
+              </button>
             </div>
           </div>
         </article>
+
+        {/* Quiz Section */}
+        {showQuiz && (
+          <div style={{ marginTop: 24 }}>
+            <Quiz monumentId={site.slug || site._id || site.name} />
+          </div>
+        )}
 
         {/* Thumbnails row */}
         <div className="site-thumbnails">
@@ -281,26 +303,6 @@ export default function SiteDetail() {
             />
           ))}
         </div>
-
-        {/* Quiz panel (togglable) */}
-        {showQuiz && (
-          <div style={{ marginTop: 16 }}>
-            <Quiz monumentId={site.slug || site._id || site.name} />
-          </div>
-        )}
-
-        {/* Hotels & Things to do (only if we have coords) */}
-        {lat && lon && (
-          <>
-            <div style={{ marginTop: 16 }}>
-              <HotelList lat={lat} lon={lon} city={site.cityCode || site.city} />
-            </div>
-
-            <div style={{ marginTop: 12 }}>
-              <ThingsToDo lat={lat} lon={lon} />
-            </div>
-          </>
-        )}
       </main>
     </div>
   );

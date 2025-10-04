@@ -1,7 +1,7 @@
 // src/components/Discover.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext.jsx";
+import { useAuth } from "../hooks/useAuth";
 import { fetchHeritageSites } from "../utils/api";
 
 export default function Discover() {

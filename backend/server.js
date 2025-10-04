@@ -5,15 +5,33 @@ const cors = require('cors');
 
 const connectDB = require('./config/db.js');
 const { initializeModel } = require('./utils/recommendationEngine');
+<<<<<<< HEAD
+=======
+const { notFound, errorHandler } = require('./middleware/errorMiddleware');
+>>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
 
 // create app BEFORE using app.use(...)
 const app = express();
+<<<<<<< HEAD
 
 // middlewares
 app.use(cors());
 app.use(express.json());
 
 // basic root route
+=======
+
+// Connect to Database and initialize model
+connectDB().then(() => {
+  initializeModel();
+});
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
+>>>>>>> 5bfb9d3525717d17d6c7f124f9cab67c4233e62e
 app.get('/', (req, res) => {
   res.send('Heritage Haven API is running...');
 });
@@ -23,6 +41,13 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/sites', require('./routes/siteRoutes'));
 app.use('/api/posts', require('./routes/postRoutes'));
 app.use('/api/recommendations', require('./routes/recommendationRoutes'));
+app.use('/api/quiz', require('./routes/quizRoutes'));
+app.use('/api/user', require('./routes/userRoutes'));
+app.use('/api/hotels', require('./routes/hotelRoutes'));
+
+// Error handling middleware (must be at the end)
+app.use(notFound);
+app.use(errorHandler);
 
 // optional routes you added — require them only if files exist
 try {
