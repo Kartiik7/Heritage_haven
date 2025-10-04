@@ -2,9 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const hotelsCtrl = require('../controllers/hotelsController');
-const authMiddleware = require('../middleware/authMiddleware'); // optional; public or require login?
 
-// Public search endpoint
+// Public search endpoint: by lat/lon or city + dates
+// Example: /api/hotels/search?lat=27.1751&lon=78.0421&checkInDate=2025-10-01&checkOutDate=2025-10-02&adults=2
 router.get('/search', hotelsCtrl.search);
 
 module.exports = router;

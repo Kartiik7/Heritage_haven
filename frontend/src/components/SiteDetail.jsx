@@ -6,7 +6,7 @@ import { fetchHeritageSiteById } from "../utils/api";
 import "../app.css";
 
 import Quiz from "./Quiz";
-import HotelsList from "./HotelList";
+import HotelList from "./HotelList";
 import ThingsToDo from "./ThingsToDo";
 
 export default function SiteDetail() {
